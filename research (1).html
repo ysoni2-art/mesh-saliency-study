@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task-Aware Mesh Saliency — Data Collection</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #1a1a1a; font-family: Arial, sans-serif; color: white; }
+
+    #task-bar {
+      background: #2a2a2a; padding: 12px 20px;
+      border-bottom: 2px solid #00aaff; text-align: center;
+    }
+    #task-bar h2 { font-size: 17px; color: #00aaff; margin-bottom: 4px; }
+    #task-bar p  { font-size: 13px; color: #ccc; }
+
+    #status-bar {
+      background: #333; padding: 7px 20px;
+      font-size: 13px; color: #aaa; text-align: center;
+    }
+
+    /* ── shape + task selector bar ── */
+    #selector-bar {
+      background: #222; padding: 10px; text-align: center;
+      font-size: 13px; color: #ccc; border-bottom: 1px solid #333;
+      display: flex; justify-content: center; align-items: center;
+      gap: 20px; flex-wrap: wrap;
+    }
+    #selector-bar select {
+      padding: 5px 10px; background: #333; color: white;
+      border: 1px solid #555; border-radius: 4px; font-size: 13px;
+    }
+    #selector-bar label { font-weight: bold; color: #aaa; }
+
+    /* ── model-bar ── */
+    #model-bar {
+      text-align: center; padding: 7px; background: #262626;
+      font-size: 12px; color: #888; border-bottom: 1px solid #333;
+    }
+    #model-bar input[type=file] { color: #ccc; font-size: 12px; }
+
+    /* ── participant bar ── */
+    #participant-bar {
+      background: #202020; padding: 10px 20px; text-align: center;
+      border-bottom: 1px solid #333; display: flex; justify-content: center;
+      align-items: center; gap: 16px; flex-wrap: wrap; font-size: 13px; color: #ccc;
+    }
+    #participant-bar input[type=text] {
+      padding: 5px 10px; background: #333; color: white;
+      border: 1px solid #555; border-radius: 4px; font-size: 13px; width: 180px;
+    }
+    #model-source-badge {
+      padding: 4px 10px; border-radius: 4px; font-size: 12px; font-weight: bold;
+    }
+    #model-source-badge.builtin  { background: #00aaff; color: white; }
+    #model-source-badge.uploaded { background: #ff9900; color: #1a1a1a; }
+
+    /* ── views grid ── */
+    #views-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 10px; padding: 10px; max-width: 1000px; margin: 0 auto;
+    }
+    .view-panel {
+      background: #2a2a2a; border: 2px solid #444;
+      border-radius: 8px; overflow: hidden; position: relative;
+    }
+    .view-panel:hover { border-color: #00aaff; }
+    .view-label {
+      position: absolute; top: 8px; left: 8px;
+      background: rgba(0,0,0,0.6); color: white;
+      padding: 3px 8px; border-radius: 4px;
+      font-size: 12px; font-weight: bold;
+      z-index: 10; pointer-events: none;
+    }
+    .click-counter {
+      position: absolute; top: 8px; right: 8px;
+      background: #00aaff; color: white;
+      padding: 3px 8px; border-radius: 4px;
+      font-size: 12px; z-index: 10; pointer-events: none;
+    }
+    .canvas-wrapper { position: relative; width: 100%; }
+    .view-canvas   { display: none; }
+    .bubble-canvas { display: block; width: 100%; cursor: crosshair; z-index: 5; }
+    #panel-top { grid-column: 1 / 3; }
+
+    /* ── bottom bar ── */
+    #bottom-bar {
+      text-align: center; padding: 12px;
+      background: #2a2a2a; margin-top: 10px;
+    }
+    #bottom-bar button {
+      padding: 9px 20px; background: #00aaff; color: white;
+      border: none; border-radius: 6px; font-size: 14px;
+      cursor: pointer; margin: 0 4px;
+    }
+    #bottom-bar button:hover { background: #0088cc; }
+    #total-clicks { margin-top: 8px; color: #aaa; font-size: 13px; }
+  </style>
+</head>
+<body>
+
+<div id="task-bar">
+  <h2 id="task-title">Task: Identify the Object</h2>
+  <p id="task-desc">The views start fully blurred. Click to reveal small circular areas and explore the shape.</p>
+</div>
+
+<div id="status-bar">⏳ Building model...</div>
+
+<!-- PARTICIPANT INFO -->
+<div id="participant-bar">
+  <label>Your name / ID: <input type="text" id="participant-id" placeholder="e.g. student_04"></label>
+  <span>Currently using: <span id="model-source-badge" class="builtin">Built-in shape</span></span>
+</div>
+
+<!-- SHAPE + TASK SELECTORS -->
+<div id="selector-bar">
+  <div>
+    <label>Shape: </label>
+    <select id="shape-select" onchange="switchShape()">
+      <option value="human">Human Figure</option>
+      <option value="dog">Dog</option>
+      <option value="mug">Mug / Cup</option>
+      <option value="chair">Chair</option>
+      <option value="airplane">Airplane</option>
+    </select>
+  </div>
+</div>
+
+<!-- LOAD OWN OBJ -->
+<div id="model-bar">
+  Or load your own OBJ file:&nbsp;
+  <input type="file" id="obj-file-input" accept=".obj">
+  <span id="model-name"></span>
+</div>
+
+<div id="views-grid">
+  <div class="view-panel" id="panel-front">
+    <div class="view-label">Front</div>
+    <div class="click-counter" id="count-front">0 clicks</div>
+    <div class="canvas-wrapper">
+      <canvas class="view-canvas" id="canvas-front"></canvas>
+      <canvas class="bubble-canvas" id="bubble-front"></canvas>
+    </div>
+  </div>
+  <div class="view-panel" id="panel-back">
+    <div class="view-label">Back</div>
+    <div class="click-counter" id="count-back">0 clicks</div>
+    <div class="canvas-wrapper">
+      <canvas class="view-canvas" id="canvas-back"></canvas>
+      <canvas class="bubble-canvas" id="bubble-back"></canvas>
+    </div>
+  </div>
+  <div class="view-panel" id="panel-left">
+    <div class="view-label">Left</div>
+    <div class="click-counter" id="count-left">0 clicks</div>
+    <div class="canvas-wrapper">
+      <canvas class="view-canvas" id="canvas-left"></canvas>
+      <canvas class="bubble-canvas" id="bubble-left"></canvas>
+    </div>
+  </div>
+  <div class="view-panel" id="panel-right">
+    <div class="view-label">Right</div>
+    <div class="click-counter" id="count-right">0 clicks</div>
+    <div class="canvas-wrapper">
+      <canvas class="view-canvas" id="canvas-right"></canvas>
+      <canvas class="bubble-canvas" id="bubble-right"></canvas>
+    </div>
+  </div>
+  <div class="view-panel" id="panel-top">
+    <div class="view-label">Top</div>
+    <div class="click-counter" id="count-top">0 clicks</div>
+    <div class="canvas-wrapper">
+      <canvas class="view-canvas" id="canvas-top"></canvas>
+      <canvas class="bubble-canvas" id="bubble-top"></canvas>
+    </div>
+  </div>
+</div>
+
+<div id="bottom-bar">
+  <button onclick="saveData()">📤 Submit My Response</button>
+  <button onclick="resetAll()" style="background:#555;">🔄 Reset</button>
+  <div id="total-clicks">
+    Total clicks: 0 &nbsp;|&nbsp; 3D surface hits: <span id="hit-count">0</span>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stackblur-canvas/2.7.0/stackblur.min.js"></script>
+<script>
+
+// ═══════════════════════════════════════════════════════════════
+//  CONSTANTS & STATE
+// ═══════════════════════════════════════════════════════════════
+var CANVAS_W = 480, CANVAS_H = 360;
+var BUBBLE_R = 50;   // fixed "medium" bubble size — not adjustable by the student
+var BLUR_R   = 40;   // fixed at maximum blur — not adjustable by the student
+var ZOOM_MULTIPLIER = 1.35;
+
+var viewList = [
+  { name:'front', camX: 0,  camY: 0,  camZ: 1    },
+  { name:'back',  camX: 0,  camY: 0,  camZ:-1    },
+  { name:'left',  camX:-1,  camY: 0,  camZ: 0    },
+  { name:'right', camX: 1,  camY: 0,  camZ: 0    },
+  { name:'top',   camX: 0,  camY: 1,  camZ: 0.01 }
+];
+
+var allClicks = [], clicksPerView = {}, snapshots = {};
+var totalClicks = 0, totalHits = 0, faceHits = {};
+var modelLoaded = false, meshObject = null;
+var currentShape = 'human', currentTask = 'identify';
+var currentObjName = 'procedural';
+var currentModelSource = 'builtin'; // 'builtin' or 'uploaded'
+
+function updateModelSourceBadge(){
+  var badge = document.getElementById('model-source-badge');
+  if(currentModelSource === 'uploaded'){
+    badge.textContent = 'Your uploaded model (' + currentObjName + ')';
+    badge.className = 'uploaded';
+  } else {
+    badge.textContent = 'Built-in shape (' + currentShape + ')';
+    badge.className = 'builtin';
+  }
+}
+
+var TASK_META = {
+  identify: { title:'Task: Identify the Object',
+               desc: 'The views are blurred. Click to reveal small areas and figure out what this object is.' },
+  grasp:    { title:'Task: Grasp the Object',
+               desc: 'Imagine picking this object up. Click where you would place your hand(s) to grasp it.' },
+  press:    { title:'Task: Press the Object',
+               desc: 'Imagine pressing or pushing this object. Click the parts you would press.' },
+  touch:    { title:'Task: Touch the Object',
+               desc: 'Imagine touching this object gently (e.g. a statue). Click where you would touch it.' }
+};
+
+viewList.forEach(function(v){ clicksPerView[v.name] = []; });
+
+// ═══════════════════════════════════════════════════════════════
+//  THREE.JS SCENE
+// ═══════════════════════════════════════════════════════════════
+var scene = new THREE.Scene();
+scene.background = new THREE.Color(0x2a2a2a);
+scene.add(new THREE.AmbientLight(0xffffff, 0.65));
+var dl1 = new THREE.DirectionalLight(0xffffff, 1.0);
+dl1.position.set(5,5,5); scene.add(dl1);
+var dl2 = new THREE.DirectionalLight(0xffffff, 0.4);
+dl2.position.set(-5,-3,-5); scene.add(dl2);
+
+var renderers = {}, cameras = {}, modelSize = 2;
+
+viewList.forEach(function(view){
+  var canvas = document.getElementById('canvas-' + view.name);
+  canvas.width = CANVAS_W; canvas.height = CANVAS_H;
+  var r = new THREE.WebGLRenderer({ canvas:canvas, antialias:true, preserveDrawingBuffer:true });
+  r.setSize(CANVAS_W, CANVAS_H);
+  renderers[view.name] = r;
+  cameras[view.name] = new THREE.PerspectiveCamera(50, CANVAS_W/CANVAS_H, 0.01, 2000);
+  var b = document.getElementById('bubble-' + view.name);
+  b.width = CANVAS_W; b.height = CANVAS_H;
+});
+
+function positionCameras(){
+  var dist = modelSize * ZOOM_MULTIPLIER;
+  viewList.forEach(function(view){
+    var cam = cameras[view.name];
+    cam.position.set(view.camX*dist, view.camY*dist, view.camZ*dist);
+    cam.lookAt(0,0,0);
+    cam.updateProjectionMatrix();
+  });
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  SNAPSHOT & BLUR
+// ═══════════════════════════════════════════════════════════════
+function captureSnapshot(v){
+  renderers[v].render(scene, cameras[v]);
+  var gl = document.getElementById('canvas-'+v);
+  var off = document.createElement('canvas');
+  off.width=CANVAS_W; off.height=CANVAS_H;
+  off.getContext('2d').drawImage(gl,0,0);
+  snapshots[v] = off.getContext('2d').getImageData(0,0,CANVAS_W,CANVAS_H);
+}
+
+function drawBlurred(v){
+  var b = document.getElementById('bubble-'+v);
+  var ctx = b.getContext('2d');
+  ctx.putImageData(snapshots[v],0,0);
+  StackBlur.canvasRGB(b,0,0,CANVAS_W,CANVAS_H,BLUR_R);
+  redrawBubbles(v);
+}
+
+function redrawBubbles(v){
+  var clicks = clicksPerView[v]; if(!clicks.length) return;
+  var ctx = document.getElementById('bubble-'+v).getContext('2d');
+  clicks.forEach(function(c){ drawBubbleAt(ctx,c.x,c.y,v); });
+}
+
+function drawBubbleAt(ctx, x, y, v){
+  var tmp = document.createElement('canvas');
+  tmp.width=CANVAS_W; tmp.height=CANVAS_H;
+  tmp.getContext('2d').putImageData(snapshots[v],0,0);
+  ctx.save();
+  ctx.beginPath(); ctx.arc(x,y,BUBBLE_R,0,Math.PI*2); ctx.clip();
+  ctx.drawImage(tmp,0,0);
+  ctx.restore();
+  ctx.beginPath(); ctx.arc(x,y,BUBBLE_R,0,Math.PI*2);
+  ctx.strokeStyle='rgba(255,80,80,0.85)'; ctx.lineWidth=2.5; ctx.stroke();
+}
+
+function captureAndBlurAll(){
+  viewList.forEach(function(v){ captureSnapshot(v.name); drawBlurred(v.name); });
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  RAYCASTING
+// ═══════════════════════════════════════════════════════════════
+var raycaster = new THREE.Raycaster();
+
+function raycastClick(viewName, cx, cy){
+  raycaster.setFromCamera(
+    new THREE.Vector2((cx/CANVAS_W)*2-1, -(cy/CANVAS_H)*2+1),
+    cameras[viewName]
+  );
+  var meshes = [];
+  if(meshObject) meshObject.traverse(function(c){ if(c.isMesh) meshes.push(c); });
+  var hits = raycaster.intersectObjects(meshes, false);
+  if(!hits.length) return null;
+  var h = hits[0];
+  return { point:h.point.clone(), faceIndex:h.faceIndex, meshName:h.object.name||'mesh' };
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  PROCEDURAL MODELS
+//  Each returns a THREE.Group. All parts are named so the saliency
+//  viewer can identify which body part was clicked.
+// ═══════════════════════════════════════════════════════════════
+var MAT_DEFAULT = new THREE.MeshPhongMaterial({ color:0x7a9abf, specular:0x223344, shininess:60 });
+
+function makeMesh(geo, name){
+  geo = geo.toNonIndexed();
+  geo.computeVertexNormals();
+  var m = new THREE.Mesh(geo, MAT_DEFAULT.clone());
+  m.name = name;
+  return m;
+}
+
+// ── HUMAN FIGURE ────────────────────────────────────────────────
+function buildHuman(){
+  var g = new THREE.Group();
+  function add(geo, name, x,y,z, rx,rz){
+    var m = makeMesh(geo, name);
+    m.position.set(x,y,z);
+    if(rx) m.rotation.x=rx;
+    if(rz) m.rotation.z=rz;
+    g.add(m); return m;
+  }
+  add(new THREE.SphereGeometry(0.18,32,32),        'head',         0, 0.82,0);
+  add(new THREE.CylinderGeometry(0.07,0.07,0.12,16),'neck',        0, 0.64,0);
+  add(new THREE.CylinderGeometry(0.22,0.18,0.55,24),'torso',       0, 0.32,0);
+  add(new THREE.CylinderGeometry(0.20,0.16,0.22,24),'hips',        0,-0.01,0);
+  var lua=add(new THREE.CylinderGeometry(0.06,0.06,0.28,16),'l_upper_arm',-0.33,0.40,0);  lua.rotation.z= Math.PI/5;
+  var lla=add(new THREE.CylinderGeometry(0.05,0.04,0.26,16),'l_lower_arm',-0.52,0.18,0);  lla.rotation.z= Math.PI/4;
+  var rua=add(new THREE.CylinderGeometry(0.06,0.06,0.28,16),'r_upper_arm', 0.33,0.40,0);  rua.rotation.z=-Math.PI/5;
+  var rla=add(new THREE.CylinderGeometry(0.05,0.04,0.26,16),'r_lower_arm', 0.52,0.18,0);  rla.rotation.z=-Math.PI/4;
+  add(new THREE.CylinderGeometry(0.09,0.08,0.35,16),'l_thigh',-0.11,-0.30,0);
+  add(new THREE.CylinderGeometry(0.07,0.05,0.33,16),'l_shin', -0.11,-0.64,0);
+  add(new THREE.CylinderGeometry(0.09,0.08,0.35,16),'r_thigh', 0.11,-0.30,0);
+  add(new THREE.CylinderGeometry(0.07,0.05,0.33,16),'r_shin',  0.11,-0.64,0);
+  var fg=new THREE.BoxGeometry(0.10,0.06,0.20);
+  add(fg,'l_foot',-0.11,-0.83,0.05);
+  add(fg,'r_foot', 0.11,-0.83,0.05);
+  return g;
+}
+
+// ── DOG ─────────────────────────────────────────────────────────
+function buildDog(){
+  var g = new THREE.Group();
+  function add(geo,name,x,y,z,rx,ry,rz){
+    var m=makeMesh(geo,name); m.position.set(x,y,z);
+    if(rx) m.rotation.x=rx;
+    if(ry) m.rotation.y=ry;
+    if(rz) m.rotation.z=rz;
+    g.add(m); return m;
+  }
+  // body (ellipsoid via scaled sphere)
+  var body=makeMesh(new THREE.SphereGeometry(0.35,32,24),'body');
+  body.scale.set(1.6,0.9,1.0); body.position.set(0,0,0); g.add(body);
+  // head
+  var head=makeMesh(new THREE.SphereGeometry(0.22,28,20),'head');
+  head.position.set(0.62,0.14,0); g.add(head);
+  // snout
+  add(new THREE.BoxGeometry(0.16,0.10,0.14),'snout',0.85,-0.04,0);
+  // ears
+  var earGeo=new THREE.BoxGeometry(0.06,0.18,0.12);
+  add(earGeo,'l_ear',0.60,0.35, 0.17, 0.3,0, 0.2);
+  add(earGeo,'r_ear',0.60,0.35,-0.17, 0.3,0,-0.2);
+  // tail
+  var tail=makeMesh(new THREE.CylinderGeometry(0.04,0.02,0.45,12),'tail');
+  tail.position.set(-0.62,0.22,0); tail.rotation.z=-Math.PI/4; g.add(tail);
+  // legs
+  var legGeo=new THREE.CylinderGeometry(0.07,0.06,0.42,12);
+  add(legGeo,'fl_leg', 0.30,-0.50, 0.18);
+  add(legGeo,'fr_leg', 0.30,-0.50,-0.18);
+  add(legGeo,'bl_leg',-0.30,-0.50, 0.18);
+  add(legGeo,'br_leg',-0.30,-0.50,-0.18);
+  // paws
+  var pawGeo=new THREE.SphereGeometry(0.09,12,8);
+  add(pawGeo,'fl_paw', 0.30,-0.72, 0.18);
+  add(pawGeo,'fr_paw', 0.30,-0.72,-0.18);
+  add(pawGeo,'bl_paw',-0.30,-0.72, 0.18);
+  add(pawGeo,'br_paw',-0.30,-0.72,-0.18);
+  return g;
+}
+
+// ── MUG / CUP ───────────────────────────────────────────────────
+function buildMug(){
+  var g = new THREE.Group();
+  // cup body — open cylinder (CylinderGeometry, open at top)
+  var bodyGeo = new THREE.CylinderGeometry(0.30, 0.25, 0.70, 48, 1, true);
+  g.add(makeMesh(bodyGeo,'cup_body'));
+  // bottom disc
+  var botGeo = new THREE.CircleGeometry(0.25, 48);
+  var bot = makeMesh(botGeo,'cup_bottom');
+  bot.rotation.x = -Math.PI/2; bot.position.y = -0.35; g.add(bot);
+  // top rim ring
+  var rimGeo = new THREE.TorusGeometry(0.30, 0.025, 10, 48);
+  var rim = makeMesh(rimGeo,'rim');
+  rim.position.y = 0.35; g.add(rim);
+  // handle — torus arc on the side
+  var handleGeo = new THREE.TorusGeometry(0.18, 0.045, 12, 24, Math.PI);
+  var handle = makeMesh(handleGeo,'handle');
+  handle.position.set(0.38, 0, 0);
+  handle.rotation.y = Math.PI/2;
+  g.add(handle);
+  return g;
+}
+
+// ── CHAIR ───────────────────────────────────────────────────────
+function buildChair(){
+  var g = new THREE.Group();
+  function add(geo,name,x,y,z){ var m=makeMesh(geo,name); m.position.set(x,y,z); g.add(m); }
+  // seat
+  add(new THREE.BoxGeometry(0.70,0.06,0.65),'seat', 0, 0, 0);
+  // seat cushion (slightly raised)
+  add(new THREE.BoxGeometry(0.64,0.06,0.60),'cushion',0,0.05,0);
+  // back rest
+  add(new THREE.BoxGeometry(0.70,0.70,0.06),'backrest',0,0.38,-0.30);
+  // back rest top rail
+  add(new THREE.BoxGeometry(0.70,0.06,0.06),'top_rail',0,0.72,-0.30);
+  // 4 legs
+  var legGeo=new THREE.CylinderGeometry(0.04,0.04,0.60,12);
+  add(legGeo,'leg_fl', 0.28,-0.33, 0.27);
+  add(legGeo,'leg_fr',-0.28,-0.33, 0.27);
+  add(legGeo,'leg_bl', 0.28,-0.33,-0.27);
+  add(legGeo,'leg_br',-0.28,-0.33,-0.27);
+  // armrests
+  add(new THREE.BoxGeometry(0.06,0.06,0.55),'armrest_l', 0.38,0.25, 0.03);
+  add(new THREE.BoxGeometry(0.06,0.06,0.55),'armrest_r',-0.38,0.25, 0.03);
+  // armrest supports
+  add(new THREE.CylinderGeometry(0.03,0.03,0.22,10),'arm_sup_l', 0.38,0.13, 0.22);
+  add(new THREE.CylinderGeometry(0.03,0.03,0.22,10),'arm_sup_r',-0.38,0.13, 0.22);
+  return g;
+}
+
+// ── AIRPLANE ────────────────────────────────────────────────────
+function buildAirplane(){
+  var g = new THREE.Group();
+  function add(geo,name,x,y,z,rx,ry,rz){
+    var m=makeMesh(geo,name); m.position.set(x,y,z);
+    if(rx) m.rotation.x=rx;
+    if(ry) m.rotation.y=ry;
+    if(rz) m.rotation.z=rz;
+    g.add(m); return m;
+  }
+  // fuselage (long ellipsoid)
+  var fuse=makeMesh(new THREE.SphereGeometry(0.18,32,20),'fuselage');
+  fuse.scale.set(5.0,1.0,1.0); g.add(fuse);
+  // nose cone
+  var nose=makeMesh(new THREE.ConeGeometry(0.18,0.40,20),'nose');
+  nose.rotation.z=-Math.PI/2; nose.position.set(0.93,0,0); g.add(nose);
+  // main wings
+  var wingGeo=new THREE.BoxGeometry(0.12,0.04,1.40);
+  add(wingGeo,'wing_l', 0.05,0, 0.72);
+  add(wingGeo,'wing_r', 0.05,0,-0.72);
+  // wing tips
+  var tipGeo=new THREE.BoxGeometry(0.10,0.04,0.30);
+  add(tipGeo,'tip_l',0.05,0.12, 1.35);
+  add(tipGeo,'tip_r',0.05,0.12,-1.35);
+  // horizontal tail
+  add(new THREE.BoxGeometry(0.08,0.03,0.60),'h_tail',-0.84,0,0);
+  // vertical tail fin
+  var vtail=makeMesh(new THREE.BoxGeometry(0.30,0.36,0.05),'v_tail');
+  vtail.position.set(-0.72,0.20,0); g.add(vtail);
+  // engines
+  var engGeo=new THREE.CylinderGeometry(0.07,0.07,0.32,16);
+  var e1=makeMesh(engGeo,'engine_l'); e1.rotation.z=Math.PI/2;
+  e1.position.set(0.05,-0.14,0.52); g.add(e1);
+  var e2=makeMesh(engGeo,'engine_r'); e2.rotation.z=Math.PI/2;
+  e2.position.set(0.05,-0.14,-0.52); g.add(e2);
+  // cockpit windows
+  var winGeo=new THREE.SphereGeometry(0.06,12,8);
+  add(winGeo,'window_l',0.62,0.10, 0.09);
+  add(winGeo,'window_r',0.62,0.10,-0.09);
+  return g;
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  LOAD PROCEDURAL MODEL INTO SCENE
+// ═══════════════════════════════════════════════════════════════
+var BUILDERS = {
+  human:    buildHuman,
+  dog:      buildDog,
+  mug:      buildMug,
+  chair:    buildChair,
+  airplane: buildAirplane
+};
+
+function loadProceduralModel(shapeName){
+  document.getElementById('status-bar').textContent = '⏳ Building ' + shapeName + '...';
+
+  if(meshObject) scene.remove(meshObject);
+  meshObject = null; modelLoaded = false;
+
+  var group = BUILDERS[shapeName]();
+
+  var box = new THREE.Box3().setFromObject(group);
+  group.position.sub(box.getCenter(new THREE.Vector3()));
+  var sz = box.getSize(new THREE.Vector3());
+  modelSize = Math.max(sz.x, sz.y, sz.z);
+
+  meshObject = group;
+  scene.add(meshObject);
+  positionCameras();
+  modelLoaded = true;
+  currentObjName = shapeName + '_procedural';
+  currentModelSource = 'builtin';
+  updateModelSourceBadge();
+
+  resetAll();
+  document.getElementById('model-name').textContent = '';
+  document.getElementById('status-bar').textContent =
+    '✅ ' + shapeName.charAt(0).toUpperCase()+shapeName.slice(1) +
+    ' loaded — views are blurred. Click to reveal areas.';
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  OBJ FILE LOADER (for user-uploaded real OBJ files)
+// ═══════════════════════════════════════════════════════════════
+var objLoader = new THREE.OBJLoader();
+
+function prepareLoadedObject(object){
+  var idx=0;
+  object.traverse(function(child){
+    if(child.isMesh){
+      if(!child.name) child.name='part_'+(idx++);
+      if(child.geometry.index) child.geometry=child.geometry.toNonIndexed();
+      child.geometry.computeVertexNormals();
+      child.material = MAT_DEFAULT.clone();
+    }
+  });
+}
+
+function loadModelFromFile(file){
+  var reader=new FileReader();
+  reader.onload=function(e){
+    var object=objLoader.parse(e.target.result);
+    if(meshObject) scene.remove(meshObject);
+    prepareLoadedObject(object);
+    meshObject=object;
+    var box=new THREE.Box3().setFromObject(meshObject);
+    meshObject.position.sub(box.getCenter(new THREE.Vector3()));
+    var sz=box.getSize(new THREE.Vector3());
+    modelSize=Math.max(sz.x,sz.y,sz.z);
+    scene.add(meshObject);
+    positionCameras();
+    modelLoaded=true;
+    currentObjName=file.name;
+    currentModelSource = 'uploaded';
+    updateModelSourceBadge();
+    resetAll();
+    document.getElementById('model-name').textContent='(loaded: '+file.name+')';
+    document.getElementById('status-bar').textContent=
+      '✅ '+file.name+' loaded — click blurred views to record saliency';
+  };
+  reader.readAsText(file);
+}
+
+document.getElementById('obj-file-input').addEventListener('change',function(e){
+  var f=e.target.files[0]; if(f) loadModelFromFile(f);
+});
+
+// ═══════════════════════════════════════════════════════════════
+//  SELECTOR CALLBACKS
+// ═══════════════════════════════════════════════════════════════
+function switchShape(){
+  currentShape = document.getElementById('shape-select').value;
+  loadProceduralModel(currentShape);
+}
+
+function switchTask(){
+  currentTask = document.getElementById('task-select').value;
+  var meta = TASK_META[currentTask];
+  document.getElementById('task-title').textContent = meta.title;
+  document.getElementById('task-desc').textContent  = meta.desc;
+  // Don't reset clicks — user may want to keep exploring same shape
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  CLICK HANDLER
+// ═══════════════════════════════════════════════════════════════
+viewList.forEach(function(view){
+  var bubble=document.getElementById('bubble-'+view.name);
+  bubble.addEventListener('click',function(e){
+    if(!modelLoaded) return;
+    var rect=bubble.getBoundingClientRect();
+    var cx=(e.clientX-rect.left)*(CANVAS_W/rect.width);
+    var cy=(e.clientY-rect.top) *(CANVAS_H/rect.height);
+
+    var hit3d=raycastClick(view.name,cx,cy);
+    var hitInfo=null;
+    if(hit3d){
+      totalHits++;
+      var key=hit3d.meshName+'_f'+hit3d.faceIndex;
+      faceHits[key]=(faceHits[key]||0)+1;
+      hitInfo={ meshName:hit3d.meshName, faceIndex:hit3d.faceIndex,
+        point3d:{ x:+hit3d.point.x.toFixed(4), y:+hit3d.point.y.toFixed(4), z:+hit3d.point.z.toFixed(4) }};
+    }
+
+    var clickData={ view:view.name, x:Math.round(cx), y:Math.round(cy),
+      timestamp:Date.now(), hit3d:hitInfo };
+    allClicks.push(clickData);
+    clicksPerView[view.name].push(clickData);
+    totalClicks++;
+
+    document.getElementById('count-'+view.name).textContent=
+      clicksPerView[view.name].length+' clicks';
+    document.getElementById('total-clicks').innerHTML=
+      'Total clicks: '+totalClicks+
+      ' &nbsp;|&nbsp; 3D surface hits: <span id="hit-count">'+totalHits+'</span>';
+
+    var ctx=bubble.getContext('2d');
+    ctx.putImageData(snapshots[view.name],0,0);
+    StackBlur.canvasRGB(bubble,0,0,CANVAS_W,CANVAS_H,BLUR_R);
+    redrawBubbles(view.name);
+    drawBubbleAt(ctx,cx,cy,view.name);
+
+    // Green border = hit, grey = miss
+    ctx.beginPath(); ctx.arc(cx,cy,BUBBLE_R,0,Math.PI*2);
+    ctx.strokeStyle=hit3d?'rgba(0,255,100,0.9)':'rgba(180,180,180,0.5)';
+    ctx.lineWidth=2.5; ctx.stroke();
+  });
+});
+
+// ═══════════════════════════════════════════════════════════════
+//  SAVE / SUBMIT DATA
+// ═══════════════════════════════════════════════════════════════
+function saveData(){
+  if(!allClicks.length){ alert('No clicks yet! Click around the blurred views before submitting.'); return; }
+  var participantId = document.getElementById('participant-id').value.trim() || 'anonymous';
+  var data={
+    participantId: participantId,
+    modelSource:  currentModelSource,   // 'builtin' or 'uploaded' — lets the viewer group responses correctly
+    task:        currentTask,
+    shape:       currentShape,
+    objFile:     currentObjName,
+    totalClicks: totalClicks,
+    totalHits:   totalHits,
+    faceHits:    faceHits,
+    clicks:      allClicks
+  };
+  var blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  a.href=url;
+  a.download='saliency_'+participantId+'_'+currentShape+'_'+currentTask+'.json';
+  a.click();
+  document.getElementById('status-bar').textContent =
+    '✅ Response submitted for ' + participantId + ' — file downloaded as ' + a.download + '. Please send this file back to collect it.';
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  RESET
+// ═══════════════════════════════════════════════════════════════
+function resetAll(){
+  allClicks=[]; totalClicks=0; totalHits=0; faceHits={};
+  viewList.forEach(function(v){ clicksPerView[v.name]=[]; });
+  document.getElementById('total-clicks').innerHTML=
+    'Total clicks: 0 &nbsp;|&nbsp; 3D surface hits: <span id="hit-count">0</span>';
+  viewList.forEach(function(v){
+    document.getElementById('count-'+v.name).textContent='0 clicks';
+  });
+  if(modelLoaded) captureAndBlurAll();
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  INIT — load the default shape on page open
+// ═══════════════════════════════════════════════════════════════
+loadProceduralModel('human');
+
+</script>
+</body>
+</html>
