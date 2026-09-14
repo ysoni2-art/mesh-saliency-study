@@ -641,17 +641,24 @@ function saveData() {
   var subFolder = (currentModelSource === 'uploaded') ? 'custom' : currentShape;
 
   var data = {
-    participantId: participantId,
-    modelSource: currentModelSource,
-    shape: currentShape,
-    objFile: currentObjName,
-    customObjRepoPath: null,
-    totalClicks: totalClicks,
-    totalHits: totalHits,
-    faceHits: faceHits,
-    clicks: allClicks,
-    submittedAt: new Date().toISOString()
-  };
+  participantId: participantId,
+  modelSource: currentModelSource,
+  shape: currentShape,
+  objFile: currentObjName,
+  customObjRepoPath:
+    currentModelSource === 'uploaded'
+      ? 'custom/models/'
+      : null,
+  totalClicks: totalClicks,
+  totalHits: totalHits,
+  faceHits: faceHits,
+  clicks: allClicks,
+  submittedAt: new Date().toISOString(),
+  objText:
+    currentModelSource === 'uploaded'
+      ? uploadedObjText
+      : null
+};
 
   // Safe fallback while the secure backend is not connected.
   if (!SUBMISSION_API_URL) {
