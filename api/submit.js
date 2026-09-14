@@ -36,18 +36,25 @@ export default async function handler(req, res) {
     // --------------------------------------------------
 
     const {
-      participantId,
-      modelSource,
-      shape,
-      objFile,
-      customObjRepoPath,
-      totalClicks,
-      totalHits,
-      faceHits,
-      clicks,
-      submittedAt,
-      objText
-    } = req.body || {};
+  participantId,
+  modelSource,
+  shape,
+  objFile,
+  customObjRepoPath,
+  totalClicks,
+  totalHits,
+  faceHits,
+  clicks,
+  submittedAt,
+  objText
+} = req.body || {};
+
+console.log(
+  'OBJ DEBUG:',
+  modelSource,
+  objFile,
+  objText ? objText.length : 0
+); 
 
     // --------------------------------------------------
     // BASIC VALIDATION
