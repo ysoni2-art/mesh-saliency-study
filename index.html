@@ -183,16 +183,6 @@
   </div>
 </div>
 
-<!-- GITHUB CONFIGURATION BAR (Settings persist in localStorage) -->
-<div id="github-config-bar">
-  <span><strong>GitHub Target:</strong></span>
-  <label>User: <input type="text" id="gh-user" placeholder="e.g. your-github-user" style="width:110px;"></label>
-  <label>Repo: <input type="text" id="gh-repo" placeholder="e.g. mesh-saliency" style="width:110px;"></label>
-  <label>Token: <input type="password" id="gh-token" placeholder="ghp_... or fine-grained" style="width:150px;"></label>
-  <button onclick="saveGithubConfig()">Save Config</button>
-  <span id="gh-config-status" style="color:#00aaff;"></span>
-</div>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/stackblur-canvas/2.7.0/stackblur.min.js"></script>
@@ -201,9 +191,6 @@
 // ═══════════════════════════════════════════════════════════════
 //  GITHUB CONFIGURATION
 // ═══════════════════════════════════════════════════════════════
-var GITHUB_USER = localStorage.getItem('GH_USER') || 'ysoni2-art';
-var GITHUB_REPO = localStorage.getItem('GH_REPO') || 'mesh-saliency-study';
-var GITHUB_TOKEN = localStorage.getItem('GH_TOKEN') || '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';
 var SUBMISSION_FOLDER = 'submissions'; 
 
 // Populate fields on page load
@@ -211,16 +198,7 @@ document.getElementById('gh-user').value = GITHUB_USER === 'ysoni2-art' ? '' : G
 document.getElementById('gh-repo').value = GITHUB_REPO === 'mesh-saliency-study' ? '' : GITHUB_REPO;
 document.getElementById('gh-token').value = GITHUB_TOKEN;
 
-function saveGithubConfig() {
-  GITHUB_USER = document.getElementById('gh-user').value.trim() || 'ysoni2-art';
-  GITHUB_REPO = document.getElementById('gh-repo').value.trim() || 'mesh-saliency-study';
-  GITHUB_TOKEN = document.getElementById('gh-token').value.trim();
-  localStorage.setItem('GH_USER', GITHUB_USER);
-  localStorage.setItem('GH_REPO', GITHUB_REPO);
-  localStorage.setItem('GH_TOKEN', GITHUB_TOKEN);
-  document.getElementById('gh-config-status').textContent = 'Saved to browser!';
-  setTimeout(function(){ document.getElementById('gh-config-status').textContent = ''; }, 3000);
-}
+
 
 // ═══════════════════════════════════════════════════════════════
 //  CONSTANTS & STATE
