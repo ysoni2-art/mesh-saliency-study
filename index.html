@@ -203,17 +203,17 @@
 // ═══════════════════════════════════════════════════════════════
 var GITHUB_USER = localStorage.getItem('GH_USER') || 'ysoni2-art';
 var GITHUB_REPO = localStorage.getItem('GH_REPO') || 'mesh-saliency-study';
-var GITHUB_TOKEN = localStorage.getItem('GH_TOKEN') || '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';
+var GITHUB_TOKEN = localStorage.getItem('GH_TOKEN') || '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';
 var SUBMISSION_FOLDER = 'submissions'; 
 
 // Populate fields on page load
-document.getElementById('gh-user').value = GITHUB_USER === 'YOUR_GITHUB_USERNAME' ? '' : GITHUB_USER;
-document.getElementById('gh-repo').value = GITHUB_REPO === 'YOUR_REPO_NAME' ? '' : GITHUB_REPO;
+document.getElementById('gh-user').value = GITHUB_USER === 'ysoni2-art' ? '' : GITHUB_USER;
+document.getElementById('gh-repo').value = GITHUB_REPO === 'mesh-saliency-study' ? '' : GITHUB_REPO;
 document.getElementById('gh-token').value = GITHUB_TOKEN;
 
 function saveGithubConfig() {
-  GITHUB_USER = document.getElementById('gh-user').value.trim() || 'YOUR_GITHUB_USERNAME';
-  GITHUB_REPO = document.getElementById('gh-repo').value.trim() || 'YOUR_REPO_NAME';
+  GITHUB_USER = document.getElementById('gh-user').value.trim() || 'ysoni2-art';
+  GITHUB_REPO = document.getElementById('gh-repo').value.trim() || 'mesh-saliency-study';
   GITHUB_TOKEN = document.getElementById('gh-token').value.trim();
   localStorage.setItem('GH_USER', GITHUB_USER);
   localStorage.setItem('GH_REPO', GITHUB_REPO);
