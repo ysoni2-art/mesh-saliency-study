@@ -645,15 +645,20 @@ function saveData() {
   modelSource: currentModelSource,
   shape: currentShape,
   objFile: currentObjName,
+
   customObjRepoPath:
     currentModelSource === 'uploaded'
       ? 'custom/models/'
       : null,
+
   totalClicks: totalClicks,
   totalHits: totalHits,
   faceHits: faceHits,
   clicks: allClicks,
+
   submittedAt: new Date().toISOString(),
+
+  // Send the actual uploaded OBJ text to the secure backend
   objText:
     currentModelSource === 'uploaded'
       ? uploadedObjText
