@@ -1,0 +1,131 @@
+{
+  "participantId": "anonymous",
+  "modelSource": "uploaded",
+  "shape": "mug",
+  "objFile": "Skeleton_Hand.obj",
+  "customObjRepoPath": null,
+  "totalClicks": 9,
+  "totalHits": 6,
+  "faceHits": {
+    "Model 1 (001)_f329005": 1,
+    "Model 1 (001)_f1647183": 1,
+    "Model 1 (001)_f2034108": 1,
+    "Model 1 (001)_f1824860": 1,
+    "Model 1 (001)_f330053": 1,
+    "Model 1 (001)_f221141": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 228,
+      "y": 112,
+      "timestamp": 1789428888204,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 286,
+      "y": 208,
+      "timestamp": 1789428894632,
+      "hit3d": {
+        "meshName": "Model 1 (001)",
+        "faceIndex": 329005,
+        "point3d": {
+          "x": 36.6336,
+          "y": -26.187,
+          "z": 43.9722
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 171,
+      "y": 178,
+      "timestamp": 1789428895755,
+      "hit3d": {
+        "meshName": "Model 1 (001)",
+        "faceIndex": 1647183,
+        "point3d": {
+          "x": -4.953,
+          "y": 1.4175,
+          "z": -58.2278
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 79,
+      "y": 149,
+      "timestamp": 1789428896881,
+      "hit3d": {
+        "meshName": "Model 1 (001)",
+        "faceIndex": 2034108,
+        "point3d": {
+          "x": -42.7023,
+          "y": 23.0049,
+          "z": -118.9839
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 285,
+      "y": 174,
+      "timestamp": 1789428899378,
+      "hit3d": {
+        "meshName": "Model 1 (001)",
+        "faceIndex": 1824860,
+        "point3d": {
+          "x": 50.9433,
+          "y": 7.1409,
+          "z": -107.0534
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 202,
+      "y": 231,
+      "timestamp": 1789428900175,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 165,
+      "y": 215,
+      "timestamp": 1789428901391,
+      "hit3d": {
+        "meshName": "Model 1 (001)",
+        "faceIndex": 330053,
+        "point3d": {
+          "x": 40.8815,
+          "y": -26.3832,
+          "z": 56.0629
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 321,
+      "y": 160,
+      "timestamp": 1789428904540,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 412,
+      "y": 201,
+      "timestamp": 1789428906911,
+      "hit3d": {
+        "meshName": "Model 1 (001)",
+        "faceIndex": 221141,
+        "point3d": {
+          "x": 69.6932,
+          "y": -14.4113,
+          "z": -115.4297
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-09-14T23:35:21.858Z"
+}
