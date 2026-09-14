@@ -1,0 +1,117 @@
+{
+  "participantId": "anonymous",
+  "modelSource": "builtin",
+  "shape": "dog",
+  "objFile": "dog_procedural",
+  "customObjRepoPath": null,
+  "totalClicks": 7,
+  "totalHits": 6,
+  "faceHits": {
+    "body_f694": 1,
+    "head_f603": 1,
+    "bl_leg_f23": 1,
+    "body_f1056": 1,
+    "bl_leg_f21": 1,
+    "head_f615": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 297,
+      "y": 144,
+      "timestamp": 1789429666551,
+      "hit3d": {
+        "meshName": "body",
+        "faceIndex": 694,
+        "point3d": {
+          "x": 0.3109,
+          "y": 0.193,
+          "z": 0.2581
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 342,
+      "y": 135,
+      "timestamp": 1789429667285,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 603,
+        "point3d": {
+          "x": 0.5663,
+          "y": 0.2489,
+          "z": 0.2085
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 236,
+      "y": 305,
+      "timestamp": 1789429668097,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 172,
+      "y": 246,
+      "timestamp": 1789429669299,
+      "hit3d": {
+        "meshName": "bl_leg",
+        "faceIndex": 23,
+        "point3d": {
+          "x": -0.3687,
+          "y": -0.3612,
+          "z": 0.2421
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 248,
+      "y": 188,
+      "timestamp": 1789429670236,
+      "hit3d": {
+        "meshName": "body",
+        "faceIndex": 1056,
+        "point3d": {
+          "x": -0.4664,
+          "y": -0.0369,
+          "z": 0.0381
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 285,
+      "y": 268,
+      "timestamp": 1789429670981,
+      "hit3d": {
+        "meshName": "bl_leg",
+        "faceIndex": 21,
+        "point3d": {
+          "x": -0.3998,
+          "y": -0.4432,
+          "z": 0.2264
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 231,
+      "y": 116,
+      "timestamp": 1789429671955,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 615,
+        "point3d": {
+          "x": 0.7667,
+          "y": 0.2597,
+          "z": 0.0358
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-09-14T23:47:53.314Z"
+}
