@@ -189,14 +189,12 @@
 <script>
 
 // ═══════════════════════════════════════════════════════════════
-//  GITHUB CONFIGURATION
+//  SUBMISSION CONFIGURATION
 // ═══════════════════════════════════════════════════════════════
-var SUBMISSION_FOLDER = 'submissions'; 
-
-// Populate fields on page load
-document.getElementById('gh-user').value = GITHUB_USER === 'ysoni2-art' ? '' : GITHUB_USER;
-document.getElementById('gh-repo').value = GITHUB_REPO === 'mesh-saliency-study' ? '' : GITHUB_REPO;
-document.getElementById('gh-token').value = GITHUB_TOKEN;
+// Leave this empty while testing locally. Responses download as JSON.
+// Later, put your secure Vercel endpoint URL here.
+var SUBMISSION_API_URL = '';
+var SUBMISSION_FOLDER = 'submissions';
 
 
 
@@ -640,9 +638,6 @@ function saveData() {
   }
 
   var participantId = document.getElementById('participant-id').value.trim() || 'anonymous';
-  var timeStamp = new Date().toISOString().replace(/[:.]/g, '-');
-  
-  // Determine folder name dynamically based on selected model
   var subFolder = (currentModelSource === 'uploaded') ? 'custom' : currentShape;
 
   var data = {
@@ -658,71 +653,41 @@ function saveData() {
     submittedAt: new Date().toISOString()
   };
 
-  // If no GitHub Token is configured, provide clear notice and download local JSON
-  if (!GITHUB_TOKEN || GITHUB_TOKEN === 'github_pat_YOUR_FINE_GRAINED_TOKEN_HERE' || !GITHUB_USER || GITHUB_USER === 'YOUR_GITHUB_USERNAME') {
+  // Safe fallback while the secure backend is not connected.
+  if (!SUBMISSION_API_URL) {
     var fname = downloadJSON(data, participantId);
     document.getElementById('status-bar').textContent =
-      'ℹ️ GitHub Token not configured below — response downloaded locally as ' + fname;
+      'ℹ️ Secure submission API is not connected yet — JSON downloaded locally as ' + fname;
     return;
   }
 
-  var apiBase = 'https://api.github.com/repos/' + GITHUB_USER + '/' + GITHUB_REPO + '/contents/';
-  var headers = {
-    'Authorization': 'Bearer ' + GITHUB_TOKEN,
-    'Content-Type': 'application/json',
-    'Accept': 'application/vnd.github.v3+json'
-  };
+  document.getElementById('status-bar').textContent =
+    '⏳ Saving response securely...';
 
-  var promises = [];
-  var customObjPath = null;
-
-  // 1. IF CUSTOM OBJ: Upload to submissions/custom/models/
-  if (currentModelSource === 'uploaded' && uploadedObjText) {
-    customObjPath = SUBMISSION_FOLDER + '/custom/models/' + participantId + '_' + timeStamp + '_' + currentObjName;
-    data.customObjRepoPath = customObjPath;
-    var encodedObj = btoa(unescape(encodeURIComponent(uploadedObjText)));
-
-    var objUpload = fetch(apiBase + customObjPath, {
-      method: 'PUT',
-      headers: headers,
-      body: JSON.stringify({
-        message: 'Add custom OBJ model from ' + participantId,
-        content: encodedObj
-      })
+  fetch(SUBMISSION_API_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(function(response) {
+    return response.json().catch(function() {
+      return { error: 'Server returned an invalid response.' };
+    }).then(function(result) {
+      if (!response.ok) {
+        throw new Error(result.error || ('Server HTTP ' + response.status));
+      }
+      return result;
     });
-    promises.push(objUpload);
-  }
-
-  // 2. SAVE JSON: Upload to submissions/<shape>/ (e.g., submissions/human/ or submissions/custom/)
-  var jsonFileName = SUBMISSION_FOLDER + '/' + subFolder + '/' + participantId + '_' + timeStamp + '.json';
-  var encodedJson = btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2))));
-
-  var jsonUpload = fetch(apiBase + jsonFileName, {
-    method: 'PUT',
-    headers: headers,
-    body: JSON.stringify({
-      message: 'Add saliency data from ' + participantId,
-      content: encodedJson
-    })
-  });
-  promises.push(jsonUpload);
-
-  document.getElementById('status-bar').textContent = '⏳ Uploading response to GitHub (' + GITHUB_USER + '/' + GITHUB_REPO + ')...';
-
-  // 3. EXECUTE UPLOADS
-  Promise.all(promises)
-  .then(function(responses) {
-    for (var i = 0; i < responses.length; i++) {
-      if (!responses[i].ok) throw new Error('GitHub API HTTP ' + responses[i].status);
-    }
+  })
+  .then(function(result) {
     document.getElementById('status-bar').textContent =
-      '✅ Response saved to "' + jsonFileName + '" on GitHub!';
+      '✅ Response saved successfully: ' + (result.jsonPath || 'GitHub');
   })
   .catch(function(err) {
-    console.error('Upload Error:', err);
+    console.error('Submission Error:', err);
     var fname = downloadJSON(data, participantId);
     document.getElementById('status-bar').textContent =
-      '⚠️ Direct GitHub upload failed (' + err.message + '). Local JSON downloaded instead.';
+      '⚠️ Secure upload failed (' + err.message + '). Local JSON downloaded as ' + fname + '.';
   });
 }
 
