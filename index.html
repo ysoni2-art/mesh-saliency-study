@@ -132,11 +132,11 @@
   <div>
     <label>Select Shape: </label>
     <select id="shape-select" onchange="switchShape()">
-      <option value="human">Human Figure</option>
-      <option value="dog">Dog</option>
-      <option value="mug">Mug / Cup</option>
-      <option value="chair">Chair</option>
-      <option value="airplane">Airplane</option>
+      <option value="human">Shape 1</option>
+      <option value="dog">Shape 2</option>
+      <option value="mug">Shape 3</option>
+      <option value="chair">Shape 4</option>
+      <option value="airplane">Shape 5</option>
     </select>
   </div>
 </div>
@@ -195,7 +195,7 @@ var SUBMISSION_FOLDER = 'submissions';
 // ═══════════════════════════════════════════════════════════════
 var CANVAS_W = 480, CANVAS_H = 360;
 var BUBBLE_R = 22;   // fixed "small" reveal radius
-var BLUR_R   = 40;   // fixed maximum blur
+var BLUR_R   = 70;   // fixed maximum blur
 var ZOOM_MULTIPLIER = 1.35;
 
 var viewList = [
@@ -211,13 +211,15 @@ var currentShape = 'human';
 var currentObjName = 'procedural';
 var currentModelSource = 'builtin'; // 'builtin' or 'uploaded'
 
+var SHAPE_NUMBER = { human:1, dog:2, mug:3, chair:4, airplane:5 };
+
 function updateModelSourceBadge(){
   var badge = document.getElementById('model-source-badge');
   if(currentModelSource === 'uploaded'){
     badge.textContent = 'Your uploaded model (' + currentObjName + ')';
     badge.className = 'uploaded';
   } else {
-    badge.textContent = 'Built-in shape (' + currentShape + ')';
+    badge.textContent = 'Built-in Shape ' + SHAPE_NUMBER[currentShape];
     badge.className = 'builtin';
   }
 }
@@ -275,6 +277,8 @@ function drawBlurred(v){
   var ctx = b.getContext('2d');
   ctx.putImageData(snapshots[v],0,0);
   StackBlur.canvasRGB(b,0,0,CANVAS_W,CANVAS_H,BLUR_R);
+  ctx.fillStyle = 'rgba(0,0,0,0.55)';
+  ctx.fillRect(0,0,CANVAS_W,CANVAS_H);
   redrawBubbles(v);
 }
 
