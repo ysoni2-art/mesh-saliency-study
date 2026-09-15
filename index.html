@@ -655,44 +655,6 @@ function saveData() {
   });
 }
 
-  // Safe fallback while the secure backend is not connected.
-  if (!SUBMISSION_API_URL) {
-    var fname = downloadJSON(data, participantId);
-    document.getElementById('status-bar').textContent =
-      'ℹ️ Secure submission API is not connected yet — JSON downloaded locally as ' + fname;
-    return;
-  }
-
-  document.getElementById('status-bar').textContent =
-    '⏳ Saving response securely...';
-
-  fetch(SUBMISSION_API_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
-  })
-  .then(function(response) {
-    return response.json().catch(function() {
-      return { error: 'Server returned an invalid response.' };
-    }).then(function(result) {
-      if (!response.ok) {
-        throw new Error(result.error || ('Server HTTP ' + response.status));
-      }
-      return result;
-    });
-  })
-  .then(function(result) {
-    document.getElementById('status-bar').textContent =
-      '✅ Response saved successfully: ' + (result.jsonPath || 'GitHub');
-  })
-  .catch(function(err) {
-    console.error('Submission Error:', err);
-    var fname = downloadJSON(data, participantId);
-    document.getElementById('status-bar').textContent =
-      '⚠️ Secure upload failed (' + err.message + '). Local JSON downloaded as ' + fname + '.';
-  });
-}
-
 function resetAll(){
   allClicks=[]; totalClicks=0; totalHits=0; faceHits={};
   viewList.forEach(function(v){ clicksPerView[v.name]=[]; });
