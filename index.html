@@ -504,59 +504,10 @@ function loadProceduralModel(shapeName){
   updateModelSourceBadge();
 
   resetAll();
-  document.getElementById('model-name').textContent = '';
   document.getElementById('status-bar').textContent =
     '✅ ' + shapeName.charAt(0).toUpperCase()+shapeName.slice(1) +
     ' loaded — views are blurred. Click to reveal areas.';
 }
-
-// ═══════════════════════════════════════════════════════════════
-//  OBJ FILE LOADER
-// ═══════════════════════════════════════════════════════════════
-var objLoader = new THREE.OBJLoader();
-
-function prepareLoadedObject(object){
-  var idx=0;
-  object.traverse(function(child){
-    if(child.isMesh){
-      if(!child.name) child.name='part_'+(idx++);
-      if(child.geometry.index) child.geometry=child.geometry.toNonIndexed();
-      child.geometry.computeVertexNormals();
-      child.material = MAT_DEFAULT.clone();
-    }
-  });
-}
-
-function loadModelFromFile(file){
-  var reader = new FileReader();
-  reader.onload = function(e){
-    uploadedObjText = e.target.result; // <-- Stores raw OBJ content for submission
-
-    var object = objLoader.parse(e.target.result);
-    if(meshObject) scene.remove(meshObject);
-    prepareLoadedObject(object);
-    meshObject = object;
-    var box = new THREE.Box3().setFromObject(meshObject);
-    meshObject.position.sub(box.getCenter(new THREE.Vector3()));
-    var sz = box.getSize(new THREE.Vector3());
-    modelSize = Math.max(sz.x,sz.y,sz.z);
-    scene.add(meshObject);
-    positionCameras();
-    modelLoaded = true;
-    currentObjName = file.name;
-    currentModelSource = 'uploaded';
-    updateModelSourceBadge();
-    resetAll();
-    document.getElementById('model-name').textContent = '(loaded: ' + file.name + ')';
-    document.getElementById('status-bar').textContent =
-      '✅ ' + file.name + ' loaded — click blurred views to record saliency';
-  };
-  reader.readAsText(file);
-}
-
-document.getElementById('obj-file-input').addEventListener('change',function(e){
-  var f=e.target.files[0]; if(f) loadModelFromFile(f);
-});
 
 function switchShape(){
   currentShape = document.getElementById('shape-select').value;
@@ -628,33 +579,81 @@ function saveData() {
     return;
   }
 
-  var participantId = document.getElementById('participant-id').value.trim() || 'anonymous';
-  var subFolder = (currentModelSource === 'uploaded') ? 'custom' : currentShape;
+  var participantId =
+    document.getElementById('participant-id').value.trim() || 'anonymous';
 
   var data = {
-  participantId: participantId,
-  modelSource: currentModelSource,
-  shape: currentShape,
-  objFile: currentObjName,
+    participantId: participantId,
+    modelSource: 'builtin',
+    shape: currentShape,
+    objFile: currentShape + '_procedural',
+    customObjRepoPath: null,
 
-  customObjRepoPath:
-    currentModelSource === 'uploaded'
-      ? 'custom/models/'
-      : null,
+    totalClicks: totalClicks,
+    totalHits: totalHits,
+    faceHits: faceHits,
+    clicks: allClicks,
 
-  totalClicks: totalClicks,
-  totalHits: totalHits,
-  faceHits: faceHits,
-  clicks: allClicks,
+    submittedAt: new Date().toISOString()
+  };
 
-  submittedAt: new Date().toISOString(),
+  if (!SUBMISSION_API_URL) {
+    var fname = downloadJSON(data, participantId);
 
-  // Send the actual uploaded OBJ text to the secure backend
-  objText:
-    currentModelSource === 'uploaded'
-      ? uploadedObjText
-      : null
-};
+    document.getElementById('status-bar').textContent =
+      'ℹ️ Secure submission API is not connected yet — JSON downloaded locally as ' + fname;
+
+    return;
+  }
+
+  document.getElementById('status-bar').textContent =
+    '⏳ Saving response securely...';
+
+  fetch(SUBMISSION_API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(function(response) {
+    return response.json().catch(function() {
+      return {
+        error: 'Server returned an invalid response.'
+      };
+    }).then(function(result) {
+
+      if (!response.ok) {
+        throw new Error(
+          result.error || ('Server HTTP ' + response.status)
+        );
+      }
+
+      return result;
+    });
+  })
+  .then(function(result) {
+
+    document.getElementById('status-bar').textContent =
+      '✅ Response saved successfully: ' +
+      (result.jsonPath || 'GitHub');
+
+  })
+  .catch(function(err) {
+
+    console.error('Submission Error:', err);
+
+    var fname = downloadJSON(data, participantId);
+
+    document.getElementById('status-bar').textContent =
+      '⚠️ Secure upload failed (' +
+      err.message +
+      '). Local JSON downloaded as ' +
+      fname +
+      '.';
+
+  });
+}
 
   // Safe fallback while the secure backend is not connected.
   if (!SUBMISSION_API_URL) {
