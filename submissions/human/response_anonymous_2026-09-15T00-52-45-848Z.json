@@ -1,0 +1,20 @@
+{
+  "participantId": "anonymous",
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "totalClicks": 1,
+  "totalHits": 0,
+  "faceHits": {},
+  "clicks": [
+    {
+      "view": "front",
+      "x": 318,
+      "y": 150,
+      "timestamp": 1789433564149,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-09-15T00:52:44.835Z"
+}
