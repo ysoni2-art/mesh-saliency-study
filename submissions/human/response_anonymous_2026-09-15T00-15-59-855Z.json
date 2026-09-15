@@ -1,0 +1,44 @@
+{
+  "participantId": "anonymous",
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "totalClicks": 3,
+  "totalHits": 1,
+  "faceHits": {
+    "l_lower_arm_f26": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 312,
+      "y": 147,
+      "timestamp": 1789431356623,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 245,
+      "y": 147,
+      "timestamp": 1789431357374,
+      "hit3d": {
+        "meshName": "l_lower_arm",
+        "faceIndex": 26,
+        "point3d": {
+          "x": -0.6335,
+          "y": 0.162,
+          "z": 0.0223
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 219,
+      "y": 218,
+      "timestamp": 1789431358043,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-09-15T00:15:59.216Z"
+}
