@@ -1,0 +1,53 @@
+{
+  "participantId": "anonymous",
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "totalClicks": 3,
+  "totalHits": 2,
+  "faceHits": {
+    "torso_f38": 1,
+    "r_lower_arm_f42": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 248,
+      "y": 174,
+      "timestamp": 1789472444409,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 38,
+        "point3d": {
+          "x": -0.1773,
+          "y": 0.0375,
+          "z": 0.0501
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 176,
+      "y": 151,
+      "timestamp": 1789472446004,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 244,
+      "y": 135,
+      "timestamp": 1789472449129,
+      "hit3d": {
+        "meshName": "r_lower_arm",
+        "faceIndex": 42,
+        "point3d": {
+          "x": 0.5899,
+          "y": 0.2239,
+          "z": -0.0207
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-09-15T11:40:54.127Z"
+}
