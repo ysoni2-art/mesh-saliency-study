@@ -35,12 +35,12 @@ export default async function handler(req, res) {
     // GET DATA FROM WEBSITE
     // --------------------------------------------------
 
-    const {
-  participantId,
+        const {
   modelSource,
   shape,
   objFile,
   customObjRepoPath,
+  answers,
   totalClicks,
   totalHits,
   faceHits,
@@ -59,12 +59,6 @@ console.log(
     // --------------------------------------------------
     // BASIC VALIDATION
     // --------------------------------------------------
-
-    if (!participantId) {
-      return res.status(400).json({
-        error: 'Missing participantId'
-      });
-    }
 
     if (!modelSource) {
       return res.status(400).json({
@@ -102,13 +96,13 @@ console.log(
         .substring(0, 80);
     }
 
-    const safeParticipant =
-      safeName(participantId);
-
     const timestamp =
       new Date()
         .toISOString()
         .replace(/[:.]/g, '-');
+
+    const randomSuffix =
+      Math.random().toString(36).substring(2, 8);
 
     // --------------------------------------------------
     // CHOOSE RESPONSE FOLDER
@@ -131,7 +125,7 @@ console.log(
     // --------------------------------------------------
 
     const jsonFilename =
-      `response_${safeParticipant}_${timestamp}.json`;
+      `response_${timestamp}_${randomSuffix}.json`;
 
     const jsonPath =
       `${responseFolder}/${jsonFilename}`;
@@ -141,8 +135,6 @@ console.log(
     // --------------------------------------------------
 
     const responseData = {
-      participantId: participantId,
-
       modelSource: modelSource,
 
       shape: shape || null,
@@ -151,6 +143,9 @@ console.log(
 
       customObjRepoPath:
         customObjRepoPath || null,
+
+      answers:
+        answers || null,
 
       totalClicks:
         totalClicks || 0,
