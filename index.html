@@ -144,23 +144,30 @@
 
 <div id="status-bar">⏳ Building model...</div>
 
-<!-- PARTICIPANT INFO -->
-<div id="participant-bar">
-  <label>Your name / ID: <input type="text" id="participant-id" placeholder="e.g. student_04"></label>
-  <span>Currently using: <span id="model-source-badge" class="builtin">Built-in shape</span></span>
+<!-- INSTRUCTIONS -->
+<div id="instructions-bar">
+  Try to answer the question as best as you can. You may click on the views to gradually reveal the shape. Click as much as you want, but not more than needed to answer the question.
 </div>
 
-<!-- SHAPE SELECTOR (Task condition removed per your request) -->
-<div id="selector-bar">
-  <div>
-    <label>Select Shape: </label>
-    <select id="shape-select" onchange="switchShape()">
-      <option value="human">Shape 1</option>
-      <option value="dog">Shape 2</option>
-      <option value="mug">Shape 3</option>
-      <option value="chair">Shape 4</option>
-      <option value="airplane">Shape 5</option>
-    </select>
+<!-- QUESTIONS -->
+<div id="participant-bar">
+  <div class="question-block">
+    <label class="question-label" for="q-object">(i) What is the object (for example, car, phone, etc.)?</label>
+    <input type="text" id="q-object" class="question-input-small" placeholder="Your answer">
+  </div>
+  <div class="question-block">
+    <label class="question-label" for="q-describe">(ii) Describe the object in words (type as many as you can).</label>
+    <textarea id="q-describe" class="question-input-large" placeholder="Your answer"></textarea>
+  </div>
+  <div class="question-block">
+    <label class="question-label">(iii) How aesthetic do you think is the object? Give a rating between 1 and 5 (the higher the more aesthetic).</label>
+    <div class="rating-group" id="q-rating">
+      <button type="button" class="rating-btn" data-value="1">1</button>
+      <button type="button" class="rating-btn" data-value="2">2</button>
+      <button type="button" class="rating-btn" data-value="3">3</button>
+      <button type="button" class="rating-btn" data-value="4">4</button>
+      <button type="button" class="rating-btn" data-value="5">5</button>
+    </div>
   </div>
 </div>
 
@@ -234,17 +241,29 @@ var currentShape = 'human';
 var currentObjName = 'procedural';
 var currentModelSource = 'builtin'; // 'builtin' or 'uploaded'
 
-var SHAPE_NUMBER = { human:1, dog:2, mug:3, chair:4, airplane:5 };
+var SHAPE_KEYS = ['human','dog','mug','chair','airplane'];
+function randomShape(){
+  return SHAPE_KEYS[Math.floor(Math.random()*SHAPE_KEYS.length)];
+}
 
-function updateModelSourceBadge(){
-  var badge = document.getElementById('model-source-badge');
-  if(currentModelSource === 'uploaded'){
-    badge.textContent = 'Your uploaded model (' + currentObjName + ')';
-    badge.className = 'uploaded';
-  } else {
-    badge.textContent = 'Built-in Shape ' + SHAPE_NUMBER[currentShape];
-    badge.className = 'builtin';
-  }
+var currentRating = null;
+function setRating(val){
+  currentRating = val;
+  document.querySelectorAll('.rating-btn').forEach(function(b){
+    b.classList.toggle('selected', parseInt(b.getAttribute('data-value'),10) === val);
+  });
+}
+document.querySelectorAll('.rating-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    setRating(parseInt(btn.getAttribute('data-value'),10));
+  });
+});
+
+function startNewRound(){
+  document.getElementById('q-object').value = '';
+  document.getElementById('q-describe').value = '';
+  setRating(null);
+  loadProceduralModel(randomShape());
 }
 
 viewList.forEach(function(v){ clicksPerView[v.name] = []; });
@@ -510,7 +529,7 @@ var BUILDERS = {
 };
 
 function loadProceduralModel(shapeName){
-  document.getElementById('status-bar').textContent = '⏳ Building ' + shapeName + '...';
+  document.getElementById('status-bar').textContent = '⏳ Building model...';
 
   if(meshObject) scene.remove(meshObject);
   meshObject = null; modelLoaded = false;
@@ -527,14 +546,12 @@ function loadProceduralModel(shapeName){
   modelLoaded = true;
   currentObjName = shapeName + '_procedural';
   currentModelSource = 'builtin';
-  updateModelSourceBadge();
+  currentShape = shapeName;
 
   resetAll();
   document.getElementById('status-bar').textContent =
-    '✅ ' + shapeName.charAt(0).toUpperCase()+shapeName.slice(1) +
-    ' loaded — views are blurred. Click to reveal areas.';
+    '✅ Ready — views are blurred. Click to reveal areas.';
 }
-
 function switchShape(){
   currentShape = document.getElementById('shape-select').value;
   loadProceduralModel(currentShape);
@@ -586,12 +603,12 @@ viewList.forEach(function(view){
 // ═══════════════════════════════════════════════════════════════
 //  DOWNLOAD FALLBACK
 // ═══════════════════════════════════════════════════════════════
-function downloadJSON(data, participantId){
+function downloadJSON(data){
   var blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
   var url=URL.createObjectURL(blob);
   var a=document.createElement('a');
   a.href=url;
-  a.download='saliency_'+participantId+'_'+currentShape+'_'+Date.now()+'.json';
+  a.download='saliency_'+currentShape+'_'+Date.now()+'.json';
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
@@ -607,15 +624,17 @@ function saveData() {
     return;
   }
 
-  var participantId =
-    document.getElementById('participant-id').value.trim() || 'anonymous';
-
   var data = {
-    participantId: participantId,
     modelSource: 'builtin',
     shape: currentShape,
     objFile: currentShape + '_procedural',
     customObjRepoPath: null,
+
+    answers: {
+      objectGuess: document.getElementById('q-object').value.trim(),
+      description: document.getElementById('q-describe').value.trim(),
+      aestheticRating: currentRating
+    },
 
     totalClicks: totalClicks,
     totalHits: totalHits,
@@ -626,11 +645,12 @@ function saveData() {
   };
 
   if (!SUBMISSION_API_URL) {
-    var fname = downloadJSON(data, participantId);
+    var fname = downloadJSON(data);
 
     document.getElementById('status-bar').textContent =
       'ℹ️ Secure submission API is not connected yet — JSON downloaded locally as ' + fname;
 
+    setTimeout(startNewRound, 1500);
     return;
   }
 
@@ -666,12 +686,14 @@ function saveData() {
       '✅ Response saved successfully: ' +
       (result.jsonPath || 'GitHub');
 
+    setTimeout(startNewRound, 1500);
+
   })
   .catch(function(err) {
 
     console.error('Submission Error:', err);
 
-    var fname = downloadJSON(data, participantId);
+    var fname = downloadJSON(data);
 
     document.getElementById('status-bar').textContent =
       '⚠️ Secure upload failed (' +
@@ -680,9 +702,10 @@ function saveData() {
       fname +
       '.';
 
+    setTimeout(startNewRound, 1500);
+
   });
 }
-
 function resetAll(){
   allClicks=[]; totalClicks=0; totalHits=0; faceHits={};
   viewList.forEach(function(v){ clicksPerView[v.name]=[]; });
@@ -697,7 +720,7 @@ function resetAll(){
 // ═══════════════════════════════════════════════════════════════
 //  INIT
 // ═══════════════════════════════════════════════════════════════
-loadProceduralModel('human');
+loadProceduralModel(randomShape());
 
 </script>
 </body>
