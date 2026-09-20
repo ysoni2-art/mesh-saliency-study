@@ -1,0 +1,135 @@
+{
+  "modelSource": "builtin",
+  "shape": "airplane",
+  "objFile": "airplane_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 14,
+  "totalHits": 2,
+  "faceHits": {
+    "fuselage_f301": 1,
+    "nose_f5": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 232,
+      "y": 142,
+      "timestamp": 1789917993898,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 334,
+      "y": 198,
+      "timestamp": 1789917994839,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 213,
+      "y": 178,
+      "timestamp": 1789917996013,
+      "hit3d": {
+        "meshName": "fuselage",
+        "faceIndex": 301,
+        "point3d": {
+          "x": -0.2785,
+          "y": 0.0234,
+          "z": 0.1392
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 347,
+      "y": 185,
+      "timestamp": 1789917996714,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 264,
+      "y": 182,
+      "timestamp": 1789917998140,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 336,
+      "y": 127,
+      "timestamp": 1789918000331,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 143,
+      "y": 263,
+      "timestamp": 1789918001350,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 180,
+      "y": 165,
+      "timestamp": 1789918002253,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 316,
+      "y": 196,
+      "timestamp": 1789918003746,
+      "hit3d": {
+        "meshName": "nose",
+        "faceIndex": 5,
+        "point3d": {
+          "x": 0.7856,
+          "y": -0.1677,
+          "z": 0.0615
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 347,
+      "y": 196,
+      "timestamp": 1789918004492,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 137,
+      "y": 178,
+      "timestamp": 1789918005987,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 245,
+      "y": 233,
+      "timestamp": 1789918008338,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 271,
+      "y": 162,
+      "timestamp": 1789918009220,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 192,
+      "y": 128,
+      "timestamp": 1789918010199,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-09-20T15:26:53.833Z"
+}
