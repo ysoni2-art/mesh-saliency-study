@@ -1,0 +1,92 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "rating",
+    "objectGuess": null,
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 8,
+  "totalHits": 2,
+  "faceHits": {
+    "torso_f16": 2
+  },
+  "clicks": [
+    {
+      "view": "right",
+      "x": 310,
+      "y": 120,
+      "timestamp": 1789918904782,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 262,
+      "y": 120,
+      "timestamp": 1789918905089,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 16,
+        "point3d": {
+          "x": 0.1567,
+          "y": 0.3647,
+          "z": -0.1351
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 262,
+      "y": 120,
+      "timestamp": 1789918905404,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 16,
+        "point3d": {
+          "x": 0.1567,
+          "y": 0.3647,
+          "z": -0.1351
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 224,
+      "y": 273,
+      "timestamp": 1789918905766,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 224,
+      "y": 273,
+      "timestamp": 1789918906067,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 191,
+      "y": 72,
+      "timestamp": 1789918906421,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 191,
+      "y": 72,
+      "timestamp": 1789918906720,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 191,
+      "y": 72,
+      "timestamp": 1789918906926,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-09-20T15:41:47.880Z"
+}
