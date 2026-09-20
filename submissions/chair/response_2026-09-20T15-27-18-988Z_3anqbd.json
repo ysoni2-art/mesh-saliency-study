@@ -1,0 +1,111 @@
+{
+  "modelSource": "builtin",
+  "shape": "chair",
+  "objFile": "chair_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 7,
+  "totalHits": 5,
+  "faceHits": {
+    "backrest_f9": 2,
+    "leg_fr_f20": 1,
+    "backrest_f0": 2
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 254,
+      "y": 136,
+      "timestamp": 1789918028047,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 9,
+        "point3d": {
+          "x": 0.0785,
+          "y": 0.243,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 347,
+      "y": 196,
+      "timestamp": 1789918028742,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 257,
+      "y": 311,
+      "timestamp": 1789918029587,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 163,
+      "y": 321,
+      "timestamp": 1789918030332,
+      "hit3d": {
+        "meshName": "leg_fr",
+        "faceIndex": 20,
+        "point3d": {
+          "x": -0.3126,
+          "y": -0.5745,
+          "z": 0.2945
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 293,
+      "y": 167,
+      "timestamp": 1789918032340,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 9,
+        "point3d": {
+          "x": -0.0833,
+          "y": 0.0662,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 312,
+      "y": 102,
+      "timestamp": 1789918033220,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 0,
+        "point3d": {
+          "x": 0.35,
+          "y": 0.3058,
+          "z": -0.2806
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 309,
+      "y": 73,
+      "timestamp": 1789918034104,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 0,
+        "point3d": {
+          "x": 0.35,
+          "y": 0.4209,
+          "z": -0.2685
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-09-20T15:27:18.756Z"
+}
