@@ -151,15 +151,15 @@
 
 <!-- QUESTIONS -->
 <div id="participant-bar">
-  <div class="question-block">
+  <div class="question-block" id="q-block-object">
     <label class="question-label" for="q-object">(i) What is the object (for example, car, phone, etc.)?</label>
     <input type="text" id="q-object" class="question-input-small" placeholder="Your answer">
   </div>
-  <div class="question-block">
+  <div class="question-block" id="q-block-describe">
     <label class="question-label" for="q-describe">(ii) Describe the object in words (type as many as you can).</label>
     <textarea id="q-describe" class="question-input-large" placeholder="Your answer"></textarea>
   </div>
-  <div class="question-block">
+  <div class="question-block" id="q-block-rating">
     <label class="question-label">(iii) How aesthetic do you think is the object? Give a rating between 1 and 5 (the higher the more aesthetic).</label>
     <div class="rating-group" id="q-rating">
       <button type="button" class="rating-btn" data-value="1">1</button>
@@ -259,10 +259,25 @@ document.querySelectorAll('.rating-btn').forEach(function(btn){
   });
 });
 
+var QUESTION_TYPES = ['object','describe','rating'];
+var currentQuestionType = null;
+
+function showQuestion(type){
+  document.getElementById('q-block-object').style.display   = (type === 'object')   ? 'block' : 'none';
+  document.getElementById('q-block-describe').style.display = (type === 'describe') ? 'block' : 'none';
+  document.getElementById('q-block-rating').style.display   = (type === 'rating')   ? 'block' : 'none';
+}
+
+function randomQuestionType(){
+  return QUESTION_TYPES[Math.floor(Math.random()*QUESTION_TYPES.length)];
+}
+
 function startNewRound(){
   document.getElementById('q-object').value = '';
   document.getElementById('q-describe').value = '';
   setRating(null);
+  currentQuestionType = randomQuestionType();
+  showQuestion(currentQuestionType);
   loadProceduralModel(randomShape());
 }
 
@@ -631,9 +646,10 @@ function saveData() {
     customObjRepoPath: null,
 
     answers: {
-      objectGuess: document.getElementById('q-object').value.trim(),
-      description: document.getElementById('q-describe').value.trim(),
-      aestheticRating: currentRating
+      questionType: currentQuestionType,
+      objectGuess: currentQuestionType === 'object' ? document.getElementById('q-object').value.trim() : null,
+      description: currentQuestionType === 'describe' ? document.getElementById('q-describe').value.trim() : null,
+      aestheticRating: currentQuestionType === 'rating' ? currentRating : null
     },
 
     totalClicks: totalClicks,
@@ -717,9 +733,8 @@ function resetAll(){
   if(modelLoaded) captureAndBlurAll();
 }
 
-// ═══════════════════════════════════════════════════════════════
-//  INIT
-// ═══════════════════════════════════════════════════════════════
+currentQuestionType = randomQuestionType();
+showQuestion(currentQuestionType);
 loadProceduralModel(randomShape());
 
 </script>
