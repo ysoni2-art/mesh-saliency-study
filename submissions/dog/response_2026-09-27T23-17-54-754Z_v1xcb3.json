@@ -1,0 +1,81 @@
+{
+  "modelSource": "builtin",
+  "shape": "dog",
+  "objFile": "dog_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "this is a veru great animal",
+    "aestheticRating": null
+  },
+  "totalClicks": 5,
+  "totalHits": 3,
+  "faceHits": {
+    "body_f562": 1,
+    "fl_leg_f1": 1,
+    "head_f494": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 247,
+      "y": 121,
+      "timestamp": 1790551066846,
+      "hit3d": {
+        "meshName": "body",
+        "faceIndex": 562,
+        "point3d": {
+          "x": 0.0336,
+          "y": 0.2862,
+          "z": 0.3122
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 280,
+      "y": 259,
+      "timestamp": 1790551067587,
+      "hit3d": {
+        "meshName": "fl_leg",
+        "faceIndex": 1,
+        "point3d": {
+          "x": 0.202,
+          "y": -0.3991,
+          "z": 0.2386
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 143,
+      "y": 228,
+      "timestamp": 1790551068378,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 359,
+      "y": 115,
+      "timestamp": 1790551069818,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 494,
+        "point3d": {
+          "x": 0.6238,
+          "y": 0.342,
+          "z": 0.181
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 133,
+      "y": 109,
+      "timestamp": 1790551070902,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-09-27T23:17:53.444Z"
+}
