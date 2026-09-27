@@ -1,0 +1,51 @@
+{
+  "modelSource": "builtin",
+  "shape": "dog",
+  "objFile": "dog_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "",
+    "aestheticRating": null
+  },
+  "totalClicks": 2,
+  "totalHits": 2,
+  "faceHits": {
+    "body_f1116": 1,
+    "body_f618": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 228,
+      "y": 187,
+      "timestamp": 1790545042496,
+      "hit3d": {
+        "meshName": "body",
+        "faceIndex": 1116,
+        "point3d": {
+          "x": -0.5265,
+          "y": -0.0315,
+          "z": -0.0515
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 302,
+      "y": 127,
+      "timestamp": 1790545043414,
+      "hit3d": {
+        "meshName": "body",
+        "faceIndex": 618,
+        "point3d": {
+          "x": -0.3942,
+          "y": 0.2481,
+          "z": 0.2907
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-09-27T21:37:24.788Z"
+}
