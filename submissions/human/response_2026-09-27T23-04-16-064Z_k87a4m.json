@@ -1,0 +1,97 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "men",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 6,
+  "totalHits": 4,
+  "faceHits": {
+    "r_shoulder_f148": 1,
+    "l_palm_f237": 1,
+    "r_palm_f151": 1,
+    "torso_f945": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 182,
+      "y": 63,
+      "timestamp": 1790550246965,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 273,
+      "y": 106,
+      "timestamp": 1790550247737,
+      "hit3d": {
+        "meshName": "r_shoulder",
+        "faceIndex": 148,
+        "point3d": {
+          "x": 0.255,
+          "y": 0.5767,
+          "z": 0.0739
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 178,
+      "y": 189,
+      "timestamp": 1790550248441,
+      "hit3d": {
+        "meshName": "l_palm",
+        "faceIndex": 237,
+        "point3d": {
+          "x": -0.4845,
+          "y": -0.0721,
+          "z": 0.0327
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 300,
+      "y": 233,
+      "timestamp": 1790550249257,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 310,
+      "y": 185,
+      "timestamp": 1790550250266,
+      "hit3d": {
+        "meshName": "r_palm",
+        "faceIndex": 151,
+        "point3d": {
+          "x": 0.5455,
+          "y": -0.0396,
+          "z": 0.0529
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 240,
+      "y": 177,
+      "timestamp": 1790550251017,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 945,
+        "point3d": {
+          "x": 0.0001,
+          "y": 0.0235,
+          "z": 0.1828
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-09-27T23:04:15.915Z"
+}
