@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Task-Aware Mesh Saliency — Data Collection</title>
+  <title>Mesh Saliency — Data Collection</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: #1a1a1a; font-family: Arial, sans-serif; color: white; }
@@ -138,7 +138,7 @@
 <body>
 
 <div id="task-bar">
-  <h2 id="task-title">Task-Aware Mesh Saliency Study</h2>
+  <h2 id="task-title">Mesh Saliency Study</h2>
   <p id="task-desc">The views start fully blurred. Click on each view to reveal small circular areas and explore the 3D shape.</p>
 </div>
 
@@ -224,7 +224,7 @@ var SUBMISSION_FOLDER = 'submissions';
 //  CONSTANTS & STATE
 // ═══════════════════════════════════════════════════════════════
 var CANVAS_W = 480, CANVAS_H = 360;
-var BUBBLE_R = 22;   // fixed "small" reveal radius
+var BUBBLE_R = 40;   // fixed "small" reveal radius
 var BLUR_R   = 70;   // fixed maximum blur
 var ZOOM_MULTIPLIER = 1.35;
 
@@ -241,7 +241,7 @@ var currentShape = 'human';
 var currentObjName = 'procedural';
 var currentModelSource = 'builtin'; // 'builtin' or 'uploaded'
 
-var SHAPE_KEYS = ['human','dog','mug','chair','airplane'];
+var SHAPE_KEYS = ['human','dog','mug','chair','bottle'];
 function randomShape(){
   return SHAPE_KEYS[Math.floor(Math.random()*SHAPE_KEYS.length)];
 }
@@ -407,6 +407,11 @@ function buildHuman(){
   var lla=add(new THREE.CylinderGeometry(0.05,0.04,0.26,16),'l_lower_arm',-0.52,0.18,0);  lla.rotation.z= Math.PI/4;
   var rua=add(new THREE.CylinderGeometry(0.06,0.06,0.28,16),'r_upper_arm', 0.33,0.40,0);  rua.rotation.z=-Math.PI/5;
   var rla=add(new THREE.CylinderGeometry(0.05,0.04,0.26,16),'r_lower_arm', 0.52,0.18,0);  rla.rotation.z=-Math.PI/4;
+
+  var lh1=add(new THREE.CylinderGeometry(0.035,0.025,0.12,12),'l_hand_a',-0.43,0.06,0); lh1.rotation.z = Math.PI/3;
+  var lh2=add(new THREE.CylinderGeometry(0.035,0.025,0.12,12),'l_hand_b',-0.46,0.10,0); lh2.rotation.z = Math.PI/6;
+  var rh1=add(new THREE.CylinderGeometry(0.035,0.025,0.12,12),'r_hand_a', 0.43,0.06,0); rh1.rotation.z = -Math.PI/3;
+  var rh2=add(new THREE.CylinderGeometry(0.035,0.025,0.12,12),'r_hand_b', 0.46,0.10,0); rh2.rotation.z = -Math.PI/6;
   add(new THREE.CylinderGeometry(0.09,0.08,0.35,16),'l_thigh',-0.11,-0.30,0);
   add(new THREE.CylinderGeometry(0.07,0.05,0.33,16),'l_shin', -0.11,-0.64,0);
   add(new THREE.CylinderGeometry(0.09,0.08,0.35,16),'r_thigh', 0.11,-0.30,0);
@@ -434,8 +439,8 @@ function buildDog(){
   var earGeo=new THREE.BoxGeometry(0.06,0.18,0.12);
   add(earGeo,'l_ear',0.60,0.35, 0.17, 0.3,0, 0.2);
   add(earGeo,'r_ear',0.60,0.35,-0.17, 0.3,0,-0.2);
-  var tail=makeMesh(new THREE.CylinderGeometry(0.04,0.02,0.45,12),'tail');
-  tail.position.set(-0.62,0.22,0); tail.rotation.z=-Math.PI/4; g.add(tail);
+  var tail=makeMesh(new THREE.CylinderGeometry(0.035,0.015,0.42,12),'tail');
+  tail.position.set(-0.50,0.14,0); tail.rotation.z=-Math.PI/3; g.add(tail);
   var legGeo=new THREE.CylinderGeometry(0.07,0.06,0.42,12);
   add(legGeo,'fl_leg', 0.30,-0.50, 0.18);
   add(legGeo,'fr_leg', 0.30,-0.50,-0.18);
@@ -502,36 +507,37 @@ function buildChair(){
   return g;
 }
 
-function buildAirplane(){
+function buildBottle(){
   var g = new THREE.Group();
-  function add(geo,name,x,y,z,rx,ry,rz){
-    var m=makeMesh(geo,name); m.position.set(x,y,z);
-    if(rx) m.rotation.x=rx;
-    if(ry) m.rotation.y=ry;
-    if(rz) m.rotation.z=rz;
-    g.add(m); return m;
-  }
-  var fuse=makeMesh(new THREE.SphereGeometry(0.18,32,20),'fuselage');
-  fuse.scale.set(5.0,1.0,1.0); g.add(fuse);
-  var nose=makeMesh(new THREE.ConeGeometry(0.18,0.40,20),'nose');
-  nose.rotation.z=-Math.PI/2; nose.position.set(0.93,0,0); g.add(nose);
-  var wingGeo=new THREE.BoxGeometry(0.12,0.04,1.40);
-  add(wingGeo,'wing_l', 0.05,0, 0.72);
-  add(wingGeo,'wing_r', 0.05,0,-0.72);
-  var tipGeo=new THREE.BoxGeometry(0.10,0.04,0.30);
-  add(tipGeo,'tip_l',0.05,0.12, 1.35);
-  add(tipGeo,'tip_r',0.05,0.12,-1.35);
-  add(new THREE.BoxGeometry(0.08,0.03,0.60),'h_tail',-0.84,0,0);
-  var vtail=makeMesh(new THREE.BoxGeometry(0.30,0.36,0.05),'v_tail');
-  vtail.position.set(-0.72,0.20,0); g.add(vtail);
-  var engGeo=new THREE.CylinderGeometry(0.07,0.07,0.32,16);
-  var e1=makeMesh(engGeo,'engine_l'); e1.rotation.z=Math.PI/2;
-  e1.position.set(0.05,-0.14,0.52); g.add(e1);
-  var e2=makeMesh(engGeo,'engine_r'); e2.rotation.z=Math.PI/2;
-  e2.position.set(0.05,-0.14,-0.52); g.add(e2);
-  var winGeo=new THREE.SphereGeometry(0.06,12,8);
-  add(winGeo,'window_l',0.62,0.10, 0.09);
-  add(winGeo,'window_r',0.62,0.10,-0.09);
+
+  var bodyR = 0.24, bodyH = 0.55;
+  var neckR = 0.08, neckH = 0.18;
+  var capR  = 0.09, capH  = 0.06;
+
+  var bodyGeo = new THREE.CylinderGeometry(bodyR, bodyR*0.92, bodyH, 32);
+  g.add(makeMesh(bodyGeo, 'bottle_body'));
+
+  var shoulderGeo = new THREE.CylinderGeometry(neckR, bodyR, 0.12, 32);
+  var shoulder = makeMesh(shoulderGeo, 'shoulder');
+  shoulder.position.y = bodyH/2 + 0.06;
+  g.add(shoulder);
+
+  var neckGeo = new THREE.CylinderGeometry(neckR, neckR, neckH, 24);
+  var neck = makeMesh(neckGeo, 'neck');
+  neck.position.y = bodyH/2 + 0.12 + neckH/2;
+  g.add(neck);
+
+  var capGeo = new THREE.CylinderGeometry(capR, capR, capH, 24);
+  var cap = makeMesh(capGeo, 'cap');
+  cap.position.y = bodyH/2 + 0.12 + neckH + capH/2;
+  g.add(cap);
+
+  var bottomGeo = new THREE.CircleGeometry(bodyR*0.92, 32);
+  var bottom = makeMesh(bottomGeo, 'bottle_bottom');
+  bottom.rotation.x = -Math.PI/2;
+  bottom.position.y = -bodyH/2;
+  g.add(bottom);
+
   return g;
 }
 
@@ -540,7 +546,7 @@ var BUILDERS = {
   dog:      buildDog,
   mug:      buildMug,
   chair:    buildChair,
-  airplane: buildAirplane
+  bottle: buildBottle
 };
 
 function loadProceduralModel(shapeName){
