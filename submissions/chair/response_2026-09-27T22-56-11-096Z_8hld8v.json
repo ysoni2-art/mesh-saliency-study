@@ -1,0 +1,74 @@
+{
+  "modelSource": "builtin",
+  "shape": "chair",
+  "objFile": "chair_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "a great chair",
+    "aestheticRating": null
+  },
+  "totalClicks": 4,
+  "totalHits": 3,
+  "faceHits": {
+    "backrest_f9": 1,
+    "leg_fl_f22": 1,
+    "arm_sup_r_f19": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 299,
+      "y": 163,
+      "timestamp": 1790549761498,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 9,
+        "point3d": {
+          "x": 0.3254,
+          "y": 0.0961,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 307,
+      "y": 230,
+      "timestamp": 1790549762440,
+      "hit3d": {
+        "meshName": "leg_fl",
+        "faceIndex": 22,
+        "point3d": {
+          "x": 0.2703,
+          "y": -0.2002,
+          "z": 0.3099
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 221,
+      "y": 45,
+      "timestamp": 1790549763270,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 145,
+      "y": 189,
+      "timestamp": 1790549764174,
+      "hit3d": {
+        "meshName": "arm_sup_r",
+        "faceIndex": 19,
+        "point3d": {
+          "x": -0.3959,
+          "y": -0.0361,
+          "z": 0.2473
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-09-27T22:56:10.582Z"
+}
