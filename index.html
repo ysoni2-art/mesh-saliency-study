@@ -645,6 +645,27 @@ function saveData() {
     return;
   }
 
+  if (currentQuestionType === 'object') {
+    var objectVal = document.getElementById('q-object').value.trim();
+    if (!objectVal) {
+      alert('Please answer the question before submitting: What is the object?');
+      document.getElementById('q-object').focus();
+      return;
+    }
+  } else if (currentQuestionType === 'describe') {
+    var describeVal = document.getElementById('q-describe').value.trim();
+    if (!describeVal) {
+      alert('Please answer the question before submitting: Describe the object in words.');
+      document.getElementById('q-describe').focus();
+      return;
+    }
+  } else if (currentQuestionType === 'rating') {
+    if (!currentRating) {
+      alert('Please give a rating (1–5) before submitting.');
+      return;
+    }
+  }
+
   var data = {
     modelSource: 'builtin',
     shape: currentShape,
