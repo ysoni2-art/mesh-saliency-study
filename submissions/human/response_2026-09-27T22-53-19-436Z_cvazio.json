@@ -1,0 +1,49 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "rating",
+    "objectGuess": null,
+    "description": null,
+    "aestheticRating": 2
+  },
+  "totalClicks": 3,
+  "totalHits": 1,
+  "faceHits": {
+    "pelvis_f480": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 209,
+      "y": 111,
+      "timestamp": 1790549593630,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 256,
+      "y": 201,
+      "timestamp": 1790549594407,
+      "hit3d": {
+        "meshName": "pelvis",
+        "faceIndex": 480,
+        "point3d": {
+          "x": -0.2202,
+          "y": -0.1566,
+          "z": 0.1145
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 216,
+      "y": 274,
+      "timestamp": 1790549595289,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-09-27T22:53:19.115Z"
+}
