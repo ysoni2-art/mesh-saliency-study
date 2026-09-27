@@ -1,0 +1,74 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "Human",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 4,
+  "totalHits": 3,
+  "faceHits": {
+    "l_shoulder_f349": 1,
+    "r_thigh_f5": 1,
+    "l_foot_f5": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 203,
+      "y": 119,
+      "timestamp": 1790549623563,
+      "hit3d": {
+        "meshName": "l_shoulder",
+        "faceIndex": 349,
+        "point3d": {
+          "x": -0.2846,
+          "y": 0.4671,
+          "z": 0.0954
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 325,
+      "y": 132,
+      "timestamp": 1790549718479,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 248,
+      "y": 228,
+      "timestamp": 1790549719503,
+      "hit3d": {
+        "meshName": "r_thigh",
+        "faceIndex": 5,
+        "point3d": {
+          "x": 0.0643,
+          "y": -0.3713,
+          "z": 0.0513
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 217,
+      "y": 317,
+      "timestamp": 1790549720385,
+      "hit3d": {
+        "meshName": "l_foot",
+        "faceIndex": 5,
+        "point3d": {
+          "x": -0.1764,
+          "y": -1.035,
+          "z": 0.1414
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-09-27T22:55:27.140Z"
+}
