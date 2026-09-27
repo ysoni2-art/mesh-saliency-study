@@ -392,38 +392,172 @@ function makeMesh(geo, name){
 
 function buildHuman(){
   var g = new THREE.Group();
-  function add(geo, name, x,y,z, rx,rz){
+
+  // Add a mesh to the human group.
+  function add(geo, name, x, y, z, sx, sy, sz){
     var m = makeMesh(geo, name);
-    m.position.set(x,y,z);
-    if(rx) m.rotation.x=rx;
-    if(rz) m.rotation.z=rz;
-    g.add(m); return m;
+    m.position.set(x, y, z);
+    if(sx !== undefined) m.scale.set(sx, sy, sz);
+    g.add(m);
+    return m;
   }
-  add(new THREE.SphereGeometry(0.18,32,32),         'head',         0, 0.82,0);
-  add(new THREE.CylinderGeometry(0.07,0.07,0.12,16),'neck',        0, 0.64,0);
-  add(new THREE.CylinderGeometry(0.22,0.18,0.55,24),'torso',       0, 0.32,0);
-  add(new THREE.CylinderGeometry(0.20,0.16,0.22,24),'hips',        0,-0.01,0);
-  var lua=add(new THREE.CylinderGeometry(0.06,0.06,0.28,16),'l_upper_arm',-0.33,0.40,0);  lua.rotation.z= Math.PI/5;
-  var lla=add(new THREE.CylinderGeometry(0.05,0.04,0.26,16),'l_lower_arm',-0.52,0.18,0);  lla.rotation.z= Math.PI/4;
-  var rua=add(new THREE.CylinderGeometry(0.06,0.06,0.28,16),'r_upper_arm', 0.33,0.40,0);  rua.rotation.z=-Math.PI/5;
-  var rla=add(new THREE.CylinderGeometry(0.05,0.04,0.26,16),'r_lower_arm', 0.52,0.18,0);  rla.rotation.z=-Math.PI/4;
 
-  var lHand = makeMesh(new THREE.CylinderGeometry(0.045,0.03,0.14,12), 'l_hand');
-  lHand.position.set(0, 0.18, 0);
-  lHand.rotation.z = 0.35;
-  lla.add(lHand);
+  // Add a limb exactly between two points.
+  // This prevents gaps between shoulders, elbows, wrists, hips, knees and ankles.
+  function addLimb(name, a, b, radiusTop, radiusBottom){
+    var direction = new THREE.Vector3().subVectors(b, a);
+    var length = direction.length();
 
-  var rHand = makeMesh(new THREE.CylinderGeometry(0.045,0.03,0.14,12), 'r_hand');
-  rHand.position.set(0, 0.18, 0);
-  rHand.rotation.z = -0.35;
-  rla.add(rHand);
-  add(new THREE.CylinderGeometry(0.09,0.08,0.35,16),'l_thigh',-0.11,-0.30,0);
-  add(new THREE.CylinderGeometry(0.07,0.05,0.33,16),'l_shin', -0.11,-0.64,0);
-  add(new THREE.CylinderGeometry(0.09,0.08,0.35,16),'r_thigh', 0.11,-0.30,0);
-  add(new THREE.CylinderGeometry(0.07,0.05,0.33,16),'r_shin',  0.11,-0.64,0);
-  var fg=new THREE.BoxGeometry(0.10,0.06,0.20);
-  add(fg,'l_foot',-0.11,-0.83,0.05);
-  add(fg,'r_foot', 0.11,-0.83,0.05);
+    var geo = new THREE.CylinderGeometry(
+      radiusTop, radiusBottom, length, 20, 1, false
+    );
+
+    var m = makeMesh(geo, name);
+    m.position.copy(a).add(b).multiplyScalar(0.5);
+    m.quaternion.setFromUnitVectors(
+      new THREE.Vector3(0, 1, 0),
+      direction.normalize()
+    );
+
+    g.add(m);
+    return m;
+  }
+
+  // -------------------------
+  // Main body
+  // -------------------------
+  add(
+    new THREE.SphereGeometry(1, 32, 24),
+    'torso',
+    0, 0.52, 0,
+    0.32, 0.50, 0.20
+  );
+
+  add(
+    new THREE.SphereGeometry(1, 28, 20),
+    'pelvis',
+    0, 0.12, 0,
+    0.28, 0.20, 0.19
+  );
+
+  // Neck and head
+  add(
+    new THREE.CylinderGeometry(0.075, 0.08, 0.12, 20),
+    'neck',
+    0, 0.98, 0
+  );
+
+  add(
+    new THREE.SphereGeometry(1, 32, 24),
+    'head',
+    0, 1.20, 0,
+    0.20, 0.23, 0.19
+  );
+
+  // -------------------------
+  // Shoulders and arms
+  // -------------------------
+  var shoulderL = new THREE.Vector3(-0.27, 0.80, 0);
+  var elbowL    = new THREE.Vector3(-0.43, 0.54, 0);
+  var wristL    = new THREE.Vector3(-0.52, 0.27, 0);
+
+  var shoulderR = new THREE.Vector3( 0.27, 0.80, 0);
+  var elbowR    = new THREE.Vector3( 0.43, 0.54, 0);
+  var wristR    = new THREE.Vector3( 0.52, 0.27, 0);
+
+  // Shoulder joints make the arms visually connected to the torso.
+  add(new THREE.SphereGeometry(0.105, 20, 16),
+      'l_shoulder', shoulderL.x, shoulderL.y, shoulderL.z);
+  add(new THREE.SphereGeometry(0.105, 20, 16),
+      'r_shoulder', shoulderR.x, shoulderR.y, shoulderR.z);
+
+  addLimb('l_upper_arm', shoulderL, elbowL, 0.075, 0.065);
+  addLimb('l_lower_arm', elbowL, wristL, 0.062, 0.050);
+  addLimb('r_upper_arm', shoulderR, elbowR, 0.075, 0.065);
+  addLimb('r_lower_arm', elbowR, wristR, 0.062, 0.050);
+
+  // Elbows and wrists.
+  add(new THREE.SphereGeometry(0.068, 18, 14),
+      'l_elbow', elbowL.x, elbowL.y, elbowL.z);
+  add(new THREE.SphereGeometry(0.068, 18, 14),
+      'r_elbow', elbowR.x, elbowR.y, elbowR.z);
+  add(new THREE.SphereGeometry(0.055, 18, 14),
+      'l_wrist', wristL.x, wristL.y, wristL.z);
+  add(new THREE.SphereGeometry(0.055, 18, 14),
+      'r_wrist', wristR.x, wristR.y, wristR.z);
+
+  // Hands: palm + three simple finger shapes.
+  // These are attached to the wrist rather than floating beside the arm.
+  function addHand(side, wrist){
+    var s = side === 'l' ? -1 : 1;
+
+    add(
+      new THREE.SphereGeometry(1, 20, 16),
+      side + '_palm',
+      wrist.x + s * 0.025,
+      wrist.y - 0.075,
+      0,
+      0.075, 0.105, 0.065
+    );
+
+    // Three short fingers pointing downward.
+    [-0.045, 0, 0.045].forEach(function(offset, i){
+      addLimb(
+        side + '_finger_' + i,
+        new THREE.Vector3(wrist.x + s * 0.025 + offset * s, wrist.y - 0.12, 0),
+        new THREE.Vector3(wrist.x + s * 0.025 + offset * s, wrist.y - 0.18, 0),
+        0.018, 0.014
+      );
+    });
+  }
+
+  addHand('l', wristL);
+  addHand('r', wristR);
+
+  // -------------------------
+  // Legs
+  // -------------------------
+  var hipL   = new THREE.Vector3(-0.13, 0.02, 0);
+  var kneeL  = new THREE.Vector3(-0.13, -0.36, 0);
+  var ankleL = new THREE.Vector3(-0.13, -0.72, 0);
+
+  var hipR   = new THREE.Vector3( 0.13, 0.02, 0);
+  var kneeR  = new THREE.Vector3( 0.13, -0.36, 0);
+  var ankleR = new THREE.Vector3( 0.13, -0.72, 0);
+
+  add(new THREE.SphereGeometry(0.10, 20, 16),
+      'l_hip', hipL.x, hipL.y, hipL.z);
+  add(new THREE.SphereGeometry(0.10, 20, 16),
+      'r_hip', hipR.x, hipR.y, hipR.z);
+
+  addLimb('l_thigh', hipL, kneeL, 0.095, 0.080);
+  addLimb('l_shin', kneeL, ankleL, 0.075, 0.055);
+  addLimb('r_thigh', hipR, kneeR, 0.095, 0.080);
+  addLimb('r_shin', kneeR, ankleR, 0.075, 0.055);
+
+  add(new THREE.SphereGeometry(0.075, 18, 14),
+      'l_knee', kneeL.x, kneeL.y, kneeL.z);
+  add(new THREE.SphereGeometry(0.075, 18, 14),
+      'r_knee', kneeR.x, kneeR.y, kneeR.z);
+
+  add(new THREE.SphereGeometry(0.06, 18, 14),
+      'l_ankle', ankleL.x, ankleL.y, ankleL.z);
+  add(new THREE.SphereGeometry(0.06, 18, 14),
+      'r_ankle', ankleR.x, ankleR.y, ankleR.z);
+
+  // Feet are attached directly to the ankles.
+  add(
+    new THREE.BoxGeometry(0.16, 0.10, 0.28),
+    'l_foot',
+    -0.13, -0.79, 0.055
+  );
+
+  add(
+    new THREE.BoxGeometry(0.16, 0.10, 0.28),
+    'r_foot',
+     0.13, -0.79, 0.055
+  );
+
   return g;
 }
 
