@@ -805,18 +805,34 @@ function saveData() {
     }
   }
 
+  // Read the answer at the exact moment of submission.
+  // For ratings, read the selected button as well as currentRating so the
+  // saved JSON reflects what is visibly selected in the page.
+  var selectedRatingButton = document.querySelector('.rating-btn.selected');
+  var submittedRating = selectedRatingButton
+    ? parseInt(selectedRatingButton.getAttribute('data-value'), 10)
+    : currentRating;
+
+  var submittedAnswers = {
+    questionType: currentQuestionType,
+    objectGuess: currentQuestionType === 'object'
+      ? document.getElementById('q-object').value.trim()
+      : null,
+    description: currentQuestionType === 'describe'
+      ? document.getElementById('q-describe').value.trim()
+      : null,
+    aestheticRating: currentQuestionType === 'rating'
+      ? submittedRating
+      : null
+  };
+
   var data = {
     modelSource: 'builtin',
     shape: currentShape,
     objFile: currentShape + '_procedural',
     customObjRepoPath: null,
 
-    answers: {
-      questionType: currentQuestionType,
-      objectGuess: currentQuestionType === 'object' ? document.getElementById('q-object').value.trim() : null,
-      description: currentQuestionType === 'describe' ? document.getElementById('q-describe').value.trim() : null,
-      aestheticRating: currentQuestionType === 'rating' ? currentRating : null
-    },
+    answers: submittedAnswers,
 
     totalClicks: totalClicks,
     totalHits: totalHits,
