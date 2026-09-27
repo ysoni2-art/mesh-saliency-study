@@ -1,0 +1,74 @@
+{
+  "modelSource": "builtin",
+  "shape": "mug",
+  "objFile": "mug_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "rating",
+    "objectGuess": null,
+    "description": null,
+    "aestheticRating": 4
+  },
+  "totalClicks": 4,
+  "totalHits": 3,
+  "faceHits": {
+    "cup_body_f76": 1,
+    "cup_body_f86": 1,
+    "cup_body_f65": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 179,
+      "y": 71,
+      "timestamp": 1790549752051,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 273,
+      "y": 188,
+      "timestamp": 1790549752774,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 76,
+        "point3d": {
+          "x": -0.4107,
+          "y": -0.019,
+          "z": 0.0841
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 320,
+      "y": 229,
+      "timestamp": 1790549753476,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 86,
+        "point3d": {
+          "x": -0.2998,
+          "y": -0.1367,
+          "z": 0.2246
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 195,
+      "y": 310,
+      "timestamp": 1790549754118,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 65,
+        "point3d": {
+          "x": -0.3728,
+          "y": -0.3393,
+          "z": -0.1173
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-09-27T22:55:57.222Z"
+}
