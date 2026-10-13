@@ -241,7 +241,7 @@ var currentShape = 'human';
 var currentObjName = 'procedural';
 var currentModelSource = 'builtin'; // 'builtin' or 'uploaded'
 
-var SHAPE_KEYS = ['human','dog','mug','chair','bottle'];
+var SHAPE_KEYS = ['human','mug','chair','bottle'];
 function randomShape(){
   return SHAPE_KEYS[Math.floor(Math.random()*SHAPE_KEYS.length)];
 }
@@ -679,38 +679,113 @@ function buildBottle(){
 
   return g;
 }
+// ═══════════ OBJ MODELS (from models/ folder) ═══════════
+var OBJ_MODELS = {
+  antler_head: 'models/0011_geometry.obj',
+  abstract:    'models/0026_geometry.obj',
+  hand_chair:  'models/0029_club_chair.obj',
+  lamp:        'models/0056_table_lamp.obj'
+};
+var OBJ_TARGET_SIZE = 1.6;
+var objCache = {};
 
+function parseOBJ(text){
+  var v = [], tri = [];
+  var lines = text.split(/\r?\n/);
+  for(var i = 0; i < lines.length; i++){
+    var l = lines[i];
+    if(l.charAt(0) === 'v' && l.charAt(1) === ' '){
+      var p = l.trim().split(/\s+/);
+      v.push(parseFloat(p[1]), parseFloat(p[2]), parseFloat(p[3]));
+    } else if(l.charAt(0) === 'f' && l.charAt(1) === ' '){
+      var q = l.trim().split(/\s+/).slice(1).map(function(t){
+        var n = parseInt(t.split('/')[0], 10);
+        return n < 0 ? v.length/3 + n : n - 1;
+      });
+      for(var k = 1; k < q.length - 1; k++){
+        [q[0], q[k], q[k+1]].forEach(function(ix){
+          tri.push(v[ix*3], v[ix*3+1], v[ix*3+2]);
+        });
+      }
+    }
+  }
+  var geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(tri), 3));
+  return geo;
+}
+
+function normalizeGeometry(geo){
+  geo.computeBoundingBox();
+  var box = geo.boundingBox;
+  var c = box.getCenter(new THREE.Vector3());
+  var s = box.getSize(new THREE.Vector3());
+  var scale = OBJ_TARGET_SIZE / Math.max(s.x, s.y, s.z);
+  geo.translate(-c.x, -c.y, -c.z);
+  geo.scale(scale, scale, scale);
+}
+
+function buildOBJModel(name){
+  var g = new THREE.Group();
+  g.add(makeMesh(objCache[name].clone(), name));
+  return g;
+}
+
+// Returns a Promise<THREE.Group> for either a procedural or an OBJ shape
+function getModelGroup(name){
+  if(!OBJ_MODELS[name]) return Promise.resolve(BUILDERS[name]());
+  if(objCache[name])    return Promise.resolve(buildOBJModel(name));
+  return fetch(OBJ_MODELS[name])
+    .then(function(r){
+      if(!r.ok) throw new Error('HTTP ' + r.status + ' for ' + OBJ_MODELS[name]);
+      return r.text();
+    })
+    .then(function(text){
+      var geo = parseOBJ(text);
+      normalizeGeometry(geo);
+      objCache[name] = geo;
+      return buildOBJModel(name);
+    });
+}
 var BUILDERS = {
   human:    buildHuman,
-  dog:      buildDog,
   mug:      buildMug,
   chair:    buildChair,
   bottle: buildBottle
 };
 
+var loadToken = 0;
 function loadProceduralModel(shapeName){
-  document.getElementById('status-bar').textContent = '⏳ Building model...';
+  var myToken = ++loadToken;
+  document.getElementById('status-bar').textContent = '⏳ Loading model...';
 
   if(meshObject) scene.remove(meshObject);
   meshObject = null; modelLoaded = false;
 
-  var group = BUILDERS[shapeName]();
-  var box = new THREE.Box3().setFromObject(group);
-  group.position.sub(box.getCenter(new THREE.Vector3()));
-  var sz = box.getSize(new THREE.Vector3());
-  modelSize = Math.max(sz.x, sz.y, sz.z);
+  getModelGroup(shapeName).then(function(group){
+    if(myToken !== loadToken) return;
+    var box = new THREE.Box3().setFromObject(group);
+    group.position.sub(box.getCenter(new THREE.Vector3()));
+    var sz = box.getSize(new THREE.Vector3());
+    modelSize = Math.max(sz.x, sz.y, sz.z);
 
-  meshObject = group;
-  scene.add(meshObject);
-  positionCameras();
-  modelLoaded = true;
-  currentObjName = shapeName + '_procedural';
-  currentModelSource = 'builtin';
-  currentShape = shapeName;
+    meshObject = group;
+    scene.add(meshObject);
+    positionCameras();
+    modelLoaded = true;
+    currentObjName = shapeName + (OBJ_MODELS[shapeName] ? '_obj' : '_procedural');
+    currentModelSource = OBJ_MODELS[shapeName] ? 'obj' : 'builtin';
+    currentShape = shapeName;
 
-  resetAll();
-  document.getElementById('status-bar').textContent =
-    '✅ Ready — views are blurred. Click to reveal areas.';
+    resetAll();
+    document.getElementById('status-bar').textContent =
+      '✅ Ready — views are blurred. Click to reveal areas.';
+  }).catch(function(err){
+    console.error(err);
+    if(myToken !== loadToken) return;
+    document.getElementById('status-bar').textContent =
+      '⚠️ Could not load ' + shapeName + ' — showing a different shape.';
+    loadProceduralModel('human');
+  });
 }
 function switchShape(){
   currentShape = document.getElementById('shape-select').value;
@@ -827,9 +902,9 @@ function saveData() {
   };
 
   var data = {
-    modelSource: 'builtin',
+    modelSource: currentModelSource,
     shape: currentShape,
-    objFile: currentShape + '_procedural',
+    objFile: currentObjName, 
     customObjRepoPath: null,
 
     answers: submittedAnswers,
