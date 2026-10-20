@@ -1,0 +1,67 @@
+{
+  "modelSource": "obj",
+  "shape": "abstract",
+  "objFile": "abstract_obj",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "pillow",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 3,
+  "totalHits": 3,
+  "faceHits": {
+    "abstract_f22226": 1,
+    "abstract_f21813": 1,
+    "abstract_f14100": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 375,
+      "y": 141,
+      "timestamp": 1792517122989,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 22226,
+        "point3d": {
+          "x": -0.5795,
+          "y": 0.1588,
+          "z": 0.552
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 144,
+      "y": 230,
+      "timestamp": 1792517123696,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 21813,
+        "point3d": {
+          "x": -0.5867,
+          "y": -0.2051,
+          "z": -0.3892
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 157,
+      "y": 73,
+      "timestamp": 1792517124464,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 14100,
+        "point3d": {
+          "x": -0.6421,
+          "y": 0.4221,
+          "z": -0.327
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-10-20T17:25:35.051Z"
+}
