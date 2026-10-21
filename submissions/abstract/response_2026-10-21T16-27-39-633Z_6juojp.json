@@ -1,0 +1,83 @@
+{
+  "modelSource": "obj",
+  "shape": "abstract",
+  "objFile": "abstract_obj",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "rating",
+    "objectGuess": null,
+    "description": null,
+    "aestheticRating": 5
+  },
+  "totalClicks": 4,
+  "totalHits": 4,
+  "faceHits": {
+    "abstract_f20882": 1,
+    "abstract_f24781": 1,
+    "abstract_f21538": 1,
+    "abstract_f48727": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 299,
+      "y": 127,
+      "timestamp": 1792600052300,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 20882,
+        "point3d": {
+          "x": -0.5885,
+          "y": 0.2148,
+          "z": 0.2422
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 273,
+      "y": 178,
+      "timestamp": 1792600052887,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 24781,
+        "point3d": {
+          "x": -0.5686,
+          "y": 0.0064,
+          "z": 0.1365
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 219,
+      "y": 121,
+      "timestamp": 1792600053380,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 21538,
+        "point3d": {
+          "x": -0.5932,
+          "y": 0.2393,
+          "z": -0.0861
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 254,
+      "y": 228,
+      "timestamp": 1792600057418,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 48727,
+        "point3d": {
+          "x": 0.0575,
+          "y": -0.1981,
+          "z": 0.57
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-10-21T16:27:38.068Z"
+}
