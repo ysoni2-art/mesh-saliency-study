@@ -1,0 +1,65 @@
+{
+  "modelSource": "obj",
+  "shape": "lamp",
+  "objFile": "lamp_obj",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "Lamp",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 4,
+  "totalHits": 2,
+  "faceHits": {
+    "lamp_f1249": 1,
+    "lamp_f6899": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 188,
+      "y": 166,
+      "timestamp": 1792600065729,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 223,
+      "y": 132,
+      "timestamp": 1792600066268,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 1249,
+        "point3d": {
+          "x": -0.4264,
+          "y": 0.216,
+          "z": -0.0743
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 211,
+      "y": 272,
+      "timestamp": 1792600066762,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 250,
+      "y": 259,
+      "timestamp": 1792600067203,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 6899,
+        "point3d": {
+          "x": -0.0995,
+          "y": -0.4225,
+          "z": 0.0525
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-10-21T16:27:58.934Z"
+}
