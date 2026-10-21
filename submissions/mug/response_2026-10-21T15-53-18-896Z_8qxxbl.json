@@ -1,0 +1,104 @@
+{
+  "modelSource": "builtin",
+  "shape": "mug",
+  "objFile": "mug_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "rating",
+    "objectGuess": null,
+    "description": null,
+    "aestheticRating": 3
+  },
+  "totalClicks": 7,
+  "totalHits": 4,
+  "faceHits": {
+    "rim_f818": 1,
+    "cup_body_f82": 1,
+    "cup_body_f10": 1,
+    "cup_body_f92": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 234,
+      "y": 122,
+      "timestamp": 1792597985104,
+      "hit3d": {
+        "meshName": "rim",
+        "faceIndex": 818,
+        "point3d": {
+          "x": -0.4541,
+          "y": 0.1403,
+          "z": -0.0154
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 310,
+      "y": 200,
+      "timestamp": 1792597985835,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 82,
+        "point3d": {
+          "x": -0.3485,
+          "y": -0.0533,
+          "z": 0.1888
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 142,
+      "y": 284,
+      "timestamp": 1792597986810,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 259,
+      "y": 127,
+      "timestamp": 1792597988225,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 10,
+        "point3d": {
+          "x": 0.0577,
+          "y": 0.1587,
+          "z": 0.2232
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 340,
+      "y": 204,
+      "timestamp": 1792597988904,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 169,
+      "y": 225,
+      "timestamp": 1792597990190,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 92,
+        "point3d": {
+          "x": -0.2059,
+          "y": -0.1287,
+          "z": 0.2689
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 304,
+      "y": 308,
+      "timestamp": 1792597991927,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-10-21T15:53:19.484Z"
+}
