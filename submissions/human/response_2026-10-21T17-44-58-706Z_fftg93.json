@@ -1,0 +1,450 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "3d human robot object",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 41,
+  "totalHits": 16,
+  "faceHits": {
+    "pelvis_f499": 1,
+    "l_lower_arm_f15": 1,
+    "l_lower_arm_f36": 1,
+    "l_thigh_f3": 1,
+    "torso_f626": 1,
+    "head_f891": 1,
+    "head_f681": 1,
+    "l_shoulder_f342": 1,
+    "torso_f987": 1,
+    "l_shin_f13": 1,
+    "l_shin_f7": 1,
+    "head_f1188": 1,
+    "head_f730": 1,
+    "torso_f651": 1,
+    "torso_f965": 1,
+    "r_shin_f30": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 269,
+      "y": 200,
+      "timestamp": 1792604632552,
+      "hit3d": {
+        "meshName": "pelvis",
+        "faceIndex": 499,
+        "point3d": {
+          "x": 0.2255,
+          "y": -0.1548,
+          "z": 0.1085
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 346,
+      "y": 273,
+      "timestamp": 1792604633234,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 366,
+      "y": 233,
+      "timestamp": 1792604635578,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 205,
+      "y": 225,
+      "timestamp": 1792604636724,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 227,
+      "y": 227,
+      "timestamp": 1792604638780,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 213,
+      "y": 216,
+      "timestamp": 1792604639271,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 405,
+      "y": 227,
+      "timestamp": 1792604641851,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 343,
+      "y": 276,
+      "timestamp": 1792604642345,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 234,
+      "y": 151,
+      "timestamp": 1792604643253,
+      "hit3d": {
+        "meshName": "l_lower_arm",
+        "faceIndex": 15,
+        "point3d": {
+          "x": -0.4837,
+          "y": 0.1964,
+          "z": -0.038
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 129,
+      "y": 234,
+      "timestamp": 1792604644002,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 298,
+      "y": 138,
+      "timestamp": 1792604645860,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 346,
+      "y": 113,
+      "timestamp": 1792604646514,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 78,
+      "y": 25,
+      "timestamp": 1792604648264,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 356,
+      "y": 140,
+      "timestamp": 1792604650143,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 181,
+      "y": 172,
+      "timestamp": 1792604650705,
+      "hit3d": {
+        "meshName": "l_lower_arm",
+        "faceIndex": 36,
+        "point3d": {
+          "x": -0.4601,
+          "y": 0.06,
+          "z": 0.0488
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 218,
+      "y": 231,
+      "timestamp": 1792604651438,
+      "hit3d": {
+        "meshName": "l_thigh",
+        "faceIndex": 3,
+        "point3d": {
+          "x": -0.168,
+          "y": -0.3967,
+          "z": 0.0746
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 237,
+      "y": 290,
+      "timestamp": 1792604652078,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 276,
+      "y": 287,
+      "timestamp": 1792604652697,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 254,
+      "y": 135,
+      "timestamp": 1792604653203,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 626,
+        "point3d": {
+          "x": 0.1042,
+          "y": 0.335,
+          "z": 0.1828
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 260,
+      "y": 73,
+      "timestamp": 1792604653849,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 891,
+        "point3d": {
+          "x": 0.1549,
+          "y": 0.8213,
+          "z": 0.0979
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 223,
+      "y": 59,
+      "timestamp": 1792604654431,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 681,
+        "point3d": {
+          "x": -0.129,
+          "y": 0.9143,
+          "z": 0.1434
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 195,
+      "y": 120,
+      "timestamp": 1792604655148,
+      "hit3d": {
+        "meshName": "l_shoulder",
+        "faceIndex": 342,
+        "point3d": {
+          "x": -0.3501,
+          "y": 0.4703,
+          "z": 0.0575
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 227,
+      "y": 180,
+      "timestamp": 1792604656448,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 987,
+        "point3d": {
+          "x": -0.2373,
+          "y": -0.0005,
+          "z": -0.0984
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 206,
+      "y": 227,
+      "timestamp": 1792604657053,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 236,
+      "y": 292,
+      "timestamp": 1792604657592,
+      "hit3d": {
+        "meshName": "l_shin",
+        "faceIndex": 13,
+        "point3d": {
+          "x": -0.1862,
+          "y": -0.8327,
+          "z": -0.0308
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 228,
+      "y": 323,
+      "timestamp": 1792604658054,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 244,
+      "y": 284,
+      "timestamp": 1792604658509,
+      "hit3d": {
+        "meshName": "l_shin",
+        "faceIndex": 7,
+        "point3d": {
+          "x": -0.1846,
+          "y": -0.7753,
+          "z": 0.027
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 287,
+      "y": 210,
+      "timestamp": 1792604658937,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 290,
+      "y": 303,
+      "timestamp": 1792604659361,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 312,
+      "y": 293,
+      "timestamp": 1792604659872,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 306,
+      "y": 210,
+      "timestamp": 1792604660377,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 247,
+      "y": 87,
+      "timestamp": 1792604660909,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 1188,
+        "point3d": {
+          "x": -0.0965,
+          "y": 0.7145,
+          "z": 0.0517
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 230,
+      "y": 58,
+      "timestamp": 1792604661528,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 730,
+        "point3d": {
+          "x": -0.1817,
+          "y": 0.9139,
+          "z": -0.0771
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 236,
+      "y": 25,
+      "timestamp": 1792604662238,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 258,
+      "y": 89,
+      "timestamp": 1792604663502,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 303,
+      "y": 109,
+      "timestamp": 1792604664029,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 305,
+      "y": 189,
+      "timestamp": 1792604664442,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 263,
+      "y": 140,
+      "timestamp": 1792604666344,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 651,
+        "point3d": {
+          "x": 0.153,
+          "y": 0.3034,
+          "z": -0.1715
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 250,
+      "y": 180,
+      "timestamp": 1792604667244,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 965,
+        "point3d": {
+          "x": 0.2572,
+          "y": -0.0005,
+          "z": -0.0752
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 252,
+      "y": 276,
+      "timestamp": 1792604667891,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 239,
+      "y": 301,
+      "timestamp": 1792604668521,
+      "hit3d": {
+        "meshName": "r_shin",
+        "faceIndex": 30,
+        "point3d": {
+          "x": 0.1979,
+          "y": -0.8983,
+          "z": 0.0038
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-10-21T17:44:57.365Z"
+}
