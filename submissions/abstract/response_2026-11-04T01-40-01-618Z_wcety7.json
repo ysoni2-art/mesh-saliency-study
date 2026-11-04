@@ -1,0 +1,130 @@
+{
+  "modelSource": "obj",
+  "shape": "abstract",
+  "objFile": "abstract_obj",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "A cloth shade",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 7,
+  "totalHits": 7,
+  "faceHits": {
+    "abstract_f24004": 1,
+    "abstract_f12727": 1,
+    "abstract_f8616": 1,
+    "abstract_f8644": 1,
+    "abstract_f8491": 1,
+    "abstract_f7148": 2
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 158,
+      "y": 205,
+      "timestamp": 1793756383441,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 24004,
+        "point3d": {
+          "x": -0.5731,
+          "y": -0.1017,
+          "z": -0.337
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 183,
+      "y": 82,
+      "timestamp": 1793756384036,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 12727,
+        "point3d": {
+          "x": -0.6308,
+          "y": 0.3865,
+          "z": -0.2268
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 113,
+      "y": 41,
+      "timestamp": 1793756384654,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 8616,
+        "point3d": {
+          "x": -0.6815,
+          "y": 0.5315,
+          "z": -0.4877
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 195,
+      "y": 41,
+      "timestamp": 1793756385161,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 8644,
+        "point3d": {
+          "x": -0.6815,
+          "y": 0.5315,
+          "z": -0.1719
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 268,
+      "y": 37,
+      "timestamp": 1793756385711,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 8491,
+        "point3d": {
+          "x": -0.687,
+          "y": 0.5453,
+          "z": 0.1066
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 337,
+      "y": 30,
+      "timestamp": 1793756386261,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 7148,
+        "point3d": {
+          "x": -0.6961,
+          "y": 0.568,
+          "z": 0.3665
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 337,
+      "y": 30,
+      "timestamp": 1793756386599,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 7148,
+        "point3d": {
+          "x": -0.6961,
+          "y": 0.568,
+          "z": 0.3665
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-04T01:40:01.330Z"
+}
