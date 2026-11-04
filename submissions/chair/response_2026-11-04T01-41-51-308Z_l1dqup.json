@@ -1,0 +1,82 @@
+{
+  "modelSource": "builtin",
+  "shape": "chair",
+  "objFile": "chair_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "A wooden chair in old style",
+    "aestheticRating": null
+  },
+  "totalClicks": 4,
+  "totalHits": 4,
+  "faceHits": {
+    "backrest_f8": 2,
+    "seat_f2": 1,
+    "leg_br_f18": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 176,
+      "y": 120,
+      "timestamp": 1793756489743,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 8,
+        "point3d": {
+          "x": -0.2526,
+          "y": 0.2522,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 176,
+      "y": 162,
+      "timestamp": 1793756490198,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 8,
+        "point3d": {
+          "x": -0.2526,
+          "y": 0.0745,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 176,
+      "y": 195,
+      "timestamp": 1793756490576,
+      "hit3d": {
+        "meshName": "seat",
+        "faceIndex": 2,
+        "point3d": {
+          "x": -0.35,
+          "y": -0.0593,
+          "z": -0.2513
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 176,
+      "y": 246,
+      "timestamp": 1793756491135,
+      "hit3d": {
+        "meshName": "leg_br",
+        "faceIndex": 18,
+        "point3d": {
+          "x": -0.3171,
+          "y": -0.2642,
+          "z": -0.2568
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-04T01:41:50.983Z"
+}
