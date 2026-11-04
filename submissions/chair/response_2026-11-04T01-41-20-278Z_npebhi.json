@@ -1,0 +1,483 @@
+{
+  "modelSource": "builtin",
+  "shape": "chair",
+  "objFile": "chair_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "rating",
+    "objectGuess": null,
+    "description": null,
+    "aestheticRating": 3
+  },
+  "totalClicks": 39,
+  "totalHits": 22,
+  "faceHits": {
+    "backrest_f3": 1,
+    "leg_br_f20": 1,
+    "seat_f2": 1,
+    "seat_f3": 2,
+    "leg_fl_f20": 1,
+    "leg_fr_f12": 1,
+    "backrest_f8": 5,
+    "armrest_l_f2": 1,
+    "seat_f8": 1,
+    "leg_fr_f20": 1,
+    "cushion_f9": 1,
+    "leg_bl_f23": 1,
+    "leg_fl_f19": 1,
+    "backrest_f9": 3,
+    "arm_sup_l_f3": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 170,
+      "y": 144,
+      "timestamp": 1793756441310,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 3,
+        "point3d": {
+          "x": -0.35,
+          "y": 0.1427,
+          "z": -0.2729
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 214,
+      "y": 155,
+      "timestamp": 1793756441972,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 232,
+      "y": 157,
+      "timestamp": 1793756442668,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 235,
+      "y": 243,
+      "timestamp": 1793756443422,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 202,
+      "y": 256,
+      "timestamp": 1793756443905,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 179,
+      "y": 277,
+      "timestamp": 1793756444359,
+      "hit3d": {
+        "meshName": "leg_br",
+        "faceIndex": 20,
+        "point3d": {
+          "x": -0.3135,
+          "y": -0.3889,
+          "z": -0.2464
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 175,
+      "y": 199,
+      "timestamp": 1793756445568,
+      "hit3d": {
+        "meshName": "seat",
+        "faceIndex": 2,
+        "point3d": {
+          "x": -0.35,
+          "y": -0.0727,
+          "z": -0.2567
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 315,
+      "y": 200,
+      "timestamp": 1793756446460,
+      "hit3d": {
+        "meshName": "seat",
+        "faceIndex": 3,
+        "point3d": {
+          "x": -0.35,
+          "y": -0.0781,
+          "z": 0.2926
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 268,
+      "y": 194,
+      "timestamp": 1793756447081,
+      "hit3d": {
+        "meshName": "seat",
+        "faceIndex": 3,
+        "point3d": {
+          "x": -0.35,
+          "y": -0.0566,
+          "z": 0.1095
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 294,
+      "y": 282,
+      "timestamp": 1793756447768,
+      "hit3d": {
+        "meshName": "leg_fl",
+        "faceIndex": 20,
+        "point3d": {
+          "x": 0.2485,
+          "y": -0.56,
+          "z": 0.2957
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 297,
+      "y": 240,
+      "timestamp": 1793756448676,
+      "hit3d": {
+        "meshName": "leg_fr",
+        "faceIndex": 12,
+        "point3d": {
+          "x": -0.281,
+          "y": -0.245,
+          "z": 0.2328
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 251,
+      "y": 300,
+      "timestamp": 1793756449324,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 151,
+      "y": 94,
+      "timestamp": 1793756450580,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 153,
+      "y": 68,
+      "timestamp": 1793756451122,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 153,
+      "y": 49,
+      "timestamp": 1793756451554,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 177,
+      "y": 32,
+      "timestamp": 1793756452044,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 8,
+        "point3d": {
+          "x": -0.2173,
+          "y": 0.6297,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 209,
+      "y": 61,
+      "timestamp": 1793756452884,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 201,
+      "y": 142,
+      "timestamp": 1793756453493,
+      "hit3d": {
+        "meshName": "armrest_l",
+        "faceIndex": 2,
+        "point3d": {
+          "x": 0.35,
+          "y": 0.2166,
+          "z": -0.2258
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 249,
+      "y": 113,
+      "timestamp": 1793756454285,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 324,
+      "y": 152,
+      "timestamp": 1793756455035,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 290,
+      "y": 111,
+      "timestamp": 1793756455922,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 178,
+      "y": 128,
+      "timestamp": 1793756459293,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 8,
+        "point3d": {
+          "x": -0.3412,
+          "y": 0.2844,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 171,
+      "y": 194,
+      "timestamp": 1793756459922,
+      "hit3d": {
+        "meshName": "seat",
+        "faceIndex": 8,
+        "point3d": {
+          "x": -0.2733,
+          "y": -0.0574,
+          "z": 0.3275
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 163,
+      "y": 273,
+      "timestamp": 1793756460530,
+      "hit3d": {
+        "meshName": "leg_fr",
+        "faceIndex": 20,
+        "point3d": {
+          "x": -0.3126,
+          "y": -0.3769,
+          "z": 0.2945
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 233,
+      "y": 204,
+      "timestamp": 1793756461259,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 291,
+      "y": 186,
+      "timestamp": 1793756461923,
+      "hit3d": {
+        "meshName": "cushion",
+        "faceIndex": 9,
+        "point3d": {
+          "x": 0.2055,
+          "y": -0.025,
+          "z": 0.3025
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 291,
+      "y": 234,
+      "timestamp": 1793756462430,
+      "hit3d": {
+        "meshName": "leg_bl",
+        "faceIndex": 23,
+        "point3d": {
+          "x": 0.2755,
+          "y": -0.2941,
+          "z": -0.2287
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 299,
+      "y": 295,
+      "timestamp": 1793756463300,
+      "hit3d": {
+        "meshName": "leg_fl",
+        "faceIndex": 19,
+        "point3d": {
+          "x": 0.2422,
+          "y": -0.4703,
+          "z": 0.2807
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 322,
+      "y": 126,
+      "timestamp": 1793756464693,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 266,
+      "y": 95,
+      "timestamp": 1793756465254,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 8,
+        "point3d": {
+          "x": 0.1441,
+          "y": 0.4664,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 196,
+      "y": 68,
+      "timestamp": 1793756465893,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 8,
+        "point3d": {
+          "x": -0.2426,
+          "y": 0.6181,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 219,
+      "y": 46,
+      "timestamp": 1793756466522,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 270,
+      "y": 61,
+      "timestamp": 1793756467127,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 8,
+        "point3d": {
+          "x": 0.1669,
+          "y": 0.656,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 277,
+      "y": 50,
+      "timestamp": 1793756467702,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 224,
+      "y": 145,
+      "timestamp": 1793756468485,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 9,
+        "point3d": {
+          "x": -0.091,
+          "y": 0.1934,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 270,
+      "y": 157,
+      "timestamp": 1793756469043,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 9,
+        "point3d": {
+          "x": 0.1669,
+          "y": 0.1251,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 302,
+      "y": 146,
+      "timestamp": 1793756469593,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 9,
+        "point3d": {
+          "x": 0.3413,
+          "y": 0.1858,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 336,
+      "y": 186,
+      "timestamp": 1793756470297,
+      "hit3d": {
+        "meshName": "arm_sup_l",
+        "faceIndex": 3,
+        "point3d": {
+          "x": 0.4054,
+          "y": -0.0261,
+          "z": 0.2361
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 138,
+      "y": 190,
+      "timestamp": 1793756471434,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-04T01:41:19.956Z"
+}
