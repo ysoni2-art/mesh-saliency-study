@@ -1,0 +1,35 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "rating",
+    "objectGuess": null,
+    "description": null,
+    "aestheticRating": 1
+  },
+  "totalClicks": 1,
+  "totalHits": 1,
+  "faceHits": {
+    "head_f949": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 251,
+      "y": 74,
+      "timestamp": 1794443024541,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 949,
+        "point3d": {
+          "x": 0.0831,
+          "y": 0.7994,
+          "z": 0.1478
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-12T00:23:45.799Z"
+}
