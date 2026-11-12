@@ -1,0 +1,35 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "wooden doll",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 1,
+  "totalHits": 1,
+  "faceHits": {
+    "head_f755": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 246,
+      "y": 59,
+      "timestamp": 1794442825403,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 755,
+        "point3d": {
+          "x": 0.0411,
+          "y": 0.9018,
+          "z": 0.1856
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-12T00:20:33.969Z"
+}
