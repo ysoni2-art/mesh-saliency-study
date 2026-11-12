@@ -1,0 +1,97 @@
+{
+  "modelSource": "obj",
+  "shape": "lamp",
+  "objFile": "lamp_obj",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "rating",
+    "objectGuess": null,
+    "description": null,
+    "aestheticRating": 1
+  },
+  "totalClicks": 6,
+  "totalHits": 4,
+  "faceHits": {
+    "lamp_f1686": 1,
+    "lamp_f1544": 1,
+    "lamp_f1625": 1,
+    "lamp_f7451": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 276,
+      "y": 67,
+      "timestamp": 1794442862044,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 1686,
+        "point3d": {
+          "x": 0.1798,
+          "y": 0.5668,
+          "z": 0.2181
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 306,
+      "y": 142,
+      "timestamp": 1794442862592,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 1544,
+        "point3d": {
+          "x": 0.3123,
+          "y": 0.1821,
+          "z": 0.3328
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 156,
+      "y": 111,
+      "timestamp": 1794442863094,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 221,
+      "y": 70,
+      "timestamp": 1794442863655,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 1625,
+        "point3d": {
+          "x": -0.094,
+          "y": 0.5373,
+          "z": 0.273
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 217,
+      "y": 217,
+      "timestamp": 1794442864700,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 7451,
+        "point3d": {
+          "x": -0.1209,
+          "y": -0.1922,
+          "z": 0.1607
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 287,
+      "y": 229,
+      "timestamp": 1794442865353,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-12T00:21:07.875Z"
+}
