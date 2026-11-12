@@ -1,0 +1,25 @@
+{
+  "modelSource": "builtin",
+  "shape": "chair",
+  "objFile": "chair_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "chair",
+    "aestheticRating": null
+  },
+  "totalClicks": 1,
+  "totalHits": 0,
+  "faceHits": {},
+  "clicks": [
+    {
+      "view": "front",
+      "x": 250,
+      "y": 256,
+      "timestamp": 1794442873341,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-12T00:21:19.425Z"
+}
