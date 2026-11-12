@@ -1,0 +1,35 @@
+{
+  "modelSource": "obj",
+  "shape": "antler_head",
+  "objFile": "antler_head_obj",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "demon face",
+    "aestheticRating": null
+  },
+  "totalClicks": 1,
+  "totalHits": 1,
+  "faceHits": {
+    "antler_head_f24906": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 219,
+      "y": 151,
+      "timestamp": 1794442908337,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 24906,
+        "point3d": {
+          "x": -0.0986,
+          "y": 0.138,
+          "z": 0.3127
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-12T00:21:49.967Z"
+}
