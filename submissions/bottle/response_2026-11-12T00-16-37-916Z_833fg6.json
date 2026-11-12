@@ -1,0 +1,49 @@
+{
+  "modelSource": "builtin",
+  "shape": "bottle",
+  "objFile": "bottle_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "rating",
+    "objectGuess": null,
+    "description": null,
+    "aestheticRating": 1
+  },
+  "totalClicks": 3,
+  "totalHits": 1,
+  "faceHits": {
+    "neck_f46": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 300,
+      "y": 67,
+      "timestamp": 1794442594083,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 233,
+      "y": 88,
+      "timestamp": 1794442594449,
+      "hit3d": {
+        "meshName": "neck",
+        "faceIndex": 46,
+        "point3d": {
+          "x": -0.0205,
+          "y": 0.2745,
+          "z": 0.0773
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 210,
+      "y": 99,
+      "timestamp": 1794442594685,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-12T00:16:37.545Z"
+}
