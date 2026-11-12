@@ -1,0 +1,25 @@
+{
+  "modelSource": "builtin",
+  "shape": "mug",
+  "objFile": "mug_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "flower pot",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 1,
+  "totalHits": 0,
+  "faceHits": {},
+  "clicks": [
+    {
+      "view": "front",
+      "x": 305,
+      "y": 147,
+      "timestamp": 1794443032033,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-12T00:24:04.415Z"
+}
