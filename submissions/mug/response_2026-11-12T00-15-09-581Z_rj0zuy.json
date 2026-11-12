@@ -1,0 +1,111 @@
+{
+  "modelSource": "builtin",
+  "shape": "mug",
+  "objFile": "mug_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "rating",
+    "objectGuess": null,
+    "description": null,
+    "aestheticRating": 1
+  },
+  "totalClicks": 8,
+  "totalHits": 4,
+  "faceHits": {
+    "cup_body_f2": 1,
+    "cup_body_f93": 1,
+    "cup_body_f87": 1,
+    "cup_body_f95": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 296,
+      "y": 128,
+      "timestamp": 1794442504341,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 214,
+      "y": 166,
+      "timestamp": 1794442504733,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 2,
+        "point3d": {
+          "x": -0.0745,
+          "y": 0.0392,
+          "z": 0.2817
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 178,
+      "y": 188,
+      "timestamp": 1794442504987,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 93,
+        "point3d": {
+          "x": -0.1764,
+          "y": -0.0236,
+          "z": 0.2824
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 142,
+      "y": 154,
+      "timestamp": 1794442505325,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 87,
+        "point3d": {
+          "x": -0.286,
+          "y": 0.0765,
+          "z": 0.2521
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 191,
+      "y": 125,
+      "timestamp": 1794442505585,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 95,
+        "point3d": {
+          "x": -0.1392,
+          "y": 0.1546,
+          "z": 0.2976
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 309,
+      "y": 133,
+      "timestamp": 1794442505808,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 180,
+      "y": 99,
+      "timestamp": 1794442506157,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 85,
+      "y": 92,
+      "timestamp": 1794442506402,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-12T00:15:09.110Z"
+}
