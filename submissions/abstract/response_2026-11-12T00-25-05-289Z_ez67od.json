@@ -1,0 +1,35 @@
+{
+  "modelSource": "obj",
+  "shape": "abstract",
+  "objFile": "abstract_obj",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "rating",
+    "objectGuess": null,
+    "description": null,
+    "aestheticRating": 1
+  },
+  "totalClicks": 1,
+  "totalHits": 1,
+  "faceHits": {
+    "abstract_f53213": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 278,
+      "y": 146,
+      "timestamp": 1794443102817,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 53213,
+        "point3d": {
+          "x": 0.1576,
+          "y": 0.1406,
+          "z": 0.5794
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-12T00:25:04.907Z"
+}
