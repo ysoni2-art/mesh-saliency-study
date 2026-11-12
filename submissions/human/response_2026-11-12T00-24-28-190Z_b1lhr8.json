@@ -1,0 +1,35 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "person",
+    "aestheticRating": null
+  },
+  "totalClicks": 1,
+  "totalHits": 1,
+  "faceHits": {
+    "head_f1074": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 246,
+      "y": 80,
+      "timestamp": 1794443062060,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 1074,
+        "point3d": {
+          "x": 0.0417,
+          "y": 0.7597,
+          "z": 0.1408
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-12T00:24:27.789Z"
+}
