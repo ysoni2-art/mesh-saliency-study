@@ -1,0 +1,25 @@
+{
+  "modelSource": "obj",
+  "shape": "antler_head",
+  "objFile": "antler_head_obj",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "demon",
+    "aestheticRating": null
+  },
+  "totalClicks": 1,
+  "totalHits": 0,
+  "faceHits": {},
+  "clicks": [
+    {
+      "view": "front",
+      "x": 276,
+      "y": 55,
+      "timestamp": 1794443081531,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-12T00:24:47.315Z"
+}
