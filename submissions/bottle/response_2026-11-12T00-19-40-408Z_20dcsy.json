@@ -1,0 +1,35 @@
+{
+  "modelSource": "builtin",
+  "shape": "bottle",
+  "objFile": "bottle_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "rating",
+    "objectGuess": null,
+    "description": null,
+    "aestheticRating": 1
+  },
+  "totalClicks": 1,
+  "totalHits": 1,
+  "faceHits": {
+    "cap_f6": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 263,
+      "y": 36,
+      "timestamp": 1794442777075,
+      "hit3d": {
+        "meshName": "cap",
+        "faceIndex": 6,
+        "point3d": {
+          "x": 0.0711,
+          "y": 0.439,
+          "z": 0.0539
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-12T00:19:40.043Z"
+}
