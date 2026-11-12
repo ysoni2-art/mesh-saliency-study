@@ -1,0 +1,104 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "rating",
+    "objectGuess": null,
+    "description": null,
+    "aestheticRating": 1
+  },
+  "totalClicks": 7,
+  "totalHits": 4,
+  "faceHits": {
+    "torso_f499": 1,
+    "head_f688": 1,
+    "r_shoulder_f353": 1,
+    "pelvis_f543": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 254,
+      "y": 124,
+      "timestamp": 1794442764433,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 499,
+        "point3d": {
+          "x": 0.1031,
+          "y": 0.4222,
+          "z": 0.1714
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 244,
+      "y": 55,
+      "timestamp": 1794442765009,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 688,
+        "point3d": {
+          "x": 0.0308,
+          "y": 0.9325,
+          "z": 0.1856
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 206,
+      "y": 84,
+      "timestamp": 1794442765747,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 280,
+      "y": 120,
+      "timestamp": 1794442766553,
+      "hit3d": {
+        "meshName": "r_shoulder",
+        "faceIndex": 353,
+        "point3d": {
+          "x": 0.3072,
+          "y": 0.466,
+          "z": 0.0889
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 285,
+      "y": 177,
+      "timestamp": 1794442767151,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 226,
+      "y": 207,
+      "timestamp": 1794442767655,
+      "hit3d": {
+        "meshName": "pelvis",
+        "faceIndex": 543,
+        "point3d": {
+          "x": -0.1028,
+          "y": -0.2059,
+          "z": 0.1732
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 213,
+      "y": 221,
+      "timestamp": 1794442768577,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-12T00:19:32.237Z"
+}
