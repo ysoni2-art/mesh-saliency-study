@@ -1,0 +1,65 @@
+{
+  "modelSource": "builtin",
+  "shape": "chair",
+  "objFile": "chair_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "chair",
+    "aestheticRating": null
+  },
+  "totalClicks": 4,
+  "totalHits": 2,
+  "faceHits": {
+    "backrest_f8": 1,
+    "seat_f9": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 288,
+      "y": 63,
+      "timestamp": 1794442713591,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 8,
+        "point3d": {
+          "x": 0.2655,
+          "y": 0.6446,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 169,
+      "y": 118,
+      "timestamp": 1794442714067,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 338,
+      "y": 169,
+      "timestamp": 1794442714707,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 211,
+      "y": 202,
+      "timestamp": 1794442715325,
+      "hit3d": {
+        "meshName": "seat",
+        "faceIndex": 9,
+        "point3d": {
+          "x": -0.1147,
+          "y": -0.0875,
+          "z": 0.3275
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-12T00:18:41.913Z"
+}
