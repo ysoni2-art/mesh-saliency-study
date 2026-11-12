@@ -1,0 +1,35 @@
+{
+  "modelSource": "builtin",
+  "shape": "mug",
+  "objFile": "mug_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "flower pot",
+    "aestheticRating": null
+  },
+  "totalClicks": 1,
+  "totalHits": 1,
+  "faceHits": {
+    "cup_body_f16": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 277,
+      "y": 161,
+      "timestamp": 1794443048914,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 16,
+        "point3d": {
+          "x": 0.1204,
+          "y": 0.0624,
+          "z": 0.1313
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-12T00:24:17.203Z"
+}
