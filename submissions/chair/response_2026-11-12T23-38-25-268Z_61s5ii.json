@@ -1,0 +1,119 @@
+{
+  "modelSource": "builtin",
+  "shape": "chair",
+  "objFile": "chair_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "chair",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 7,
+  "totalHits": 6,
+  "faceHits": {
+    "backrest_f8": 4,
+    "seat_f9": 1,
+    "armrest_l_f2": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 309,
+      "y": 64,
+      "timestamp": 1794526688019,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 217,
+      "y": 85,
+      "timestamp": 1794526688692,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 8,
+        "point3d": {
+          "x": -0.1289,
+          "y": 0.5271,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 269,
+      "y": 85,
+      "timestamp": 1794526689392,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 8,
+        "point3d": {
+          "x": 0.1593,
+          "y": 0.5271,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 320,
+      "y": 196,
+      "timestamp": 1794526690800,
+      "hit3d": {
+        "meshName": "seat",
+        "faceIndex": 9,
+        "point3d": {
+          "x": 0.317,
+          "y": -0.0629,
+          "z": 0.3275
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 320,
+      "y": 133,
+      "timestamp": 1794526691957,
+      "hit3d": {
+        "meshName": "armrest_l",
+        "faceIndex": 2,
+        "point3d": {
+          "x": 0.35,
+          "y": 0.2082,
+          "z": 0.1677
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 173,
+      "y": 53,
+      "timestamp": 1794526694299,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 8,
+        "point3d": {
+          "x": -0.3188,
+          "y": 0.5084,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 181,
+      "y": 119,
+      "timestamp": 1794526694697,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 8,
+        "point3d": {
+          "x": -0.1017,
+          "y": 0.279,
+          "z": -0.2675
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-12T23:38:25.010Z"
+}
