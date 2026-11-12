@@ -1,0 +1,304 @@
+{
+  "modelSource": "builtin",
+  "shape": "bottle",
+  "objFile": "bottle_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "bottle",
+    "aestheticRating": null
+  },
+  "totalClicks": 24,
+  "totalHits": 13,
+  "faceHits": {
+    "shoulder_f61": 1,
+    "neck_f3": 1,
+    "neck_f38": 1,
+    "bottle_body_f61": 1,
+    "bottle_body_f8": 1,
+    "shoulder_f3": 1,
+    "shoulder_f63": 1,
+    "bottle_body_f53": 1,
+    "bottle_body_f60": 1,
+    "bottle_body_f62": 1,
+    "bottle_body_f57": 1,
+    "bottle_body_f1": 1,
+    "cap_f46": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 285,
+      "y": 70,
+      "timestamp": 1794442514637,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 191,
+      "y": 87,
+      "timestamp": 1794442514949,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 178,
+      "y": 95,
+      "timestamp": 1794442515178,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 202,
+      "y": 120,
+      "timestamp": 1794442515451,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 226,
+      "y": 120,
+      "timestamp": 1794442515706,
+      "hit3d": {
+        "meshName": "shoulder",
+        "faceIndex": 61,
+        "point3d": {
+          "x": -0.039,
+          "y": 0.1718,
+          "z": 0.1312
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 248,
+      "y": 104,
+      "timestamp": 1794442515999,
+      "hit3d": {
+        "meshName": "neck",
+        "faceIndex": 3,
+        "point3d": {
+          "x": 0.0247,
+          "y": 0.2257,
+          "z": 0.0756
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 217,
+      "y": 67,
+      "timestamp": 1794442516576,
+      "hit3d": {
+        "meshName": "neck",
+        "faceIndex": 38,
+        "point3d": {
+          "x": -0.0723,
+          "y": 0.349,
+          "z": 0.0326
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 214,
+      "y": 276,
+      "timestamp": 1794442520609,
+      "hit3d": {
+        "meshName": "bottle_body",
+        "faceIndex": 61,
+        "point3d": {
+          "x": -0.0684,
+          "y": -0.2523,
+          "z": 0.2162
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 313,
+      "y": 289,
+      "timestamp": 1794442521122,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 316,
+      "y": 236,
+      "timestamp": 1794442521547,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 302,
+      "y": 165,
+      "timestamp": 1794442521903,
+      "hit3d": {
+        "meshName": "bottle_body",
+        "faceIndex": 8,
+        "point3d": {
+          "x": 0.1702,
+          "y": 0.0416,
+          "z": 0.1662
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 273,
+      "y": 142,
+      "timestamp": 1794442522177,
+      "hit3d": {
+        "meshName": "shoulder",
+        "faceIndex": 3,
+        "point3d": {
+          "x": 0.0866,
+          "y": 0.101,
+          "z": 0.215
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 235,
+      "y": 133,
+      "timestamp": 1794442522431,
+      "hit3d": {
+        "meshName": "shoulder",
+        "faceIndex": 63,
+        "point3d": {
+          "x": -0.0146,
+          "y": 0.1246,
+          "z": 0.1991
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 170,
+      "y": 165,
+      "timestamp": 1794442522747,
+      "hit3d": {
+        "meshName": "bottle_body",
+        "faceIndex": 53,
+        "point3d": {
+          "x": -0.1994,
+          "y": 0.043,
+          "z": 0.1297
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 133,
+      "y": 159,
+      "timestamp": 1794442522990,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 218,
+      "y": 190,
+      "timestamp": 1794442523615,
+      "hit3d": {
+        "meshName": "bottle_body",
+        "faceIndex": 60,
+        "point3d": {
+          "x": -0.057,
+          "y": -0.025,
+          "z": 0.228
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 226,
+      "y": 210,
+      "timestamp": 1794442523905,
+      "hit3d": {
+        "meshName": "bottle_body",
+        "faceIndex": 62,
+        "point3d": {
+          "x": -0.0355,
+          "y": -0.0782,
+          "z": 0.2305
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 186,
+      "y": 261,
+      "timestamp": 1794442524208,
+      "hit3d": {
+        "meshName": "bottle_body",
+        "faceIndex": 57,
+        "point3d": {
+          "x": -0.1463,
+          "y": -0.2214,
+          "z": 0.1747
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 184,
+      "y": 345,
+      "timestamp": 1794442524447,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 314,
+      "y": 345,
+      "timestamp": 1794442525315,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 320,
+      "y": 353,
+      "timestamp": 1794442525663,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 250,
+      "y": 322,
+      "timestamp": 1794442525964,
+      "hit3d": {
+        "meshName": "bottle_body",
+        "faceIndex": 1,
+        "point3d": {
+          "x": 0.0251,
+          "y": -0.3693,
+          "z": 0.2213
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 246,
+      "y": 25,
+      "timestamp": 1794442526852,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 233,
+      "y": 32,
+      "timestamp": 1794442527094,
+      "hit3d": {
+        "meshName": "cap",
+        "faceIndex": 46,
+        "point3d": {
+          "x": -0.0203,
+          "y": 0.4387,
+          "z": 0.0873
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-12T00:15:34.783Z"
+}
