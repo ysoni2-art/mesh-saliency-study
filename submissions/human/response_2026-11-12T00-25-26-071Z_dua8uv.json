@@ -1,0 +1,35 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "rating",
+    "objectGuess": null,
+    "description": null,
+    "aestheticRating": 1
+  },
+  "totalClicks": 1,
+  "totalHits": 1,
+  "faceHits": {
+    "torso_f172": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 235,
+      "y": 92,
+      "timestamp": 1794443122890,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 172,
+        "point3d": {
+          "x": -0.0425,
+          "y": 0.6806,
+          "z": 0.0769
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-12T00:25:25.621Z"
+}
