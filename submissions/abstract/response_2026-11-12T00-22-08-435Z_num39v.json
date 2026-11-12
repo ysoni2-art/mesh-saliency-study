@@ -1,0 +1,35 @@
+{
+  "modelSource": "obj",
+  "shape": "abstract",
+  "objFile": "abstract_obj",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "pillow",
+    "aestheticRating": null
+  },
+  "totalClicks": 1,
+  "totalHits": 1,
+  "faceHits": {
+    "abstract_f51013": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 262,
+      "y": 172,
+      "timestamp": 1794442926416,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 51013,
+        "point3d": {
+          "x": 0.0905,
+          "y": 0.0339,
+          "z": 0.5721
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-12T00:22:07.985Z"
+}
