@@ -1,0 +1,305 @@
+{
+  "modelSource": "obj",
+  "shape": "antler_head",
+  "objFile": "antler_head_obj",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "A face with pointed ears and antlers",
+    "aestheticRating": null
+  },
+  "totalClicks": 19,
+  "totalHits": 17,
+  "faceHits": {
+    "antler_head_f24864": 1,
+    "antler_head_f6533": 1,
+    "antler_head_f3029": 1,
+    "antler_head_f34367": 1,
+    "antler_head_f22244": 1,
+    "antler_head_f32159": 1,
+    "antler_head_f18145": 1,
+    "antler_head_f28167": 1,
+    "antler_head_f25565": 1,
+    "antler_head_f27743": 1,
+    "antler_head_f496": 1,
+    "antler_head_f4517": 1,
+    "antler_head_f12016": 1,
+    "antler_head_f36847": 1,
+    "antler_head_f13144": 1,
+    "antler_head_f3109": 1,
+    "antler_head_f657": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 189,
+      "y": 148,
+      "timestamp": 1794526584861,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 24864,
+        "point3d": {
+          "x": -0.2489,
+          "y": 0.1547,
+          "z": 0.2701
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 252,
+      "y": 151,
+      "timestamp": 1794526587107,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 6533,
+        "point3d": {
+          "x": 0.0588,
+          "y": 0.1373,
+          "z": 0.3236
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 250,
+      "y": 234,
+      "timestamp": 1794526589151,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 3029,
+        "point3d": {
+          "x": 0.0458,
+          "y": -0.2551,
+          "z": 0.3228
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 152,
+      "y": 47,
+      "timestamp": 1794526594463,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 214,
+      "y": 40,
+      "timestamp": 1794526597001,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 206,
+      "y": 96,
+      "timestamp": 1794526598274,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 34367,
+        "point3d": {
+          "x": -0.1669,
+          "y": 0.4073,
+          "z": 0.2842
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 221,
+      "y": 194,
+      "timestamp": 1794526604701,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 22244,
+        "point3d": {
+          "x": -0.0906,
+          "y": -0.0647,
+          "z": 0.3426
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 282,
+      "y": 136,
+      "timestamp": 1794526612410,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 32159,
+        "point3d": {
+          "x": -0.2965,
+          "y": 0.2123,
+          "z": 0.2012
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 267,
+      "y": 84,
+      "timestamp": 1794526613437,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 18145,
+        "point3d": {
+          "x": 0.2591,
+          "y": 0.6028,
+          "z": 0.1665
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 273,
+      "y": 180,
+      "timestamp": 1794526615107,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 28167,
+        "point3d": {
+          "x": -0.2963,
+          "y": 0,
+          "z": 0.1614
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 298,
+      "y": 216,
+      "timestamp": 1794526615801,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 25565,
+        "point3d": {
+          "x": -0.1298,
+          "y": -0.1879,
+          "z": 0.3059
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 243,
+      "y": 221,
+      "timestamp": 1794526617162,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 27743,
+        "point3d": {
+          "x": -0.2701,
+          "y": -0.2018,
+          "z": 0.0157
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 218,
+      "y": 159,
+      "timestamp": 1794526625317,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 496,
+        "point3d": {
+          "x": 0.3184,
+          "y": 0.0983,
+          "z": 0.1071
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 240,
+      "y": 196,
+      "timestamp": 1794526626372,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 4517,
+        "point3d": {
+          "x": 0.3028,
+          "y": -0.0793,
+          "z": 0.0022
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 263,
+      "y": 154,
+      "timestamp": 1794526626951,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 12016,
+        "point3d": {
+          "x": 0.3351,
+          "y": 0.1234,
+          "z": -0.1083
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 212,
+      "y": 82,
+      "timestamp": 1794526628089,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 36847,
+        "point3d": {
+          "x": -0.2531,
+          "y": 0.6099,
+          "z": 0.1747
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 194,
+      "y": 121,
+      "timestamp": 1794526628679,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 13144,
+        "point3d": {
+          "x": 0.2727,
+          "y": 0.2889,
+          "z": 0.2239
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 175,
+      "y": 179,
+      "timestamp": 1794526629252,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 3109,
+        "point3d": {
+          "x": 0.0357,
+          "y": 0.0076,
+          "z": 0.3579
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 263,
+      "y": 121,
+      "timestamp": 1794526630964,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 657,
+        "point3d": {
+          "x": 0.2853,
+          "y": 0.287,
+          "z": -0.1112
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-12T23:37:29.971Z"
+}
