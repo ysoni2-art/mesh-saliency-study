@@ -1,0 +1,35 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "doll",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 1,
+  "totalHits": 1,
+  "faceHits": {
+    "head_f1258": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 235,
+      "y": 89,
+      "timestamp": 1794443142428,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 1258,
+        "point3d": {
+          "x": -0.0424,
+          "y": 0.7016,
+          "z": 0.0778
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-12T00:25:47.177Z"
+}
