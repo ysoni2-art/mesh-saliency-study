@@ -1,0 +1,111 @@
+{
+  "modelSource": "builtin",
+  "shape": "bottle",
+  "objFile": "bottle_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "A bottle with a low poly-count",
+    "aestheticRating": null
+  },
+  "totalClicks": 8,
+  "totalHits": 4,
+  "faceHits": {
+    "neck_f6": 1,
+    "bottle_body_f60": 1,
+    "shoulder_f60": 1,
+    "bottle_body_f52": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 261,
+      "y": 60,
+      "timestamp": 1794526825546,
+      "hit3d": {
+        "meshName": "neck",
+        "faceIndex": 6,
+        "point3d": {
+          "x": 0.063,
+          "y": 0.3655,
+          "z": 0.0482
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 208,
+      "y": 47,
+      "timestamp": 1794526826390,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 213,
+      "y": 173,
+      "timestamp": 1794526827198,
+      "hit3d": {
+        "meshName": "bottle_body",
+        "faceIndex": 60,
+        "point3d": {
+          "x": -0.0714,
+          "y": 0.0179,
+          "z": 0.2251
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 218,
+      "y": 128,
+      "timestamp": 1794526827701,
+      "hit3d": {
+        "meshName": "shoulder",
+        "faceIndex": 60,
+        "point3d": {
+          "x": -0.0607,
+          "y": 0.1441,
+          "z": 0.1631
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 169,
+      "y": 169,
+      "timestamp": 1794526828278,
+      "hit3d": {
+        "meshName": "bottle_body",
+        "faceIndex": 52,
+        "point3d": {
+          "x": -0.2057,
+          "y": 0.0316,
+          "z": 0.1171
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 167,
+      "y": 275,
+      "timestamp": 1794526828656,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 166,
+      "y": 240,
+      "timestamp": 1794526829238,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 182,
+      "y": 357,
+      "timestamp": 1794526829651,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-12T23:40:41.526Z"
+}
