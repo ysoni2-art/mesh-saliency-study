@@ -1,0 +1,56 @@
+{
+  "modelSource": "builtin",
+  "shape": "bottle",
+  "objFile": "bottle_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "computer generated image of a bottle",
+    "aestheticRating": null
+  },
+  "totalClicks": 4,
+  "totalHits": 1,
+  "faceHits": {
+    "bottle_body_f60": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 322,
+      "y": 27,
+      "timestamp": 1794442556104,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 204,
+      "y": 55,
+      "timestamp": 1794442556464,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 196,
+      "y": 91,
+      "timestamp": 1794442556707,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 218,
+      "y": 162,
+      "timestamp": 1794442556953,
+      "hit3d": {
+        "meshName": "bottle_body",
+        "faceIndex": 60,
+        "point3d": {
+          "x": -0.0568,
+          "y": 0.0462,
+          "z": 0.2306
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-12T00:16:27.805Z"
+}
