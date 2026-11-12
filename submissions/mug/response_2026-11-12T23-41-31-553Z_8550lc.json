@@ -1,0 +1,244 @@
+{
+  "modelSource": "builtin",
+  "shape": "mug",
+  "objFile": "mug_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "A bucket with a side-handle for some reaon",
+    "aestheticRating": null
+  },
+  "totalClicks": 18,
+  "totalHits": 11,
+  "faceHits": {
+    "rim_f89": 1,
+    "handle_f300": 1,
+    "cup_body_f94": 1,
+    "cup_body_f18": 1,
+    "rim_f300": 1,
+    "cup_body_f4": 1,
+    "handle_f788": 1,
+    "rim_f905": 1,
+    "cup_body_f73": 1,
+    "cup_body_f78": 1,
+    "cup_body_f88": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 284,
+      "y": 164,
+      "timestamp": 1794526862934,
+      "hit3d": {
+        "meshName": "rim",
+        "faceIndex": 89,
+        "point3d": {
+          "x": 0.1568,
+          "y": 0.0588,
+          "z": 0.0074
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 342,
+      "y": 180,
+      "timestamp": 1794526863419,
+      "hit3d": {
+        "meshName": "handle",
+        "faceIndex": 300,
+        "point3d": {
+          "x": 0.3642,
+          "y": 0,
+          "z": 0.0011
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 155,
+      "y": 41,
+      "timestamp": 1794526864216,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 144,
+      "y": 85,
+      "timestamp": 1794526864631,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 178,
+      "y": 129,
+      "timestamp": 1794526865147,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 94,
+        "point3d": {
+          "x": -0.1745,
+          "y": 0.1435,
+          "z": 0.2945
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 109,
+      "y": 139,
+      "timestamp": 1794526865639,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 283,
+      "y": 126,
+      "timestamp": 1794526866467,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 18,
+        "point3d": {
+          "x": 0.1411,
+          "y": 0.1775,
+          "z": 0.1048
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 256,
+      "y": 67,
+      "timestamp": 1794526866886,
+      "hit3d": {
+        "meshName": "rim",
+        "faceIndex": 300,
+        "point3d": {
+          "x": 0.0582,
+          "y": 0.3978,
+          "z": 0.021
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 230,
+      "y": 129,
+      "timestamp": 1794526867399,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 4,
+        "point3d": {
+          "x": -0.0276,
+          "y": 0.146,
+          "z": 0.2753
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 338,
+      "y": 242,
+      "timestamp": 1794526868402,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 328,
+      "y": 326,
+      "timestamp": 1794526868715,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 295,
+      "y": 290,
+      "timestamp": 1794526869046,
+      "hit3d": {
+        "meshName": "handle",
+        "faceIndex": 788,
+        "point3d": {
+          "x": 0.1943,
+          "y": -0.3887,
+          "z": 0.0188
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 295,
+      "y": 227,
+      "timestamp": 1794526869570,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 229,
+      "y": 92,
+      "timestamp": 1794526870413,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 238,
+      "y": 51,
+      "timestamp": 1794526870790,
+      "hit3d": {
+        "meshName": "rim",
+        "faceIndex": 905,
+        "point3d": {
+          "x": -0.434,
+          "y": 0.3178,
+          "z": -0.0056
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 251,
+      "y": 280,
+      "timestamp": 1794526879040,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 73,
+        "point3d": {
+          "x": -0.4052,
+          "y": -0.2543,
+          "z": 0.029
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 283,
+      "y": 191,
+      "timestamp": 1794526879433,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 78,
+        "point3d": {
+          "x": -0.4013,
+          "y": -0.028,
+          "z": 0.1096
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 330,
+      "y": 158,
+      "timestamp": 1794526879826,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 88,
+        "point3d": {
+          "x": -0.2705,
+          "y": 0.0634,
+          "z": 0.2589
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-12T23:41:31.274Z"
+}
