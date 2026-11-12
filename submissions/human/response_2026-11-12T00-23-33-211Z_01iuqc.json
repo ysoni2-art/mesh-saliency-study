@@ -1,0 +1,42 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "person",
+    "aestheticRating": null
+  },
+  "totalClicks": 2,
+  "totalHits": 1,
+  "faceHits": {
+    "torso_f880": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 247,
+      "y": 175,
+      "timestamp": 1794442995566,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 880,
+        "point3d": {
+          "x": 0.0514,
+          "y": 0.041,
+          "z": 0.1826
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 272,
+      "y": 100,
+      "timestamp": 1794443001523,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-12T00:23:32.749Z"
+}
