@@ -1,0 +1,25 @@
+{
+  "modelSource": "builtin",
+  "shape": "bottle",
+  "objFile": "bottle_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "bottle",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 1,
+  "totalHits": 0,
+  "faceHits": {},
+  "clicks": [
+    {
+      "view": "front",
+      "x": 273,
+      "y": 81,
+      "timestamp": 1794442975827,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-12T00:23:01.767Z"
+}
