@@ -1,0 +1,422 @@
+{
+  "modelSource": "obj",
+  "shape": "lamp",
+  "objFile": "lamp_obj",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "rating",
+    "objectGuess": null,
+    "description": null,
+    "aestheticRating": 5
+  },
+  "totalClicks": 28,
+  "totalHits": 23,
+  "faceHits": {
+    "lamp_f2301": 1,
+    "lamp_f1440": 1,
+    "lamp_f7507": 1,
+    "lamp_f6632": 1,
+    "lamp_f4617": 1,
+    "lamp_f1373": 1,
+    "lamp_f1419": 1,
+    "lamp_f5174": 1,
+    "lamp_f1255": 1,
+    "lamp_f1402": 1,
+    "lamp_f1589": 1,
+    "lamp_f1311": 1,
+    "lamp_f7497": 1,
+    "lamp_f3152": 1,
+    "lamp_f1563": 1,
+    "lamp_f1817": 1,
+    "lamp_f1776": 1,
+    "lamp_f1638": 1,
+    "lamp_f1544": 1,
+    "lamp_f4582": 1,
+    "lamp_f7275": 1,
+    "lamp_f6427": 1,
+    "lamp_f3142": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 276,
+      "y": 157,
+      "timestamp": 1795214827188,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 2301,
+        "point3d": {
+          "x": 0.2396,
+          "y": 0.1545,
+          "z": -0.4141
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 265,
+      "y": 105,
+      "timestamp": 1795214827516,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 1440,
+        "point3d": {
+          "x": 0.1183,
+          "y": 0.3566,
+          "z": 0.3311
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 255,
+      "y": 217,
+      "timestamp": 1795214827868,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 7507,
+        "point3d": {
+          "x": 0.0786,
+          "y": -0.1901,
+          "z": 0.1845
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 253,
+      "y": 294,
+      "timestamp": 1795214828178,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 6632,
+        "point3d": {
+          "x": 0.0684,
+          "y": -0.6171,
+          "z": 0.069
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 228,
+      "y": 176,
+      "timestamp": 1795214828500,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 4617,
+        "point3d": {
+          "x": -0.0648,
+          "y": 0.0214,
+          "z": 0.0864
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 239,
+      "y": 124,
+      "timestamp": 1795214828795,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 1373,
+        "point3d": {
+          "x": -0.0049,
+          "y": 0.2549,
+          "z": 0.4054
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 217,
+      "y": 107,
+      "timestamp": 1795214829099,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 1419,
+        "point3d": {
+          "x": -0.1085,
+          "y": 0.3418,
+          "z": 0.3407
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 243,
+      "y": 150,
+      "timestamp": 1795214829747,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 5174,
+        "point3d": {
+          "x": -0.0405,
+          "y": 0.1648,
+          "z": 0.0191
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 189,
+      "y": 135,
+      "timestamp": 1795214830083,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 1255,
+        "point3d": {
+          "x": -0.3653,
+          "y": 0.2097,
+          "z": -0.2388
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 235,
+      "y": 86,
+      "timestamp": 1795214830332,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 1402,
+        "point3d": {
+          "x": -0.3123,
+          "y": 0.4521,
+          "z": -0.0227
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 290,
+      "y": 79,
+      "timestamp": 1795214830563,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 1589,
+        "point3d": {
+          "x": -0.1176,
+          "y": 0.536,
+          "z": 0.265
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 305,
+      "y": 134,
+      "timestamp": 1795214830819,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 1311,
+        "point3d": {
+          "x": -0.2836,
+          "y": 0.2259,
+          "z": 0.3168
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 233,
+      "y": 212,
+      "timestamp": 1795214831100,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 7497,
+        "point3d": {
+          "x": -0.1824,
+          "y": -0.1623,
+          "z": -0.0384
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 267,
+      "y": 261,
+      "timestamp": 1795214831331,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 282,
+      "y": 298,
+      "timestamp": 1795214831555,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 213,
+      "y": 304,
+      "timestamp": 1795214831778,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 3152,
+        "point3d": {
+          "x": 0.1339,
+          "y": -0.7341,
+          "z": -0.1586
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 208,
+      "y": 58,
+      "timestamp": 1795214832586,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 1563,
+        "point3d": {
+          "x": -0.2226,
+          "y": 0.6117,
+          "z": -0.1614
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 254,
+      "y": 39,
+      "timestamp": 1795214832860,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 1817,
+        "point3d": {
+          "x": -0.2035,
+          "y": 0.715,
+          "z": 0.0732
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 190,
+      "y": 64,
+      "timestamp": 1795214833604,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 243,
+      "y": 64,
+      "timestamp": 1795214833804,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 1776,
+        "point3d": {
+          "x": 0.2814,
+          "y": 0.5664,
+          "z": -0.0125
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 278,
+      "y": 120,
+      "timestamp": 1795214834013,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 1638,
+        "point3d": {
+          "x": 0.3452,
+          "y": 0.2829,
+          "z": -0.1797
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 269,
+      "y": 160,
+      "timestamp": 1795214834243,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 166,
+      "y": 143,
+      "timestamp": 1795214834532,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 1544,
+        "point3d": {
+          "x": 0.2889,
+          "y": 0.1787,
+          "z": 0.3597
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 229,
+      "y": 192,
+      "timestamp": 1795214834931,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 4582,
+        "point3d": {
+          "x": 0.1341,
+          "y": -0.0655,
+          "z": 0.0585
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 240,
+      "y": 231,
+      "timestamp": 1795214835146,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 7275,
+        "point3d": {
+          "x": 0.2067,
+          "y": -0.2574,
+          "z": 0.0009
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 211,
+      "y": 291,
+      "timestamp": 1795214835354,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 266,
+      "y": 310,
+      "timestamp": 1795214835540,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 6427,
+        "point3d": {
+          "x": 0.0469,
+          "y": -0.7138,
+          "z": -0.1417
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 284,
+      "y": 315,
+      "timestamp": 1795214835746,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 3142,
+        "point3d": {
+          "x": 0.0532,
+          "y": -0.7341,
+          "z": -0.2385
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-20T22:47:19.201Z"
+}
