@@ -157,7 +157,7 @@
 
 <div id="task-bar">
   <h2 id="task-title">Mesh Saliency Study</h2>
-  <p id="task-desc">The views start fully blurred. Click on each view to reveal small circular areas and explore the 3D shape.</p>
+  <p id="task-desc">The views start fully covered. Click on each view to reveal small circular areas and explore the 3D shape.</p>
 </div>
 
 <div id="status-bar">⏳ Building model...</div>
@@ -255,7 +255,16 @@ var SUBMISSION_FOLDER = 'submissions';
 // ═══════════════════════════════════════════════════════════════
 var CANVAS_W = 480, CANVAS_H = 360;
 var BUBBLE_R = 40;   // fixed "small" reveal radius
-var BLUR_R   = 70;   // fixed maximum blur
+var BLUR_R   = 70;   // fixed maximum blur (no longer used for the cover)
+// Colour that completely hides the 3D shape until the user clicks.
+// A flat dark gray, so no outline or bright area of the shape shows through.
+var COVER_COLOR = '#3a3a3a';
+
+// Fill a view with the dark gray cover.
+function drawCover(ctx){
+  ctx.fillStyle = COVER_COLOR;
+  ctx.fillRect(0, 0, CANVAS_W, CANVAS_H);
+}
 var ZOOM_MULTIPLIER = 1.35;
 
 var viewList = [
@@ -472,10 +481,7 @@ function captureSnapshot(v){
 function drawBlurred(v){
   var b = document.getElementById('bubble-'+v);
   var ctx = b.getContext('2d');
-  ctx.putImageData(snapshots[v],0,0);
-  StackBlur.canvasRGB(b,0,0,CANVAS_W,CANVAS_H,BLUR_R);
-  ctx.fillStyle = 'rgba(0,0,0,0.55)';
-  ctx.fillRect(0,0,CANVAS_W,CANVAS_H);
+  drawCover(ctx);
   redrawBubbles(v);
 }
 
@@ -918,7 +924,7 @@ function loadProceduralModel(shapeName){
 
     resetAll();
     document.getElementById('status-bar').textContent =
-      '✅ Ready — views are blurred. Click to reveal areas.';
+      '✅ Ready — views are covered. Click to reveal areas.';
   }).catch(function(err){
     console.error(err);
     if(myToken !== loadToken) return;
@@ -966,10 +972,7 @@ viewList.forEach(function(view){
       ' &nbsp;|&nbsp; 3D surface hits: <span id="hit-count">'+totalHits+'</span>';
 
         var ctx=bubble.getContext('2d');
-    ctx.putImageData(snapshots[view.name],0,0);
-    StackBlur.canvasRGB(bubble,0,0,CANVAS_W,CANVAS_H,BLUR_R);
-    ctx.fillStyle = 'rgba(0,0,0,0.55)';
-    ctx.fillRect(0,0,CANVAS_W,CANVAS_H);
+    drawCover(ctx);
     redrawBubbles(view.name);
     drawBubbleAt(ctx,cx,cy,view.name);
   });
@@ -996,7 +999,7 @@ function downloadJSON(data){
 function saveData() {
   if (isSubmitting) return;
   if (!allClicks.length) {
-    alert('No clicks yet! Click around the blurred views before submitting.');
+    alert('No clicks yet! Click around the covered views before submitting.');
     return;
   }
 
