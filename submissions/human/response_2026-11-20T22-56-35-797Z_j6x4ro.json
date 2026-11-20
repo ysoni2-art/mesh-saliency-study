@@ -1,0 +1,81 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "human",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 5,
+  "totalHits": 3,
+  "faceHits": {
+    "head_f869": 1,
+    "torso_f701": 1,
+    "r_shin_f2": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 218,
+      "y": 72,
+      "timestamp": 1795215388716,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 869,
+        "point3d": {
+          "x": -0.1695,
+          "y": 0.8343,
+          "z": 0.0795
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 278,
+      "y": 146,
+      "timestamp": 1795215389498,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 701,
+        "point3d": {
+          "x": 0.298,
+          "y": 0.2628,
+          "z": 0.0682
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 182,
+      "y": 224,
+      "timestamp": 1795215390421,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 252,
+      "y": 296,
+      "timestamp": 1795215391325,
+      "hit3d": {
+        "meshName": "r_shin",
+        "faceIndex": 2,
+        "point3d": {
+          "x": 0.0961,
+          "y": -0.8999,
+          "z": 0.0588
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 295,
+      "y": 227,
+      "timestamp": 1795215392164,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-20T22:56:36.433Z"
+}
