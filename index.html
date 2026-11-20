@@ -133,6 +133,24 @@
       padding: 3px 10px; cursor: pointer; font-size: 11px;
     }
     #github-config-bar button:hover { background: #555; }
+
+    /* ── progress (objects done in this session) ── */
+    #progress-bar {
+      background: #202020; padding: 10px 20px; text-align: center;
+      border-bottom: 1px solid #333; font-size: 15px; color: #ddd;
+    }
+    #progress-text b { color: #00aaff; }
+    #progress-track {
+      width: 100%; max-width: 420px; height: 8px; margin: 7px auto 0;
+      background: #333; border-radius: 4px; overflow: hidden;
+    }
+    #progress-fill { height: 100%; width: 0; background: #00aaff; transition: width 0.4s; }
+
+    /* ── shown after all objects are done ── */
+    #done-screen { display: none; text-align: center; padding: 60px 20px; }
+    #done-screen h2 { font-size: 26px; color: #00aaff; margin-bottom: 12px; }
+    #done-screen p  { font-size: 16px; color: #ccc; }
+    #submit-btn:disabled { background: #555 !important; cursor: not-allowed; }
   </style>
 </head>
 <body>
@@ -143,6 +161,18 @@
 </div>
 
 <div id="status-bar">⏳ Building model...</div>
+
+<!-- PROGRESS -->
+<div id="progress-bar">
+  <div id="progress-text">Object <b>1</b> of <b>8</b> · 0 of 8 done</div>
+  <div id="progress-track"><div id="progress-fill"></div></div>
+</div>
+
+<!-- SHOWN WHEN ALL OBJECTS ARE DONE -->
+<div id="done-screen">
+  <h2>🎉 Thank you — you have completed all objects!</h2>
+  <p>Your responses have been saved. You can close this page now.</p>
+</div>
 
 <!-- INSTRUCTIONS -->
 <div id="instructions-bar">
@@ -199,7 +229,7 @@
 </div>
 
 <div id="bottom-bar">
-  <button onclick="saveData()">📤 Submit My Response</button>
+  <button id="submit-btn" onclick="saveData()">📤 Submit My Response</button>
   <button onclick="resetAll()" style="background:#555;">🔄 Reset</button>
   <div id="total-clicks">
     Total clicks: 0 &nbsp;|&nbsp; 3D surface hits: <span id="hit-count">0</span>
@@ -272,13 +302,123 @@ function randomQuestionType(){
   return QUESTION_TYPES[Math.floor(Math.random()*QUESTION_TYPES.length)];
 }
 
+// ═══════════════════════════════════════════════════════════════
+//  SESSION PLAN — each person sees every object once,
+//  objects / questions with the fewest responses first
+// ═══════════════════════════════════════════════════════════════
+// Current number of responses per object and question.
+// Update these numbers when new data comes in.
+var RESPONSE_COUNTS = {
+  abstract:    { object: 4, describe: 6,  rating: 8 },
+  antler_head: { object: 4, describe: 6,  rating: 3 },
+  bottle:      { object: 5, describe: 10, rating: 3 },
+  chair:       { object: 4, describe: 5,  rating: 3 },
+  hand_chair:  { object: 7, describe: 3,  rating: 3 },
+  human:       { object: 4, describe: 5,  rating: 5 },
+  lamp:        { object: 4, describe: 3,  rating: 3 },
+  mug:         { object: 2, describe: 5,  rating: 4 }
+};
+
+// Fewer responses → higher weight. Squared so low counts are strongly preferred,
+// while some randomness keeps everyone from getting exactly the same order.
+function priorityWeight(count){ return 1 / Math.pow((count || 0) + 1, 2); }
+
+function weightedPick(keys, weightOf){
+  var total = 0;
+  keys.forEach(function(k){ total += weightOf(k); });
+  var r = Math.random() * total;
+  for(var i = 0; i < keys.length; i++){
+    r -= weightOf(keys[i]);
+    if(r <= 0) return keys[i];
+  }
+  return keys[keys.length - 1];
+}
+
+// Live number of submissions per object, read from the GitHub repo
+// (one request). If it fails, the totals from RESPONSE_COUNTS are used.
+var REPO_TREE_URL = 'https://api.github.com/repos/ysoni2-art/mesh-saliency-study/git/trees/main?recursive=1';
+var liveTotals = null;
+
+function loadLiveTotals(){
+  var timeout = new Promise(function(_, reject){ setTimeout(function(){ reject(new Error('timeout')); }, 4000); });
+  return Promise.race([fetch(REPO_TREE_URL).then(function(r){
+    if(!r.ok) throw new Error('HTTP ' + r.status);
+    return r.json();
+  }), timeout]).then(function(tree){
+    var totals = {};
+    SHAPE_KEYS.forEach(function(s){ totals[s] = 0; });
+    (tree.tree || []).forEach(function(item){
+      var m = /^submissions\/([^\/]+)\/[^\/]+\.json$/.exec(item.path || '');
+      if(m && totals.hasOwnProperty(m[1])) totals[m[1]]++;
+    });
+    liveTotals = totals;
+  }).catch(function(err){
+    console.warn('Live response counts not available, using the built-in table.', err);
+  });
+}
+
+function objectTotal(s){
+  if(liveTotals) return liveTotals[s] || 0;
+  var c = RESPONSE_COUNTS[s] || {};
+  return (c.object || 0) + (c.describe || 0) + (c.rating || 0);
+}
+
+function buildSessionPlan(){
+  var remaining = SHAPE_KEYS.slice(), plan = [];
+  while(remaining.length){
+    // Object: the fewer total responses, the earlier it tends to come.
+    var shape = weightedPick(remaining, function(s){ return priorityWeight(objectTotal(s)); });
+    remaining.splice(remaining.indexOf(shape), 1);
+    // Question: the one with the fewest responses for this object is most likely.
+    var question = weightedPick(QUESTION_TYPES, function(q){
+      return priorityWeight((RESPONSE_COUNTS[shape] || {})[q]);
+    });
+    plan.push({ shape: shape, question: question });
+  }
+  return plan;
+}
+
+var sessionPlan = [];          // filled once the live counts have loaded
+var sessionIndex = 0;         // which object of the plan is shown now
+var isSubmitting = false;      // blocks double submissions of the same answer
+
+function updateProgress(){
+  var total = sessionPlan.length || SHAPE_KEYS.length;
+  var done = Math.min(sessionIndex, total);
+  document.getElementById('progress-text').innerHTML =
+    (done < total ? 'Object <b>' + (done + 1) + '</b> of <b>' + total + '</b> · ' : '') +
+    done + ' of ' + total + ' done';
+  document.getElementById('progress-fill').style.width = (done / total * 100) + '%';
+}
+
+function showDoneScreen(){
+  ['instructions-bar','participant-bar','views-grid','bottom-bar'].forEach(function(id){
+    document.getElementById(id).style.display = 'none';
+  });
+  document.getElementById('done-screen').style.display = 'block';
+  document.getElementById('status-bar').textContent = '✅ All objects completed — thank you!';
+  updateProgress();
+}
+
 function startNewRound(){
+  isSubmitting = false;
+  document.getElementById('submit-btn').disabled = false;
+  if(sessionIndex >= sessionPlan.length){ showDoneScreen(); return; }
   document.getElementById('q-object').value = '';
   document.getElementById('q-describe').value = '';
   setRating(null);
-  currentQuestionType = randomQuestionType();
+  var step = sessionPlan[sessionIndex];
+  currentQuestionType = step.question;
   showQuestion(currentQuestionType);
-  loadProceduralModel(randomShape());
+  updateProgress();
+  loadProceduralModel(step.shape);
+}
+
+// Called once per submitted object: count it as done and move to the next one.
+function finishRound(){
+  sessionIndex++;
+  updateProgress();
+  setTimeout(startNewRound, 1500);
 }
 
 viewList.forEach(function(v){ clicksPerView[v.name] = []; });
@@ -798,7 +938,7 @@ function switchShape(){
 viewList.forEach(function(view){
   var bubble=document.getElementById('bubble-'+view.name);
   bubble.addEventListener('click',function(e){
-    if(!modelLoaded) return;
+    if(!modelLoaded || isSubmitting) return;
     var rect=bubble.getBoundingClientRect();
     var cx=(e.clientX-rect.left)*(CANVAS_W/rect.width);
     var cy=(e.clientY-rect.top) *(CANVAS_H/rect.height);
@@ -854,6 +994,7 @@ function downloadJSON(data){
 //  SAVE / SUBMIT DATA TO GITHUB DIRECTLY
 // ═══════════════════════════════════════════════════════════════
 function saveData() {
+  if (isSubmitting) return;
   if (!allClicks.length) {
     alert('No clicks yet! Click around the blurred views before submitting.');
     return;
@@ -883,6 +1024,11 @@ function saveData() {
   // Read the answer at the exact moment of submission.
   // For ratings, read the selected button as well as currentRating so the
   // saved JSON reflects what is visibly selected in the page.
+  // Lock this round so the same answer cannot be saved twice (double-clicks).
+  if (isSubmitting) return;
+  isSubmitting = true;
+  document.getElementById('submit-btn').disabled = true;
+
   var selectedRatingButton = document.querySelector('.rating-btn.selected');
   var submittedRating = selectedRatingButton
     ? parseInt(selectedRatingButton.getAttribute('data-value'), 10)
@@ -923,7 +1069,7 @@ function saveData() {
     document.getElementById('status-bar').textContent =
       'ℹ️ Secure submission API is not connected yet — JSON downloaded locally as ' + fname;
 
-    setTimeout(startNewRound, 1500);
+    finishRound();
     return;
   }
 
@@ -959,7 +1105,7 @@ function saveData() {
       '✅ Response saved successfully: ' +
       (result.jsonPath || 'GitHub');
 
-    setTimeout(startNewRound, 1500);
+    finishRound();
 
   })
   .catch(function(err) {
@@ -975,7 +1121,7 @@ function saveData() {
       fname +
       '.';
 
-    setTimeout(startNewRound, 1500);
+    finishRound();
 
   });
 }
@@ -990,9 +1136,12 @@ function resetAll(){
   if(modelLoaded) captureAndBlurAll();
 }
 
-currentQuestionType = randomQuestionType();
-showQuestion(currentQuestionType);
-loadProceduralModel(randomShape());
+// Start: read live counts (if available), plan the session, show the first object.
+updateProgress();
+loadLiveTotals().then(function(){
+  sessionPlan = buildSessionPlan();
+  startNewRound();
+});
 
 </script>
 </body>
