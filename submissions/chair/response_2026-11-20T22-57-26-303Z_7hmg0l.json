@@ -1,0 +1,112 @@
+{
+  "modelSource": "builtin",
+  "shape": "chair",
+  "objFile": "chair_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "rating",
+    "objectGuess": null,
+    "description": null,
+    "aestheticRating": 5
+  },
+  "totalClicks": 7,
+  "totalHits": 5,
+  "faceHits": {
+    "backrest_f8": 2,
+    "leg_fl_f1": 1,
+    "seat_f8": 1,
+    "cushion_f9": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 255,
+      "y": 84,
+      "timestamp": 1795215436715,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 8,
+        "point3d": {
+          "x": 0.0803,
+          "y": 0.5289,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 322,
+      "y": 182,
+      "timestamp": 1795215437507,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 313,
+      "y": 258,
+      "timestamp": 1795215438442,
+      "hit3d": {
+        "meshName": "leg_fl",
+        "faceIndex": 1,
+        "point3d": {
+          "x": 0.296,
+          "y": -0.3153,
+          "z": 0.3082
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 161,
+      "y": 284,
+      "timestamp": 1795215439534,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 167,
+      "y": 191,
+      "timestamp": 1795215440341,
+      "hit3d": {
+        "meshName": "seat",
+        "faceIndex": 8,
+        "point3d": {
+          "x": -0.2912,
+          "y": -0.0442,
+          "z": 0.3275
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 186,
+      "y": 99,
+      "timestamp": 1795215441151,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 8,
+        "point3d": {
+          "x": -0.2981,
+          "y": 0.4457,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 264,
+      "y": 187,
+      "timestamp": 1795215442151,
+      "hit3d": {
+        "meshName": "cushion",
+        "faceIndex": 9,
+        "point3d": {
+          "x": 0.0976,
+          "y": -0.0283,
+          "z": 0.3025
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-20T22:57:26.915Z"
+}
