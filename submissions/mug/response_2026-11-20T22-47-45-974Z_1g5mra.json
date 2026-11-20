@@ -1,0 +1,726 @@
+{
+  "modelSource": "builtin",
+  "shape": "mug",
+  "objFile": "mug_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "rating",
+    "objectGuess": null,
+    "description": null,
+    "aestheticRating": 4
+  },
+  "totalClicks": 51,
+  "totalHits": 40,
+  "faceHits": {
+    "cup_body_f76": 5,
+    "cup_body_f77": 1,
+    "cup_body_f71": 1,
+    "cup_body_f68": 1,
+    "cup_body_f66": 2,
+    "cup_body_f2": 2,
+    "cup_body_f8": 2,
+    "handle_f424": 1,
+    "cup_body_f18": 1,
+    "rim_f94": 1,
+    "cup_body_f31": 1,
+    "cup_body_f35": 1,
+    "handle_f509": 1,
+    "handle_f232": 1,
+    "cup_body_f32": 1,
+    "cup_body_f1": 1,
+    "cup_body_f92": 1,
+    "cup_body_f90": 3,
+    "cup_body_f4": 2,
+    "cup_body_f0": 1,
+    "cup_body_f3": 1,
+    "cup_body_f88": 1,
+    "cup_body_f89": 1,
+    "cup_body_f93": 1,
+    "handle_f248": 1,
+    "handle_f817": 1,
+    "cup_body_f62": 1,
+    "rim_f40": 1,
+    "cup_body_f33": 1,
+    "cup_body_f63": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 282,
+      "y": 143,
+      "timestamp": 1795214848627,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 76,
+        "point3d": {
+          "x": -0.4119,
+          "y": 0.0928,
+          "z": 0.1054
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 276,
+      "y": 223,
+      "timestamp": 1795214848867,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 76,
+        "point3d": {
+          "x": -0.4011,
+          "y": -0.1086,
+          "z": 0.0926
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 271,
+      "y": 304,
+      "timestamp": 1795214849075,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 77,
+        "point3d": {
+          "x": -0.3897,
+          "y": -0.3181,
+          "z": 0.0796
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 238,
+      "y": 272,
+      "timestamp": 1795214849292,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 71,
+        "point3d": {
+          "x": -0.4083,
+          "y": -0.2325,
+          "z": -0.0051
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 219,
+      "y": 194,
+      "timestamp": 1795214849491,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 68,
+        "point3d": {
+          "x": -0.4172,
+          "y": -0.0347,
+          "z": -0.0531
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 206,
+      "y": 113,
+      "timestamp": 1795214849691,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 66,
+        "point3d": {
+          "x": -0.425,
+          "y": 0.1665,
+          "z": -0.0833
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 222,
+      "y": 97,
+      "timestamp": 1795214849866,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 275,
+      "y": 182,
+      "timestamp": 1795214850074,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 76,
+        "point3d": {
+          "x": -0.4104,
+          "y": -0.0038,
+          "z": 0.0883
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 279,
+      "y": 187,
+      "timestamp": 1795214850243,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 76,
+        "point3d": {
+          "x": -0.4057,
+          "y": -0.0177,
+          "z": 0.0991
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 343,
+      "y": 240,
+      "timestamp": 1795214850555,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 206,
+      "y": 180,
+      "timestamp": 1795214850754,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 2,
+        "point3d": {
+          "x": -0.0969,
+          "y": -0.0004,
+          "z": 0.2833
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 244,
+      "y": 160,
+      "timestamp": 1795214850915,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 8,
+        "point3d": {
+          "x": 0.0129,
+          "y": 0.0601,
+          "z": 0.2478
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 302,
+      "y": 212,
+      "timestamp": 1795214851075,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 232,
+      "y": 238,
+      "timestamp": 1795214851371,
+      "hit3d": {
+        "meshName": "handle",
+        "faceIndex": 424,
+        "point3d": {
+          "x": 0.4583,
+          "y": -0.1384,
+          "z": 0.0201
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 206,
+      "y": 146,
+      "timestamp": 1795214851571,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 18,
+        "point3d": {
+          "x": 0.1338,
+          "y": 0.1105,
+          "z": 0.1115
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 237,
+      "y": 125,
+      "timestamp": 1795214851724,
+      "hit3d": {
+        "meshName": "rim",
+        "faceIndex": 94,
+        "point3d": {
+          "x": 0.1822,
+          "y": 0.1702,
+          "z": 0.0091
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 280,
+      "y": 223,
+      "timestamp": 1795214851907,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 31,
+        "point3d": {
+          "x": 0.1043,
+          "y": -0.1414,
+          "z": -0.1312
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 289,
+      "y": 276,
+      "timestamp": 1795214852051,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 35,
+        "point3d": {
+          "x": 0.063,
+          "y": -0.3289,
+          "z": -0.1683
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 233,
+      "y": 288,
+      "timestamp": 1795214852203,
+      "hit3d": {
+        "meshName": "handle",
+        "faceIndex": 509,
+        "point3d": {
+          "x": 0.4467,
+          "y": -0.2633,
+          "z": 0.0171
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 244,
+      "y": 147,
+      "timestamp": 1795214852402,
+      "hit3d": {
+        "meshName": "handle",
+        "faceIndex": 232,
+        "point3d": {
+          "x": 0.3755,
+          "y": 0.0856,
+          "z": -0.0103
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 295,
+      "y": 125,
+      "timestamp": 1795214852546,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 32,
+        "point3d": {
+          "x": 0.0993,
+          "y": 0.182,
+          "z": -0.1819
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 281,
+      "y": 247,
+      "timestamp": 1795214852899,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 239,
+      "y": 294,
+      "timestamp": 1795214853091,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 8,
+        "point3d": {
+          "x": -0.0033,
+          "y": -0.3422,
+          "z": 0.2241
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 202,
+      "y": 290,
+      "timestamp": 1795214853266,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 1,
+        "point3d": {
+          "x": -0.1107,
+          "y": -0.3191,
+          "z": 0.262
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 166,
+      "y": 190,
+      "timestamp": 1795214853491,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 92,
+        "point3d": {
+          "x": -0.2118,
+          "y": -0.028,
+          "z": 0.275
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 159,
+      "y": 138,
+      "timestamp": 1795214853699,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 90,
+        "point3d": {
+          "x": -0.2305,
+          "y": 0.1211,
+          "z": 0.28
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 222,
+      "y": 128,
+      "timestamp": 1795214853898,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 4,
+        "point3d": {
+          "x": -0.05,
+          "y": 0.1482,
+          "z": 0.2831
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 222,
+      "y": 129,
+      "timestamp": 1795214854075,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 4,
+        "point3d": {
+          "x": -0.05,
+          "y": 0.1443,
+          "z": 0.2828
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 214,
+      "y": 81,
+      "timestamp": 1795214854298,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 188,
+      "y": 69,
+      "timestamp": 1795214854498,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 196,
+      "y": 129,
+      "timestamp": 1795214854715,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 0,
+        "point3d": {
+          "x": -0.1228,
+          "y": 0.1426,
+          "z": 0.2958
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 157,
+      "y": 86,
+      "timestamp": 1795214854947,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 190,
+      "y": 83,
+      "timestamp": 1795214855083,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 257,
+      "y": 105,
+      "timestamp": 1795214855243,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 217,
+      "y": 149,
+      "timestamp": 1795214855410,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 3,
+        "point3d": {
+          "x": -0.0656,
+          "y": 0.0895,
+          "z": 0.2836
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 159,
+      "y": 208,
+      "timestamp": 1795214855610,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 90,
+        "point3d": {
+          "x": -0.2339,
+          "y": -0.08,
+          "z": 0.2637
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 151,
+      "y": 228,
+      "timestamp": 1795214855827,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 88,
+        "point3d": {
+          "x": -0.2616,
+          "y": -0.1417,
+          "z": 0.247
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 207,
+      "y": 246,
+      "timestamp": 1795214856051,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 2,
+        "point3d": {
+          "x": -0.0942,
+          "y": -0.1904,
+          "z": 0.2689
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 155,
+      "y": 290,
+      "timestamp": 1795214856227,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 89,
+        "point3d": {
+          "x": -0.2516,
+          "y": -0.3261,
+          "z": 0.2373
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 176,
+      "y": 310,
+      "timestamp": 1795214856419,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 93,
+        "point3d": {
+          "x": -0.1877,
+          "y": -0.3815,
+          "z": 0.2541
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 325,
+      "y": 183,
+      "timestamp": 1795214856762,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 340,
+      "y": 175,
+      "timestamp": 1795214856924,
+      "hit3d": {
+        "meshName": "handle",
+        "faceIndex": 248,
+        "point3d": {
+          "x": 0.3527,
+          "y": 0.0188,
+          "z": 0.0272
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 284,
+      "y": 287,
+      "timestamp": 1795214857330,
+      "hit3d": {
+        "meshName": "handle",
+        "faceIndex": 817,
+        "point3d": {
+          "x": 0.1567,
+          "y": -0.3801,
+          "z": 0.0133
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 180,
+      "y": 120,
+      "timestamp": 1795214859771,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 62,
+        "point3d": {
+          "x": -0.3938,
+          "y": 0.1543,
+          "z": -0.1528
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 243,
+      "y": 47,
+      "timestamp": 1795214860026,
+      "hit3d": {
+        "meshName": "rim",
+        "faceIndex": 40,
+        "point3d": {
+          "x": -0.4273,
+          "y": 0.3291,
+          "z": 0.0086
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 334,
+      "y": 135,
+      "timestamp": 1795214860282,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 90,
+        "point3d": {
+          "x": -0.2331,
+          "y": 0.1344,
+          "z": 0.2801
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 292,
+      "y": 168,
+      "timestamp": 1795214860739,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 33,
+        "point3d": {
+          "x": 0.0927,
+          "y": 0.0408,
+          "z": -0.1737
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 292,
+      "y": 116,
+      "timestamp": 1795214860978,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 274,
+      "y": 223,
+      "timestamp": 1795214861739,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 76,
+        "point3d": {
+          "x": -0.4036,
+          "y": -0.1083,
+          "z": 0.0854
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 202,
+      "y": 272,
+      "timestamp": 1795214861970,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 66,
+        "point3d": {
+          "x": -0.39,
+          "y": -0.2369,
+          "z": -0.0969
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 189,
+      "y": 309,
+      "timestamp": 1795214862185,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 63,
+        "point3d": {
+          "x": -0.3626,
+          "y": -0.3413,
+          "z": -0.1359
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-20T22:47:45.050Z"
+}
