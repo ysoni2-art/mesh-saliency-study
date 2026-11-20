@@ -1,0 +1,111 @@
+{
+  "modelSource": "obj",
+  "shape": "antler_head",
+  "objFile": "antler_head_obj",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "skull",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 8,
+  "totalHits": 4,
+  "faceHits": {
+    "antler_head_f8817": 1,
+    "antler_head_f30743": 1,
+    "antler_head_f31572": 1,
+    "antler_head_f26013": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 215,
+      "y": 61,
+      "timestamp": 1795217036102,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 270,
+      "y": 95,
+      "timestamp": 1795217036790,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 8817,
+        "point3d": {
+          "x": 0.1458,
+          "y": 0.4087,
+          "z": 0.2948
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 154,
+      "y": 137,
+      "timestamp": 1795217037509,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 30743,
+        "point3d": {
+          "x": -0.4807,
+          "y": 0.2419,
+          "z": 0.0113
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 320,
+      "y": 176,
+      "timestamp": 1795217038222,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 218,
+      "y": 202,
+      "timestamp": 1795217038919,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 31572,
+        "point3d": {
+          "x": -0.1044,
+          "y": -0.1064,
+          "z": 0.3211
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 192,
+      "y": 246,
+      "timestamp": 1795217039653,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 218,
+      "y": 141,
+      "timestamp": 1795217040477,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 26013,
+        "point3d": {
+          "x": -0.1024,
+          "y": 0.1837,
+          "z": 0.3579
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 343,
+      "y": 234,
+      "timestamp": 1795217041351,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-20T23:31:33.647Z"
+}
