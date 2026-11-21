@@ -1,0 +1,147 @@
+{
+  "modelSource": "builtin",
+  "shape": "chair",
+  "objFile": "chair_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "A chair with armrests",
+    "aestheticRating": null
+  },
+  "totalClicks": 12,
+  "totalHits": 5,
+  "faceHits": {
+    "armrest_r_f2": 1,
+    "leg_br_f18": 1,
+    "backrest_f9": 2,
+    "armrest_l_f1": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 242,
+      "y": 56,
+      "timestamp": 1795288561144,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 233,
+      "y": 174,
+      "timestamp": 1795288562139,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 196,
+      "y": 134,
+      "timestamp": 1795288563090,
+      "hit3d": {
+        "meshName": "armrest_r",
+        "faceIndex": 2,
+        "point3d": {
+          "x": -0.41,
+          "y": 0.1739,
+          "z": -0.1671
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 177,
+      "y": 224,
+      "timestamp": 1795288563958,
+      "hit3d": {
+        "meshName": "leg_br",
+        "faceIndex": 18,
+        "point3d": {
+          "x": -0.316,
+          "y": -0.175,
+          "z": -0.2525
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 323,
+      "y": 213,
+      "timestamp": 1795288564919,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 306,
+      "y": 100,
+      "timestamp": 1795288565754,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 250,
+      "y": 117,
+      "timestamp": 1795288566570,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 234,
+      "y": 151,
+      "timestamp": 1795288568516,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 9,
+        "point3d": {
+          "x": -0.0338,
+          "y": 0.161,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 299,
+      "y": 112,
+      "timestamp": 1795288569319,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 9,
+        "point3d": {
+          "x": 0.3254,
+          "y": 0.3748,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 273,
+      "y": 205,
+      "timestamp": 1795288570170,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 230,
+      "y": 157,
+      "timestamp": 1795288572505,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 280,
+      "y": 132,
+      "timestamp": 1795288573394,
+      "hit3d": {
+        "meshName": "armrest_l",
+        "faceIndex": 1,
+        "point3d": {
+          "x": 0.41,
+          "y": 0.1798,
+          "z": -0.1502
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-21T19:16:23.710Z"
+}
