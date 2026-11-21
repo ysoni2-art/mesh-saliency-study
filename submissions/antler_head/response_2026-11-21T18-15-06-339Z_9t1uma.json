@@ -1,0 +1,182 @@
+{
+  "modelSource": "obj",
+  "shape": "antler_head",
+  "objFile": "antler_head_obj",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "it's a goofy head of one of those narnia creatures with the short deer racks and elf-like ears",
+    "aestheticRating": null
+  },
+  "totalClicks": 13,
+  "totalHits": 8,
+  "faceHits": {
+    "antler_head_f22440": 1,
+    "antler_head_f7796": 1,
+    "antler_head_f28249": 1,
+    "antler_head_f8397": 1,
+    "antler_head_f7338": 1,
+    "antler_head_f35161": 1,
+    "antler_head_f29325": 1,
+    "antler_head_f22340": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 217,
+      "y": 124,
+      "timestamp": 1795284832702,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 22440,
+        "point3d": {
+          "x": -0.1086,
+          "y": 0.2619,
+          "z": 0.3652
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 280,
+      "y": 183,
+      "timestamp": 1795284833396,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 7796,
+        "point3d": {
+          "x": 0.1911,
+          "y": -0.0132,
+          "z": 0.3088
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 195,
+      "y": 212,
+      "timestamp": 1795284834037,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 28249,
+        "point3d": {
+          "x": -0.2272,
+          "y": -0.1583,
+          "z": 0.2261
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 252,
+      "y": 272,
+      "timestamp": 1795284835147,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 8397,
+        "point3d": {
+          "x": 0.0718,
+          "y": -0.5345,
+          "z": -0.0812
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 276,
+      "y": 104,
+      "timestamp": 1795284835856,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 7338,
+        "point3d": {
+          "x": 0.1722,
+          "y": 0.3643,
+          "z": 0.2993
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 229,
+      "y": 58,
+      "timestamp": 1795284836418,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 175,
+      "y": 67,
+      "timestamp": 1795284837037,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 35161,
+        "point3d": {
+          "x": -0.3225,
+          "y": 0.5627,
+          "z": 0.2321
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 322,
+      "y": 41,
+      "timestamp": 1795284837780,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 164,
+      "y": 26,
+      "timestamp": 1795284838701,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 175,
+      "y": 133,
+      "timestamp": 1795284839644,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 173,
+      "y": 172,
+      "timestamp": 1795284840056,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 29325,
+        "point3d": {
+          "x": -0.3774,
+          "y": 0.0462,
+          "z": -0.0038
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 237,
+      "y": 177,
+      "timestamp": 1795284846033,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 22340,
+        "point3d": {
+          "x": -0.0125,
+          "y": 0.0125,
+          "z": 0.4011
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 300,
+      "y": 209,
+      "timestamp": 1795284846510,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-21T18:15:05.852Z"
+}
