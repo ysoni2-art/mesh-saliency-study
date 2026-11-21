@@ -1,0 +1,178 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "An articulated humanoid doll, decentil realistic besides the head",
+    "aestheticRating": null
+  },
+  "totalClicks": 15,
+  "totalHits": 6,
+  "faceHits": {
+    "l_lower_arm_f17": 1,
+    "torso_f428": 1,
+    "head_f879": 1,
+    "l_upper_arm_f3": 1,
+    "head_f999": 1,
+    "r_upper_arm_f35": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 172,
+      "y": 148,
+      "timestamp": 1795288445745,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 211,
+      "y": 169,
+      "timestamp": 1795288446669,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 313,
+      "y": 199,
+      "timestamp": 1795288447568,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 272,
+      "y": 211,
+      "timestamp": 1795288448384,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 233,
+      "y": 149,
+      "timestamp": 1795288449458,
+      "hit3d": {
+        "meshName": "l_lower_arm",
+        "faceIndex": 17,
+        "point3d": {
+          "x": -0.4612,
+          "y": 0.2071,
+          "z": -0.0486
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 220,
+      "y": 255,
+      "timestamp": 1795288450306,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 229,
+      "y": 111,
+      "timestamp": 1795288452166,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 428,
+        "point3d": {
+          "x": -0.0813,
+          "y": 0.5242,
+          "z": 0.151
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 235,
+      "y": 69,
+      "timestamp": 1795288453027,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 879,
+        "point3d": {
+          "x": -0.0342,
+          "y": 0.8326,
+          "z": 0.1767
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 189,
+      "y": 132,
+      "timestamp": 1795288453869,
+      "hit3d": {
+        "meshName": "l_upper_arm",
+        "faceIndex": 3,
+        "point3d": {
+          "x": -0.3976,
+          "y": 0.3719,
+          "z": 0.0588
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 279,
+      "y": 219,
+      "timestamp": 1795288454657,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 253,
+      "y": 80,
+      "timestamp": 1795288457869,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 999,
+        "point3d": {
+          "x": -0.1199,
+          "y": 0.7662,
+          "z": 0.0987
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 269,
+      "y": 208,
+      "timestamp": 1795288459321,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 198,
+      "y": 124,
+      "timestamp": 1795288460096,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 232,
+      "y": 123,
+      "timestamp": 1795288460892,
+      "hit3d": {
+        "meshName": "r_upper_arm",
+        "faceIndex": 35,
+        "point3d": {
+          "x": 0.3855,
+          "y": 0.396,
+          "z": 0.0566
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 330,
+      "y": 207,
+      "timestamp": 1795288477215,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-21T19:14:49.317Z"
+}
