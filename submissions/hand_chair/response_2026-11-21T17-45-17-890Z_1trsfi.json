@@ -1,0 +1,316 @@
+{
+  "modelSource": "obj",
+  "shape": "hand_chair",
+  "objFile": "hand_chair_obj",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "hand",
+    "aestheticRating": null
+  },
+  "totalClicks": 22,
+  "totalHits": 16,
+  "faceHits": {
+    "hand_chair_f553": 1,
+    "hand_chair_f451": 1,
+    "hand_chair_f138": 1,
+    "hand_chair_f572": 1,
+    "hand_chair_f248": 1,
+    "hand_chair_f174": 1,
+    "hand_chair_f143": 1,
+    "hand_chair_f268": 1,
+    "hand_chair_f73": 2,
+    "hand_chair_f133": 1,
+    "hand_chair_f235": 1,
+    "hand_chair_f455": 1,
+    "hand_chair_f323": 1,
+    "hand_chair_f458": 1,
+    "hand_chair_f444": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 240,
+      "y": 173,
+      "timestamp": 1795283095478,
+      "hit3d": {
+        "meshName": "hand_chair",
+        "faceIndex": 553,
+        "point3d": {
+          "x": -0.5088,
+          "y": 0.0293,
+          "z": 0.002
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 293,
+      "y": 216,
+      "timestamp": 1795283096646,
+      "hit3d": {
+        "meshName": "hand_chair",
+        "faceIndex": 451,
+        "point3d": {
+          "x": -0.417,
+          "y": -0.1614,
+          "z": 0.2379
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 232,
+      "y": 246,
+      "timestamp": 1795283097607,
+      "hit3d": {
+        "meshName": "hand_chair",
+        "faceIndex": 138,
+        "point3d": {
+          "x": -0.266,
+          "y": -0.3237,
+          "z": -0.0382
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 272,
+      "y": 131,
+      "timestamp": 1795283098745,
+      "hit3d": {
+        "meshName": "hand_chair",
+        "faceIndex": 572,
+        "point3d": {
+          "x": -0.5059,
+          "y": 0.2119,
+          "z": 0.1374
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 181,
+      "y": 227,
+      "timestamp": 1795283099934,
+      "hit3d": {
+        "meshName": "hand_chair",
+        "faceIndex": 248,
+        "point3d": {
+          "x": -0.3807,
+          "y": -0.2154,
+          "z": -0.2702
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 281,
+      "y": 206,
+      "timestamp": 1795283100990,
+      "hit3d": {
+        "meshName": "hand_chair",
+        "faceIndex": 174,
+        "point3d": {
+          "x": 0.2611,
+          "y": -0.1654,
+          "z": -0.2839
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 208,
+      "y": 251,
+      "timestamp": 1795283101938,
+      "hit3d": {
+        "meshName": "hand_chair",
+        "faceIndex": 143,
+        "point3d": {
+          "x": -0.1502,
+          "y": -0.3399,
+          "z": 0.3243
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 179,
+      "y": 175,
+      "timestamp": 1795283102486,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 285,
+      "y": 203,
+      "timestamp": 1795283103324,
+      "hit3d": {
+        "meshName": "hand_chair",
+        "faceIndex": 268,
+        "point3d": {
+          "x": -0.2088,
+          "y": -0.1433,
+          "z": -0.2755
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 255,
+      "y": 187,
+      "timestamp": 1795283103880,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 290,
+      "y": 125,
+      "timestamp": 1795283104399,
+      "hit3d": {
+        "meshName": "hand_chair",
+        "faceIndex": 73,
+        "point3d": {
+          "x": 0.0434,
+          "y": 0.3014,
+          "z": -0.2763
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 251,
+      "y": 254,
+      "timestamp": 1795283104949,
+      "hit3d": {
+        "meshName": "hand_chair",
+        "faceIndex": 133,
+        "point3d": {
+          "x": 0.3526,
+          "y": -0.3474,
+          "z": -0.0494
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 287,
+      "y": 257,
+      "timestamp": 1795283105602,
+      "hit3d": {
+        "meshName": "hand_chair",
+        "faceIndex": 235,
+        "point3d": {
+          "x": 0.2206,
+          "y": -0.3634,
+          "z": 0.3374
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 277,
+      "y": 122,
+      "timestamp": 1795283106066,
+      "hit3d": {
+        "meshName": "hand_chair",
+        "faceIndex": 455,
+        "point3d": {
+          "x": 0.2326,
+          "y": 0.3616,
+          "z": -0.259
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 192,
+      "y": 157,
+      "timestamp": 1795283106575,
+      "hit3d": {
+        "meshName": "hand_chair",
+        "faceIndex": 323,
+        "point3d": {
+          "x": -0.3043,
+          "y": 0.1478,
+          "z": -0.2834
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 246,
+      "y": 66,
+      "timestamp": 1795283107144,
+      "hit3d": {
+        "meshName": "hand_chair",
+        "faceIndex": 73,
+        "point3d": {
+          "x": 0.0344,
+          "y": 0.7125,
+          "z": -0.2517
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 140,
+      "y": 106,
+      "timestamp": 1795283107847,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 347,
+      "y": 103,
+      "timestamp": 1795283108595,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 185,
+      "y": 139,
+      "timestamp": 1795283109452,
+      "hit3d": {
+        "meshName": "hand_chair",
+        "faceIndex": 458,
+        "point3d": {
+          "x": -0.2526,
+          "y": 0.2036,
+          "z": -0.2693
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 148,
+      "y": 210,
+      "timestamp": 1795283110078,
+      "hit3d": {
+        "meshName": "hand_chair",
+        "faceIndex": 444,
+        "point3d": {
+          "x": -0.3076,
+          "y": -0.1451,
+          "z": -0.4396
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 236,
+      "y": 91,
+      "timestamp": 1795283110578,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 311,
+      "y": 65,
+      "timestamp": 1795283111150,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-21T17:45:17.001Z"
+}
