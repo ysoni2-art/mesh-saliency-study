@@ -1,0 +1,490 @@
+{
+  "modelSource": "obj",
+  "shape": "abstract",
+  "objFile": "abstract_obj",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "rating",
+    "objectGuess": null,
+    "description": null,
+    "aestheticRating": 2
+  },
+  "totalClicks": 30,
+  "totalHits": 29,
+  "faceHits": {
+    "abstract_f26525": 1,
+    "abstract_f19951": 1,
+    "abstract_f22923": 1,
+    "abstract_f22039": 1,
+    "abstract_f23147": 1,
+    "abstract_f22358": 1,
+    "abstract_f9808": 1,
+    "abstract_f55220": 1,
+    "abstract_f51710": 1,
+    "abstract_f39469": 1,
+    "abstract_f27406": 1,
+    "abstract_f37894": 1,
+    "abstract_f60782": 1,
+    "abstract_f71428": 1,
+    "abstract_f71454": 1,
+    "abstract_f59981": 1,
+    "abstract_f73555": 1,
+    "abstract_f74088": 1,
+    "abstract_f79980": 1,
+    "abstract_f72075": 1,
+    "abstract_f81160": 1,
+    "abstract_f73542": 1,
+    "abstract_f85611": 1,
+    "abstract_f75186": 1,
+    "abstract_f89245": 1,
+    "abstract_f81189": 1,
+    "abstract_f54653": 1,
+    "abstract_f73715": 1,
+    "abstract_f80825": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 262,
+      "y": 168,
+      "timestamp": 1795288499229,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 26525,
+        "point3d": {
+          "x": -0.5696,
+          "y": 0.0503,
+          "z": 0.0916
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 227,
+      "y": 115,
+      "timestamp": 1795288500040,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 19951,
+        "point3d": {
+          "x": -0.5981,
+          "y": 0.2626,
+          "z": -0.0542
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 205,
+      "y": 213,
+      "timestamp": 1795288500808,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 22923,
+        "point3d": {
+          "x": -0.5764,
+          "y": -0.1342,
+          "z": -0.144
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 152,
+      "y": 220,
+      "timestamp": 1795288501798,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 22039,
+        "point3d": {
+          "x": -0.5805,
+          "y": -0.1656,
+          "z": -0.3592
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 96,
+      "y": 210,
+      "timestamp": 1795288502707,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 23147,
+        "point3d": {
+          "x": -0.575,
+          "y": -0.1216,
+          "z": -0.5895
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 86,
+      "y": 135,
+      "timestamp": 1795288503765,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 22358,
+        "point3d": {
+          "x": -0.5831,
+          "y": 0.1829,
+          "z": -0.6309
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 118,
+      "y": 48,
+      "timestamp": 1795288504588,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 9808,
+        "point3d": {
+          "x": -0.6721,
+          "y": 0.507,
+          "z": -0.4698
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 293,
+      "y": 214,
+      "timestamp": 1795288505975,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 55220,
+        "point3d": {
+          "x": 0.2148,
+          "y": -0.1395,
+          "z": 0.5885
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 268,
+      "y": 295,
+      "timestamp": 1795288506638,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 51710,
+        "point3d": {
+          "x": 0.1149,
+          "y": -0.4718,
+          "z": 0.5743
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 183,
+      "y": 327,
+      "timestamp": 1795288507352,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 39469,
+        "point3d": {
+          "x": -0.2326,
+          "y": -0.5988,
+          "z": 0.5919
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 102,
+      "y": 304,
+      "timestamp": 1795288508268,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 27406,
+        "point3d": {
+          "x": -0.5284,
+          "y": -0.4759,
+          "z": 0.6803
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 87,
+      "y": 211,
+      "timestamp": 1795288509134,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 161,
+      "y": 132,
+      "timestamp": 1795288510103,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 37894,
+        "point3d": {
+          "x": -0.3168,
+          "y": 0.1921,
+          "z": 0.6111
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 325,
+      "y": 152,
+      "timestamp": 1795288510927,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 60782,
+        "point3d": {
+          "x": 0.3409,
+          "y": 0.1108,
+          "z": 0.6175
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 387,
+      "y": 162,
+      "timestamp": 1795288511766,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 71428,
+        "point3d": {
+          "x": 0.5598,
+          "y": 0.07,
+          "z": 0.6928
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 386,
+      "y": 245,
+      "timestamp": 1795288512883,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 71454,
+        "point3d": {
+          "x": 0.5547,
+          "y": -0.2484,
+          "z": 0.6907
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 314,
+      "y": 65,
+      "timestamp": 1795288513630,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 59981,
+        "point3d": {
+          "x": 0.2996,
+          "y": 0.4607,
+          "z": 0.6067
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 190,
+      "y": 152,
+      "timestamp": 1795288514930,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 73555,
+        "point3d": {
+          "x": 0.5742,
+          "y": 0.1139,
+          "z": 0.2054
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 159,
+      "y": 227,
+      "timestamp": 1795288515780,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 74088,
+        "point3d": {
+          "x": 0.5843,
+          "y": -0.1905,
+          "z": 0.3306
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 99,
+      "y": 256,
+      "timestamp": 1795288516453,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 79980,
+        "point3d": {
+          "x": 0.6083,
+          "y": -0.3059,
+          "z": 0.5685
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 342,
+      "y": 185,
+      "timestamp": 1795288517064,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 72075,
+        "point3d": {
+          "x": 0.5687,
+          "y": -0.0199,
+          "z": -0.42
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 312,
+      "y": 92,
+      "timestamp": 1795288517759,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 81160,
+        "point3d": {
+          "x": 0.6205,
+          "y": 0.3516,
+          "z": -0.2889
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 286,
+      "y": 194,
+      "timestamp": 1795288519112,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 73542,
+        "point3d": {
+          "x": 0.57,
+          "y": -0.0582,
+          "z": -0.1898
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 356,
+      "y": 296,
+      "timestamp": 1795288519701,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 85611,
+        "point3d": {
+          "x": 0.653,
+          "y": -0.4544,
+          "z": -0.4522
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 407,
+      "y": 239,
+      "timestamp": 1795288520497,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 75186,
+        "point3d": {
+          "x": 0.5933,
+          "y": -0.2397,
+          "z": -0.6777
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 209,
+      "y": 41,
+      "timestamp": 1795288521614,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 89245,
+        "point3d": {
+          "x": 0.6822,
+          "y": 0.5333,
+          "z": 0.1202
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 130,
+      "y": 90,
+      "timestamp": 1795288522259,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 81189,
+        "point3d": {
+          "x": 0.6222,
+          "y": 0.3574,
+          "z": 0.4399
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 77,
+      "y": 61,
+      "timestamp": 1795288523062,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 54653,
+        "point3d": {
+          "x": 0.6565,
+          "y": 0.4641,
+          "z": 0.6353
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 77,
+      "y": 166,
+      "timestamp": 1795288524185,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 73715,
+        "point3d": {
+          "x": 0.57,
+          "y": 0.0567,
+          "z": 0.6719
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 382,
+      "y": 95,
+      "timestamp": 1795288525234,
+      "hit3d": {
+        "meshName": "abstract",
+        "faceIndex": 80825,
+        "point3d": {
+          "x": 0.6173,
+          "y": 0.3399,
+          "z": -0.5682
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-21T19:15:28.945Z"
+}
