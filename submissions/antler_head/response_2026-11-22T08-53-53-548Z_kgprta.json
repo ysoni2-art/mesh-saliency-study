@@ -1,0 +1,200 @@
+{
+  "modelSource": "obj",
+  "shape": "antler_head",
+  "objFile": "antler_head_obj",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "rating",
+    "objectGuess": null,
+    "description": null,
+    "aestheticRating": 3
+  },
+  "totalClicks": 13,
+  "totalHits": 10,
+  "faceHits": {
+    "antler_head_f33620": 1,
+    "antler_head_f31750": 1,
+    "antler_head_f6326": 1,
+    "antler_head_f12664": 1,
+    "antler_head_f14853": 1,
+    "antler_head_f22207": 1,
+    "antler_head_f3959": 1,
+    "antler_head_f12908": 1,
+    "antler_head_f7933": 1,
+    "antler_head_f15939": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 187,
+      "y": 185,
+      "timestamp": 1795337572145,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 33620,
+        "point3d": {
+          "x": -0.1249,
+          "y": -0.0263,
+          "z": -0.2773
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 268,
+      "y": 193,
+      "timestamp": 1795337573979,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 31750,
+        "point3d": {
+          "x": -0.2762,
+          "y": -0.0636,
+          "z": 0.1358
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 167,
+      "y": 175,
+      "timestamp": 1795337575753,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 255,
+      "y": 147,
+      "timestamp": 1795337576733,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 6326,
+        "point3d": {
+          "x": 0.0717,
+          "y": 0.1573,
+          "z": 0.3321
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 186,
+      "y": 195,
+      "timestamp": 1795337578412,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 12664,
+        "point3d": {
+          "x": 0.2187,
+          "y": -0.0757,
+          "z": 0.2709
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 271,
+      "y": 187,
+      "timestamp": 1795337579441,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 14853,
+        "point3d": {
+          "x": 0.2826,
+          "y": -0.0341,
+          "z": -0.1487
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 219,
+      "y": 199,
+      "timestamp": 1795337595024,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 22207,
+        "point3d": {
+          "x": -0.0995,
+          "y": -0.0901,
+          "z": 0.3366
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 241,
+      "y": 253,
+      "timestamp": 1795337596510,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 3959,
+        "point3d": {
+          "x": 0.005,
+          "y": -0.3482,
+          "z": 0.3279
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 235,
+      "y": 320,
+      "timestamp": 1795337597878,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 287,
+      "y": 201,
+      "timestamp": 1795337599598,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 12908,
+        "point3d": {
+          "x": 0.2341,
+          "y": -0.1043,
+          "z": 0.2499
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 243,
+      "y": 95,
+      "timestamp": 1795337600742,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 7933,
+        "point3d": {
+          "x": 0.0145,
+          "y": 0.4044,
+          "z": 0.334
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 305,
+      "y": 74,
+      "timestamp": 1795337602287,
+      "hit3d": {
+        "meshName": "antler_head",
+        "faceIndex": 15939,
+        "point3d": {
+          "x": 0.3267,
+          "y": 0.5275,
+          "z": 0.2319
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 149,
+      "y": 101,
+      "timestamp": 1795337604672,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-22T08:53:55.810Z"
+}
