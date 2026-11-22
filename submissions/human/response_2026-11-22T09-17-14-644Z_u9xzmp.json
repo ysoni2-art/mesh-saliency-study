@@ -1,0 +1,79 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "human",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 6,
+  "totalHits": 2,
+  "faceHits": {
+    "l_upper_arm_f12": 1,
+    "head_f610": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 183,
+      "y": 174,
+      "timestamp": 1795338977690,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 236,
+      "y": 123,
+      "timestamp": 1795338979081,
+      "hit3d": {
+        "meshName": "l_upper_arm",
+        "faceIndex": 12,
+        "point3d": {
+          "x": -0.4164,
+          "y": 0.3879,
+          "z": -0.0298
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 248,
+      "y": 51,
+      "timestamp": 1795338980163,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 610,
+        "point3d": {
+          "x": -0.1829,
+          "y": 0.9624,
+          "z": 0.0577
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 262,
+      "y": 226,
+      "timestamp": 1795338981615,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 224,
+      "y": 298,
+      "timestamp": 1795338986771,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 288,
+      "y": 162,
+      "timestamp": 1795338991575,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-22T09:17:16.861Z"
+}
