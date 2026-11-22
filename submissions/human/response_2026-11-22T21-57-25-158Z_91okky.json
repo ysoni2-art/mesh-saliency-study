@@ -1,0 +1,70 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "3d model of a person",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 6,
+  "totalHits": 1,
+  "faceHits": {
+    "torso_f495": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 269,
+      "y": 68,
+      "timestamp": 1795384629849,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 239,
+      "y": 123,
+      "timestamp": 1795384630437,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 495,
+        "point3d": {
+          "x": -0.0103,
+          "y": 0.4258,
+          "z": 0.1823
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 210,
+      "y": 61,
+      "timestamp": 1795384631261,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 232,
+      "y": 274,
+      "timestamp": 1795384632124,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 199,
+      "y": 192,
+      "timestamp": 1795384639678,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 284,
+      "y": 178,
+      "timestamp": 1795384640794,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-22T21:57:24.387Z"
+}
