@@ -1,0 +1,130 @@
+{
+  "modelSource": "obj",
+  "shape": "lamp",
+  "objFile": "lamp_obj",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "A lamp with a traditional shroud, curved rounded body and round base",
+    "aestheticRating": null
+  },
+  "totalClicks": 12,
+  "totalHits": 3,
+  "faceHits": {
+    "lamp_f1552": 1,
+    "lamp_f4682": 1,
+    "lamp_f1353": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 55,
+      "y": 69,
+      "timestamp": 1795384543997,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 125,
+      "y": 80,
+      "timestamp": 1795384544685,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 183,
+      "y": 98,
+      "timestamp": 1795384545238,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 1552,
+        "point3d": {
+          "x": 0.05,
+          "y": 0.4506,
+          "z": 0.3104
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 451,
+      "y": 125,
+      "timestamp": 1795384545829,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 367,
+      "y": 275,
+      "timestamp": 1795384546416,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 180,
+      "y": 269,
+      "timestamp": 1795384546921,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 196,
+      "y": 247,
+      "timestamp": 1795384547366,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 332,
+      "y": 80,
+      "timestamp": 1795384547937,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 321,
+      "y": 267,
+      "timestamp": 1795384548613,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 262,
+      "y": 179,
+      "timestamp": 1795384549169,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 4682,
+        "point3d": {
+          "x": 0.1203,
+          "y": 0.0075,
+          "z": 0.0479
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 221,
+      "y": 142,
+      "timestamp": 1795384550557,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 1353,
+        "point3d": {
+          "x": -0.0847,
+          "y": 0.1694,
+          "z": 0.4599
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 204,
+      "y": 195,
+      "timestamp": 1795384551269,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-22T21:56:30.043Z"
+}
