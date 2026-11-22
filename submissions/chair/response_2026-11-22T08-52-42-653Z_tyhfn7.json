@@ -1,0 +1,225 @@
+{
+  "modelSource": "builtin",
+  "shape": "chair",
+  "objFile": "chair_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "A chair with four individual legs, a solid back, and arms held up by poles",
+    "aestheticRating": null
+  },
+  "totalClicks": 18,
+  "totalHits": 9,
+  "faceHits": {
+    "seat_f2": 1,
+    "leg_bl_f20": 1,
+    "backrest_f9": 2,
+    "leg_fr_f21": 1,
+    "seat_f1": 1,
+    "seat_f0": 1,
+    "armrest_l_f0": 1,
+    "backrest_f0": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 403,
+      "y": 25,
+      "timestamp": 1795337424663,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 61,
+      "y": 25,
+      "timestamp": 1795337432257,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 191,
+      "y": 190,
+      "timestamp": 1795337432968,
+      "hit3d": {
+        "meshName": "seat",
+        "faceIndex": 2,
+        "point3d": {
+          "x": -0.35,
+          "y": -0.0397,
+          "z": -0.1904
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 72,
+      "y": 41,
+      "timestamp": 1795337442113,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 285,
+      "y": 271,
+      "timestamp": 1795337444174,
+      "hit3d": {
+        "meshName": "leg_bl",
+        "faceIndex": 20,
+        "point3d": {
+          "x": 0.2474,
+          "y": -0.4946,
+          "z": -0.2455
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 261,
+      "y": 164,
+      "timestamp": 1795337447774,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 9,
+        "point3d": {
+          "x": 0.1168,
+          "y": 0.0884,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 211,
+      "y": 206,
+      "timestamp": 1795337449202,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 165,
+      "y": 277,
+      "timestamp": 1795337451572,
+      "hit3d": {
+        "meshName": "leg_fr",
+        "faceIndex": 21,
+        "point3d": {
+          "x": -0.3046,
+          "y": -0.3905,
+          "z": 0.3025
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 269,
+      "y": 196,
+      "timestamp": 1795337455488,
+      "hit3d": {
+        "meshName": "seat",
+        "faceIndex": 1,
+        "point3d": {
+          "x": 0.35,
+          "y": -0.0633,
+          "z": -0.112
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 190,
+      "y": 158,
+      "timestamp": 1795337457031,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 200,
+      "y": 196,
+      "timestamp": 1795337458458,
+      "hit3d": {
+        "meshName": "seat",
+        "faceIndex": 0,
+        "point3d": {
+          "x": 0.35,
+          "y": -0.0633,
+          "z": 0.156
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 222,
+      "y": 256,
+      "timestamp": 1795337459648,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 118,
+      "y": 258,
+      "timestamp": 1795337461503,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 120,
+      "y": 200,
+      "timestamp": 1795337462838,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 180,
+      "y": 120,
+      "timestamp": 1795337464094,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 257,
+      "y": 126,
+      "timestamp": 1795337465052,
+      "hit3d": {
+        "meshName": "armrest_l",
+        "faceIndex": 0,
+        "point3d": {
+          "x": 0.41,
+          "y": 0.2041,
+          "z": -0.0621
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 309,
+      "y": 156,
+      "timestamp": 1795337466241,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 0,
+        "point3d": {
+          "x": 0.35,
+          "y": 0.0943,
+          "z": -0.2696
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 307,
+      "y": 94,
+      "timestamp": 1795337467538,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 9,
+        "point3d": {
+          "x": 0.3166,
+          "y": 0.3461,
+          "z": -0.2675
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-22T08:52:44.197Z"
+}
