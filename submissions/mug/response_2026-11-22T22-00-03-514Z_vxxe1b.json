@@ -1,0 +1,49 @@
+{
+  "modelSource": "builtin",
+  "shape": "mug",
+  "objFile": "mug_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "bucket",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 3,
+  "totalHits": 1,
+  "faceHits": {
+    "cup_body_f7": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 240,
+      "y": 193,
+      "timestamp": 1795384788572,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 7,
+        "point3d": {
+          "x": 0,
+          "y": -0.0384,
+          "z": 0.2474
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 178,
+      "y": 98,
+      "timestamp": 1795384789475,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 292,
+      "y": 122,
+      "timestamp": 1795384790228,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-22T22:00:02.787Z"
+}
