@@ -1,0 +1,81 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "Antropomorphic figure",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 5,
+  "totalHits": 3,
+  "faceHits": {
+    "torso_f859": 1,
+    "head_f1188": 1,
+    "head_f1193": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 158,
+      "y": 148,
+      "timestamp": 1795560018241,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 225,
+      "y": 166,
+      "timestamp": 1795560019709,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 859,
+        "point3d": {
+          "x": -0.2589,
+          "y": 0.1039,
+          "z": -0.1065
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 247,
+      "y": 86,
+      "timestamp": 1795560021370,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 1188,
+        "point3d": {
+          "x": -0.1034,
+          "y": 0.7209,
+          "z": 0.0562
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 232,
+      "y": 89,
+      "timestamp": 1795560027500,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 1193,
+        "point3d": {
+          "x": -0.0639,
+          "y": 0.7068,
+          "z": 0.0741
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 236,
+      "y": 285,
+      "timestamp": 1795560029709,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-24T22:40:46.611Z"
+}
