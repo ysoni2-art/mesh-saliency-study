@@ -1,0 +1,81 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "humanoid robot",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 5,
+  "totalHits": 3,
+  "faceHits": {
+    "torso_f494": 1,
+    "head_f687": 1,
+    "torso_f921": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 276,
+      "y": 181,
+      "timestamp": 1795553057941,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 239,
+      "y": 117,
+      "timestamp": 1795553060132,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 494,
+        "point3d": {
+          "x": -0.0103,
+          "y": 0.4735,
+          "z": 0.1729
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 239,
+      "y": 58,
+      "timestamp": 1795553062796,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 687,
+        "point3d": {
+          "x": -0.0102,
+          "y": 0.9111,
+          "z": 0.1887
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 215,
+      "y": 280,
+      "timestamp": 1795553066676,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 224,
+      "y": 175,
+      "timestamp": 1795553070148,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 921,
+        "point3d": {
+          "x": -0.2278,
+          "y": 0.0404,
+          "z": -0.1178
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-24T20:44:39.267Z"
+}
