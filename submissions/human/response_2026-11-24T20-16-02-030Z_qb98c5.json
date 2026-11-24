@@ -1,0 +1,230 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "Wooden doll used for crash tests",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 16,
+  "totalHits": 11,
+  "faceHits": {
+    "torso_f942": 1,
+    "r_thigh_f36": 1,
+    "torso_f940": 1,
+    "pelvis_f389": 1,
+    "head_f1067": 1,
+    "r_shoulder_f194": 1,
+    "torso_f433": 1,
+    "l_lower_arm_f1": 1,
+    "r_upper_arm_f0": 1,
+    "l_thigh_f4": 1,
+    "l_thigh_f7": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 235,
+      "y": 176,
+      "timestamp": 1795551329661,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 942,
+        "point3d": {
+          "x": -0.0348,
+          "y": 0.027,
+          "z": 0.1813
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 263,
+      "y": 251,
+      "timestamp": 1795551330281,
+      "hit3d": {
+        "meshName": "r_thigh",
+        "faceIndex": 36,
+        "point3d": {
+          "x": 0.1803,
+          "y": -0.5488,
+          "z": 0.0751
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 372,
+      "y": 220,
+      "timestamp": 1795551330868,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 232,
+      "y": 183,
+      "timestamp": 1795551331624,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 940,
+        "point3d": {
+          "x": -0.0582,
+          "y": -0.0194,
+          "z": 0.1702
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 271,
+      "y": 193,
+      "timestamp": 1795551333431,
+      "hit3d": {
+        "meshName": "pelvis",
+        "faceIndex": 389,
+        "point3d": {
+          "x": 0.2411,
+          "y": -0.1045,
+          "z": 0.0658
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 231,
+      "y": 82,
+      "timestamp": 1795551334137,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 1067,
+        "point3d": {
+          "x": -0.071,
+          "y": 0.7493,
+          "z": 0.1213
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 283,
+      "y": 108,
+      "timestamp": 1795551334902,
+      "hit3d": {
+        "meshName": "r_shoulder",
+        "faceIndex": 194,
+        "point3d": {
+          "x": 0.3387,
+          "y": 0.5605,
+          "z": 0.0554
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 242,
+      "y": 113,
+      "timestamp": 1795551335537,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 433,
+        "point3d": {
+          "x": 0.0117,
+          "y": 0.5052,
+          "z": 0.1644
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 167,
+      "y": 117,
+      "timestamp": 1795551336246,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 152,
+      "y": 217,
+      "timestamp": 1795551337211,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 181,
+      "y": 156,
+      "timestamp": 1795551338092,
+      "hit3d": {
+        "meshName": "l_lower_arm",
+        "faceIndex": 1,
+        "point3d": {
+          "x": -0.4603,
+          "y": 0.1857,
+          "z": 0.0512
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 293,
+      "y": 145,
+      "timestamp": 1795551338775,
+      "hit3d": {
+        "meshName": "r_upper_arm",
+        "faceIndex": 0,
+        "point3d": {
+          "x": 0.4089,
+          "y": 0.2686,
+          "z": 0.0731
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 214,
+      "y": 263,
+      "timestamp": 1795551339356,
+      "hit3d": {
+        "meshName": "l_thigh",
+        "faceIndex": 4,
+        "point3d": {
+          "x": -0.2055,
+          "y": -0.6489,
+          "z": 0.0568
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 214,
+      "y": 224,
+      "timestamp": 1795551340018,
+      "hit3d": {
+        "meshName": "l_thigh",
+        "faceIndex": 7,
+        "point3d": {
+          "x": -0.2075,
+          "y": -0.3499,
+          "z": 0.0284
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 268,
+      "y": 318,
+      "timestamp": 1795551340590,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 200,
+      "y": 330,
+      "timestamp": 1795551341276,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-24T20:16:02.786Z"
+}
