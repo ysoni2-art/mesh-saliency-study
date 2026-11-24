@@ -1,0 +1,143 @@
+{
+  "modelSource": "builtin",
+  "shape": "chair",
+  "objFile": "chair_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "chair with armrests",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 10,
+  "totalHits": 6,
+  "faceHits": {
+    "backrest_f9": 1,
+    "backrest_f8": 1,
+    "seat_f8": 1,
+    "armrest_r_f2": 1,
+    "leg_fl_f16": 1,
+    "leg_fl_f23": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 269,
+      "y": 162,
+      "timestamp": 1795553085251,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 9,
+        "point3d": {
+          "x": 0.1593,
+          "y": 0.0986,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 244,
+      "y": 66,
+      "timestamp": 1795553087836,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 8,
+        "point3d": {
+          "x": 0.0228,
+          "y": 0.6294,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 222,
+      "y": 283,
+      "timestamp": 1795553090196,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 162,
+      "y": 194,
+      "timestamp": 1795553092572,
+      "hit3d": {
+        "meshName": "seat",
+        "faceIndex": 8,
+        "point3d": {
+          "x": -0.3115,
+          "y": -0.0547,
+          "z": 0.3275
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 334,
+      "y": 165,
+      "timestamp": 1795553100572,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 262,
+      "y": 126,
+      "timestamp": 1795553103772,
+      "hit3d": {
+        "meshName": "armrest_r",
+        "faceIndex": 2,
+        "point3d": {
+          "x": -0.41,
+          "y": 0.2017,
+          "z": 0.0845
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 287,
+      "y": 236,
+      "timestamp": 1795553106859,
+      "hit3d": {
+        "meshName": "leg_fl",
+        "faceIndex": 16,
+        "point3d": {
+          "x": 0.244,
+          "y": -0.3075,
+          "z": 0.2575
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 251,
+      "y": 175,
+      "timestamp": 1795553109171,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 128,
+      "y": 291,
+      "timestamp": 1795553113548,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 307,
+      "y": 304,
+      "timestamp": 1795553116541,
+      "hit3d": {
+        "meshName": "leg_fl",
+        "faceIndex": 23,
+        "point3d": {
+          "x": 0.2709,
+          "y": -0.4975,
+          "z": 0.3101
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-24T20:45:34.827Z"
+}
