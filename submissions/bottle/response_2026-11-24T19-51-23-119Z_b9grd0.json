@@ -1,0 +1,128 @@
+{
+  "modelSource": "builtin",
+  "shape": "bottle",
+  "objFile": "bottle_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "bottle",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 8,
+  "totalHits": 6,
+  "faceHits": {
+    "bottle_body_f48": 2,
+    "shoulder_f49": 1,
+    "bottle_body_f50": 1,
+    "neck_f41": 1,
+    "cap_f39": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 241,
+      "y": 200,
+      "timestamp": 1795549866495,
+      "hit3d": {
+        "meshName": "bottle_body",
+        "faceIndex": 48,
+        "point3d": {
+          "x": -0.2348,
+          "y": -0.0507,
+          "z": 0.0013
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 242,
+      "y": 141,
+      "timestamp": 1795549867645,
+      "hit3d": {
+        "meshName": "shoulder",
+        "faceIndex": 49,
+        "point3d": {
+          "x": -0.231,
+          "y": 0.1014,
+          "z": 0.0053
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 186,
+      "y": 97,
+      "timestamp": 1795549869110,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 245,
+      "y": 269,
+      "timestamp": 1795549870383,
+      "hit3d": {
+        "meshName": "bottle_body",
+        "faceIndex": 48,
+        "point3d": {
+          "x": -0.2273,
+          "y": -0.232,
+          "z": 0.0134
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 258,
+      "y": 335,
+      "timestamp": 1795549871244,
+      "hit3d": {
+        "meshName": "bottle_body",
+        "faceIndex": 50,
+        "point3d": {
+          "x": -0.2175,
+          "y": -0.4048,
+          "z": 0.046
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 320,
+      "y": 118,
+      "timestamp": 1795549873696,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 256,
+      "y": 83,
+      "timestamp": 1795549874643,
+      "hit3d": {
+        "meshName": "neck",
+        "faceIndex": 41,
+        "point3d": {
+          "x": -0.0629,
+          "y": 0.2917,
+          "z": 0.0484
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 250,
+      "y": 43,
+      "timestamp": 1795549876074,
+      "hit3d": {
+        "meshName": "cap",
+        "faceIndex": 39,
+        "point3d": {
+          "x": -0.0845,
+          "y": 0.4057,
+          "z": 0.0291
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-24T19:51:23.224Z"
+}
