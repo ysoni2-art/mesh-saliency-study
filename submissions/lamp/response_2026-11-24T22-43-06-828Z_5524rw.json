@@ -1,0 +1,46 @@
+{
+  "modelSource": "obj",
+  "shape": "lamp",
+  "objFile": "lamp_obj",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "3D model of a lamp, again blue, seems to be the default texture of this program, your stereotypical table lamp with a lampshade.",
+    "aestheticRating": null
+  },
+  "totalClicks": 4,
+  "totalHits": 0,
+  "faceHits": {},
+  "clicks": [
+    {
+      "view": "front",
+      "x": 174,
+      "y": 108,
+      "timestamp": 1795560124572,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 111,
+      "y": 214,
+      "timestamp": 1795560126673,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 166,
+      "y": 157,
+      "timestamp": 1795560127854,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 298,
+      "y": 166,
+      "timestamp": 1795560129587,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-24T22:43:06.420Z"
+}
