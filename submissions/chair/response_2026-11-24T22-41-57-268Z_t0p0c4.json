@@ -1,0 +1,125 @@
+{
+  "modelSource": "builtin",
+  "shape": "chair",
+  "objFile": "chair_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "It's a chair. Blue. An angular, low poly model, baby's first 3D modelling project no offence.",
+    "aestheticRating": null
+  },
+  "totalClicks": 9,
+  "totalHits": 5,
+  "faceHits": {
+    "backrest_f8": 3,
+    "leg_fr_f3": 1,
+    "seat_f9": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 143,
+      "y": 119,
+      "timestamp": 1795560057221,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 195,
+      "y": 75,
+      "timestamp": 1795560058477,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 247,
+      "y": 74,
+      "timestamp": 1795560061350,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 8,
+        "point3d": {
+          "x": 0.0379,
+          "y": 0.5855,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 193,
+      "y": 75,
+      "timestamp": 1795560062845,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 8,
+        "point3d": {
+          "x": -0.2578,
+          "y": 0.5779,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 199,
+      "y": 152,
+      "timestamp": 1795560064047,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 8,
+        "point3d": {
+          "x": -0.2275,
+          "y": 0.1532,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 137,
+      "y": 152,
+      "timestamp": 1795560065226,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 180,
+      "y": 231,
+      "timestamp": 1795560066135,
+      "hit3d": {
+        "meshName": "leg_fr",
+        "faceIndex": 3,
+        "point3d": {
+          "x": -0.2459,
+          "y": -0.2057,
+          "z": 0.293
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 283,
+      "y": 195,
+      "timestamp": 1795560068001,
+      "hit3d": {
+        "meshName": "seat",
+        "faceIndex": 9,
+        "point3d": {
+          "x": 0.1694,
+          "y": -0.059,
+          "z": 0.3275
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 329,
+      "y": 119,
+      "timestamp": 1795560070051,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-24T22:41:56.793Z"
+}
