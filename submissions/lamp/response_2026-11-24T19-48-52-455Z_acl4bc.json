@@ -1,0 +1,79 @@
+{
+  "modelSource": "obj",
+  "shape": "lamp",
+  "objFile": "lamp_obj",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "Lamp\nHttps://tinyurl.com/pteenanal",
+    "aestheticRating": null
+  },
+  "totalClicks": 6,
+  "totalHits": 2,
+  "faceHits": {
+    "lamp_f1267": 1,
+    "lamp_f2555": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 365,
+      "y": 195,
+      "timestamp": 1795549686992,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 194,
+      "y": 127,
+      "timestamp": 1795549690722,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 1267,
+        "point3d": {
+          "x": -0.3486,
+          "y": 0.2481,
+          "z": -0.2158
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 258,
+      "y": 149,
+      "timestamp": 1795549693166,
+      "hit3d": {
+        "meshName": "lamp",
+        "faceIndex": 2555,
+        "point3d": {
+          "x": 0.4207,
+          "y": 0.2083,
+          "z": 0.1175
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 431,
+      "y": 234,
+      "timestamp": 1795549694513,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 323,
+      "y": 166,
+      "timestamp": 1795549695490,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 276,
+      "y": 208,
+      "timestamp": 1795549696647,
+      "hit3d": null
+    }
+  ],
+  "submittedAt": "2026-11-24T19:48:52.060Z"
+}
