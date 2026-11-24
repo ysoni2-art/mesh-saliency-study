@@ -1,0 +1,74 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "Man",
+    "aestheticRating": null
+  },
+  "totalClicks": 4,
+  "totalHits": 3,
+  "faceHits": {
+    "torso_f922": 1,
+    "l_shoulder_f264": 1,
+    "head_f676": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 230,
+      "y": 174,
+      "timestamp": 1795549742948,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 922,
+        "point3d": {
+          "x": -0.2727,
+          "y": 0.046,
+          "z": -0.0748
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 254,
+      "y": 253,
+      "timestamp": 1795549744416,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 250,
+      "y": 105,
+      "timestamp": 1795549745799,
+      "hit3d": {
+        "meshName": "l_shoulder",
+        "faceIndex": 264,
+        "point3d": {
+          "x": -0.3447,
+          "y": 0.5254,
+          "z": 0.0692
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 251,
+      "y": 56,
+      "timestamp": 1795549747133,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 676,
+        "point3d": {
+          "x": -0.1763,
+          "y": 0.9292,
+          "z": 0.0851
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-24T19:49:21.251Z"
+}
