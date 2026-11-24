@@ -1,0 +1,113 @@
+{
+  "modelSource": "builtin",
+  "shape": "chair",
+  "objFile": "chair_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "Chair",
+    "aestheticRating": null
+  },
+  "totalClicks": 7,
+  "totalHits": 5,
+  "faceHits": {
+    "cushion_f3": 1,
+    "seat_f3": 1,
+    "armrest_r_f3": 1,
+    "seat_f2": 1,
+    "backrest_f8": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 231,
+      "y": 186,
+      "timestamp": 1795549793486,
+      "hit3d": {
+        "meshName": "cushion",
+        "faceIndex": 3,
+        "point3d": {
+          "x": -0.32,
+          "y": -0.0242,
+          "z": -0.0351
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 247,
+      "y": 116,
+      "timestamp": 1795549794710,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 258,
+      "y": 259,
+      "timestamp": 1795549796058,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 298,
+      "y": 202,
+      "timestamp": 1795549797191,
+      "hit3d": {
+        "meshName": "seat",
+        "faceIndex": 3,
+        "point3d": {
+          "x": -0.35,
+          "y": -0.0845,
+          "z": 0.2269
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 310,
+      "y": 130,
+      "timestamp": 1795549798218,
+      "hit3d": {
+        "meshName": "armrest_r",
+        "faceIndex": 3,
+        "point3d": {
+          "x": -0.41,
+          "y": 0.1873,
+          "z": 0.2646
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 171,
+      "y": 200,
+      "timestamp": 1795549801249,
+      "hit3d": {
+        "meshName": "seat",
+        "faceIndex": 2,
+        "point3d": {
+          "x": -0.35,
+          "y": -0.0784,
+          "z": -0.2714
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 183,
+      "y": 105,
+      "timestamp": 1795549803555,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 8,
+        "point3d": {
+          "x": -0.0466,
+          "y": 0.3509,
+          "z": -0.2675
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-24T19:50:08.706Z"
+}
