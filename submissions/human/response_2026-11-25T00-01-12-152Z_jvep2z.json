@@ -1,0 +1,97 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "It is a mannequin/replica of a human body",
+    "aestheticRating": null
+  },
+  "totalClicks": 6,
+  "totalHits": 4,
+  "faceHits": {
+    "torso_f875": 1,
+    "pelvis_f379": 1,
+    "torso_f829": 1,
+    "r_thigh_f30": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 261,
+      "y": 174,
+      "timestamp": 1795564834878,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 875,
+        "point3d": {
+          "x": -0.1647,
+          "y": 0.0465,
+          "z": 0.1555
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 243,
+      "y": 194,
+      "timestamp": 1795564836824,
+      "hit3d": {
+        "meshName": "pelvis",
+        "faceIndex": 379,
+        "point3d": {
+          "x": 0.0233,
+          "y": -0.1046,
+          "z": 0.1755
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 230,
+      "y": 166,
+      "timestamp": 1795564839990,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 829,
+        "point3d": {
+          "x": 0.2878,
+          "y": 0.1004,
+          "z": 0.0705
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 188,
+      "y": 303,
+      "timestamp": 1795564845427,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 271,
+      "y": 287,
+      "timestamp": 1795564847297,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 238,
+      "y": 262,
+      "timestamp": 1795564850748,
+      "hit3d": {
+        "meshName": "r_thigh",
+        "faceIndex": 30,
+        "point3d": {
+          "x": 0.2207,
+          "y": -0.606,
+          "z": 0.0151
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-25T00:01:11.992Z"
+}
