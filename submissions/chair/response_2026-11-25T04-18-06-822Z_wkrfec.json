@@ -1,0 +1,315 @@
+{
+  "modelSource": "builtin",
+  "shape": "chair",
+  "objFile": "chair_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "chair",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 26,
+  "totalHits": 13,
+  "faceHits": {
+    "leg_br_f18": 1,
+    "leg_br_f14": 1,
+    "armrest_r_f3": 1,
+    "arm_sup_r_f0": 1,
+    "backrest_f8": 2,
+    "backrest_f9": 3,
+    "backrest_f1": 1,
+    "seat_f1": 1,
+    "seat_f9": 1,
+    "leg_bl_f1": 1
+  },
+  "clicks": [
+    {
+      "view": "left",
+      "x": 155,
+      "y": 131,
+      "timestamp": 1795580244548,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 176,
+      "y": 219,
+      "timestamp": 1795580245555,
+      "hit3d": {
+        "meshName": "leg_br",
+        "faceIndex": 18,
+        "point3d": {
+          "x": -0.3174,
+          "y": -0.1563,
+          "z": -0.2576
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 166,
+      "y": 275,
+      "timestamp": 1795580247020,
+      "hit3d": {
+        "meshName": "leg_br",
+        "faceIndex": 14,
+        "point3d": {
+          "x": -0.3035,
+          "y": -0.3846,
+          "z": -0.2987
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 241,
+      "y": 71,
+      "timestamp": 1795580248186,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 248,
+      "y": 135,
+      "timestamp": 1795580249047,
+      "hit3d": {
+        "meshName": "armrest_r",
+        "faceIndex": 3,
+        "point3d": {
+          "x": -0.41,
+          "y": 0.1676,
+          "z": 0.0311
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 261,
+      "y": 204,
+      "timestamp": 1795580249846,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 348,
+      "y": 133,
+      "timestamp": 1795580251567,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 314,
+      "y": 168,
+      "timestamp": 1795580252239,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 329,
+      "y": 245,
+      "timestamp": 1795580252975,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 211,
+      "y": 229,
+      "timestamp": 1795580253593,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 151,
+      "y": 144,
+      "timestamp": 1795580254324,
+      "hit3d": {
+        "meshName": "arm_sup_r",
+        "faceIndex": 0,
+        "point3d": {
+          "x": -0.3737,
+          "y": 0.1516,
+          "z": 0.2504
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 129,
+      "y": 219,
+      "timestamp": 1795580254990,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 237,
+      "y": 123,
+      "timestamp": 1795580255740,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 8,
+        "point3d": {
+          "x": -0.0174,
+          "y": 0.3138,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 234,
+      "y": 166,
+      "timestamp": 1795580256330,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 9,
+        "point3d": {
+          "x": -0.0325,
+          "y": 0.0794,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 279,
+      "y": 83,
+      "timestamp": 1795580257270,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 9,
+        "point3d": {
+          "x": 0.217,
+          "y": 0.533,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 151,
+      "y": 49,
+      "timestamp": 1795580258137,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 317,
+      "y": 88,
+      "timestamp": 1795580259315,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 1,
+        "point3d": {
+          "x": 0.35,
+          "y": 0.3624,
+          "z": -0.3026
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 294,
+      "y": 193,
+      "timestamp": 1795580260037,
+      "hit3d": {
+        "meshName": "seat",
+        "faceIndex": 1,
+        "point3d": {
+          "x": 0.35,
+          "y": -0.051,
+          "z": -0.2114
+        }
+      }
+    },
+    {
+      "view": "right",
+      "x": 249,
+      "y": 286,
+      "timestamp": 1795580260839,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 109,
+      "y": 309,
+      "timestamp": 1795580261517,
+      "hit3d": null
+    },
+    {
+      "view": "right",
+      "x": 145,
+      "y": 234,
+      "timestamp": 1795580262066,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 290,
+      "y": 197,
+      "timestamp": 1795580263111,
+      "hit3d": {
+        "meshName": "seat",
+        "faceIndex": 9,
+        "point3d": {
+          "x": 0.2,
+          "y": -0.0681,
+          "z": 0.3275
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 294,
+      "y": 286,
+      "timestamp": 1795580263723,
+      "hit3d": {
+        "meshName": "leg_bl",
+        "faceIndex": 1,
+        "point3d": {
+          "x": 0.2951,
+          "y": -0.5761,
+          "z": -0.2315
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 290,
+      "y": 144,
+      "timestamp": 1795580264843,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 9,
+        "point3d": {
+          "x": 0.2775,
+          "y": 0.2004,
+          "z": -0.2675
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 130,
+      "y": 63,
+      "timestamp": 1795580265447,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 200,
+      "y": 62,
+      "timestamp": 1795580266058,
+      "hit3d": {
+        "meshName": "backrest",
+        "faceIndex": 8,
+        "point3d": {
+          "x": -0.2215,
+          "y": 0.654,
+          "z": -0.2675
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-25T04:18:07.296Z"
+}
