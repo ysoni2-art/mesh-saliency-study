@@ -1,0 +1,88 @@
+{
+  "modelSource": "builtin",
+  "shape": "human",
+  "objFile": "human_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "object",
+    "objectGuess": "Person",
+    "description": null,
+    "aestheticRating": null
+  },
+  "totalClicks": 6,
+  "totalHits": 3,
+  "faceHits": {
+    "torso_f1002": 1,
+    "torso_f804": 1,
+    "head_f557": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 134,
+      "y": 213,
+      "timestamp": 1795726379151,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 224,
+      "y": 186,
+      "timestamp": 1795726381853,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 1002,
+        "point3d": {
+          "x": -0.1171,
+          "y": -0.047,
+          "z": 0.1497
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 316,
+      "y": 132,
+      "timestamp": 1795726384481,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 206,
+      "y": 163,
+      "timestamp": 1795726388949,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 254,
+      "y": 163,
+      "timestamp": 1795726390567,
+      "hit3d": {
+        "meshName": "torso",
+        "faceIndex": 804,
+        "point3d": {
+          "x": -0.2629,
+          "y": 0.1238,
+          "z": 0.1051
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 231,
+      "y": 51,
+      "timestamp": 1795726400009,
+      "hit3d": {
+        "meshName": "head",
+        "faceIndex": 557,
+        "point3d": {
+          "x": -0.0697,
+          "y": 0.9656,
+          "z": 0.1705
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-26T20:53:28.038Z"
+}
