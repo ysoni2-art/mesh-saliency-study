@@ -1,0 +1,152 @@
+{
+  "modelSource": "builtin",
+  "shape": "mug",
+  "objFile": "mug_procedural",
+  "customObjRepoPath": null,
+  "answers": {
+    "questionType": "describe",
+    "objectGuess": null,
+    "description": "A garbage bin like object with a large half circle handle going from once side to the other",
+    "aestheticRating": null
+  },
+  "totalClicks": 10,
+  "totalHits": 7,
+  "faceHits": {
+    "cup_body_f7": 1,
+    "cup_body_f86": 1,
+    "cup_body_f91": 1,
+    "cup_body_f60": 1,
+    "cup_body_f80": 1,
+    "rim_f817": 1,
+    "cup_body_f70": 1
+  },
+  "clicks": [
+    {
+      "view": "front",
+      "x": 242,
+      "y": 162,
+      "timestamp": 1795726416126,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 7,
+        "point3d": {
+          "x": 0.0046,
+          "y": 0.0523,
+          "z": 0.2524
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 141,
+      "y": 165,
+      "timestamp": 1795726417625,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 86,
+        "point3d": {
+          "x": -0.2931,
+          "y": 0.0435,
+          "z": 0.2445
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 400,
+      "y": 151,
+      "timestamp": 1795726419241,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 297,
+      "y": 94,
+      "timestamp": 1795726420641,
+      "hit3d": null
+    },
+    {
+      "view": "front",
+      "x": 162,
+      "y": 286,
+      "timestamp": 1795726422525,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 91,
+        "point3d": {
+          "x": -0.2282,
+          "y": -0.3128,
+          "z": 0.2481
+        }
+      }
+    },
+    {
+      "view": "front",
+      "x": 152,
+      "y": 95,
+      "timestamp": 1795726424009,
+      "hit3d": null
+    },
+    {
+      "view": "left",
+      "x": 169,
+      "y": 117,
+      "timestamp": 1795726426489,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 60,
+        "point3d": {
+          "x": -0.3718,
+          "y": 0.1647,
+          "z": -0.1858
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 306,
+      "y": 113,
+      "timestamp": 1795726427805,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 80,
+        "point3d": {
+          "x": -0.3839,
+          "y": 0.1748,
+          "z": 0.1702
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 233,
+      "y": 119,
+      "timestamp": 1795726429123,
+      "hit3d": {
+        "meshName": "rim",
+        "faceIndex": 817,
+        "point3d": {
+          "x": -0.4525,
+          "y": 0.1479,
+          "z": -0.0175
+        }
+      }
+    },
+    {
+      "view": "left",
+      "x": 227,
+      "y": 279,
+      "timestamp": 1795726431824,
+      "hit3d": {
+        "meshName": "cup_body",
+        "faceIndex": 70,
+        "point3d": {
+          "x": -0.4052,
+          "y": -0.2498,
+          "z": -0.0341
+        }
+      }
+    }
+  ],
+  "submittedAt": "2026-11-26T20:54:31.823Z"
+}
